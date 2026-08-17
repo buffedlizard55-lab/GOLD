@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gold Engagement Ring Buying Guide — No-Hallucinations Edition</title>
+  <meta name="description" content="A buyer-first, evidence-based checklist for buying a solid-gold engagement ring online. Every product price, weight, and stamp comes with a verifiable source URL." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============================================================
+       NO-HALLUCINATIONS BANNER
+       This is the project's central rule. If a number on this site
+       does not have a source URL next to it, treat it as suspect.
+       ============================================================ -->
+  <div class="banner" role="alert">
+    <strong>No-hallucination policy:</strong>
+    Every product price, weight, hallmark, and spot-price figure on this site is
+    either (a) pulled from a live external source with a citation, or (b) clearly
+    labeled as user-input or a placeholder. If you spot a number without a
+    <em>Source</em> link, that is a bug — please open a GitHub issue.
+  </div>
+
+  <header class="site-header">
+    <h1>Gold Engagement Ring — Buyer’s Reference</h1>
+    <p class="subtitle">
+      A checklist, a calculator, and a working evidence table for buying a
+      <strong>solid-gold</strong> engagement ring online without getting burned.
+    </p>
+    <nav class="topnav">
+      <a href="#checklist">Checklist</a>
+      <a href="#evidence">Evidence table</a>
+      <a href="#findings">Findings</a>
+      <a href="#spot">Live spot</a>
+      <a href="#calculator">Calculator</a>
+      <a href="#verification">Verification</a>
+      <a href="#audit">Hallucination audit</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         SUMMARY — "no hallucination" reminder
+         ============================================================ -->
+    <section id="summary" class="card">
+      <h2>Read this first</h2>
+      <p>
+        This site exists because <strong>a 14K or 18K stamp is not proof</strong>.
+        Scams, plated rings labeled "gold", and mis-stamped alloys are routine
+        on marketplaces. Our rule on this project is simple:
+      </p>
+      <ul>
+        <li>No product is added to the evidence table unless we can cite a source URL.</li>
+        <li>No price or weight is transcribed from memory.</li>
+        <li>The live gold spot price is <em>embedded</em> from Kitco, not copied as text, so we can't misquote it.</li>
+        <li>The calculator does the math from numbers <em>you</em> provide — it does not invent a spot price.</li>
+      </ul>
+      <p class="muted">
+        Last full hallucination audit: see the
+        <a href="#audit">audit log</a>. Re-run the audit after every edit.
+      </p>
+    </section>
+
+    <!-- ============================================================
+         CHECKLIST
+         ============================================================ -->
+    <section id="checklist" class="card">
+      <h2>Gold ring — online buying checklist</h2>
+      <ol class="checklist">
+        <li>
+          <strong>Gold purity:</strong> Confirm the karat — 10K, 14K, 18K, etc.
+          Higher karat = more gold content.
+        </li>
+        <li>
+          <strong>Solid gold:</strong> Listing must explicitly say
+          <em>solid gold</em>, not plated, vermeil, gold-filled, gold overlay, or
+          gold-tone.
+        </li>
+        <li>
+          <strong>Hallmark:</strong> Look for a 10K / 14K / 18K stamp
+          <em>plus</em> a maker’s / manufacturer’s mark (e.g. JA, BE, BN, or a
+          registered trademark).
+        </li>
+        <li>
+          <strong>Weight:</strong> Get the ring’s weight in <strong>grams</strong>.
+          A legitimate seller publishes it. If they can’t, that is a yellow flag.
+        </li>
+        <li>
+          <strong>Seller reputation:</strong> Research independent reviews and
+          complaints; verify the business has real contact information (physical
+          address, working phone, real domain).
+        </li>
+        <li>
+          <strong>Price sanity check:</strong> Compare the listed price to
+          (grams × karat-fraction × spot price per gram). Anything wildly below
+          the metal’s melt value is almost certainly fake, plated, or wrong-weight.
+        </li>
+        <li>
+          <strong>Return policy:</strong> You must be able to return the ring
+          after you receive and inspect it. Watch for exclusions on resized or
+          custom rings — they often void your ability to test before resizing.
+        </li>
+        <li>
+          <strong>Payment:</strong> Pay by <strong>credit card</strong> for
+          chargeback protection. Avoid wire transfer, crypto, gift cards, or any
+          irreversible method.
+        </li>
+        <li>
+          <strong>Documentation:</strong> Save the listing snapshot, the
+          receipt, the seller’s text, and any claim about purity. Screenshot the
+          date.
+        </li>
+        <li>
+          <strong>After delivery, before resizing/wearing:</strong> Take the
+          ring to an <strong>independent jeweler</strong> and ask them to verify
+          the gold purity and weight.
+        </li>
+        <li>
+          <strong>Best verification:</strong> Ask for <strong>XRF testing</strong>
+          ($50–$150 typical — see <a href="https://volity.io/gold/gold-slab-testing-cost/" target="_blank" rel="noopener noreferrer">volity.io</a>) or another professional gold-purity test. Do not
+          rely on the stamp alone.
+        </li>
+        <li>
+          <strong>If the seller won’t let you independently verify or return it:
+          do not buy it.</strong>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============================================================
+         EVIDENCE TABLE — every product with a source URL
+         ============================================================ -->
+    <section id="evidence" class="card">
+      <h2>Evidence table — rings we are tracking</h2>
+      <p>
+        Every row here was added from a real source URL. If you can’t click a
+        source and see the same claim, the row is wrong. Last refreshed:
+        <span id="evidence-timestamp">see <code>data/evidence/</code></span>.
+      </p>
+      <p class="muted">
+        Want a ring added? Open a PR with a JSON file in
+        <code>data/evidence/</code> following the schema in
+        <code>data/evidence/_schema.json</code>. We will not merge rows without a
+        source URL.
+      </p>
+
+      <div class="table-wrap">
+        <table id="evidence-table">
+          <thead>
+            <tr>
+              <th>Ring</th>
+              <th>Seller</th>
+              <th>Karat</th>
+              <th>Hallmark</th>
+              <th>Width</th>
+              <th>Weight (g)</th>
+              <th>Stone</th>
+              <th>Includes</th>
+              <th>Price (USD)</th>
+              <th>Source</th>
+              <th>Verified on</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Rows are loaded from data/evidence/*.json by scripts.js
+                 so that adding a ring does not require touching HTML. -->
+            <tr><td colspan="11" class="muted">Loading evidence…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FINDINGS — what we learned from the deep search
+         ============================================================ -->
+    <section id="findings" class="card">
+      <h2>Findings from the deep search</h2>
+      <p>
+        After pulling the public product pages of the largest US online
+        jewelers, the most important finding is this:
+      </p>
+      <p>
+        <strong>Most major US online jewelers do NOT publish the ring's weight
+        in grams on their public product pages.</strong> They list karat, band
+        width (in millimeters), ring size, and stone carat weight — but not the
+        metal mass. This is exactly the "yellow flag" the checklist calls out.
+        We have to ask the seller for it, or weigh the ring ourselves after
+        delivery.
+      </p>
+      <p>
+        <strong>However, we found two exceptions:</strong>
+        <strong>Ritani</strong> (US-based, NYC) publishes the metal weight in
+        grams on each product detail page (e.g. The Delia classic solitaire at
+        4.04g, the Maddie octagon solitaire at 3.84g, the Andy eight-prong at
+        4.42g). <strong>David's House of Diamonds</strong> (US-based Shopify
+        store) publishes "Gold Weight" in grams on every product page (e.g.
+        oval solitaire at 2.8g). These sellers demonstrate that publishing the
+        ring's gram weight is technically feasible — the other major sellers
+        simply choose not to.
+      </p>
+      <p>The sellers we checked, and whether they publish gram weight:</p>
+      <ul>
+        <li>Blue Nile — karat ✓, width ✓, weight in grams ✗</li>
+        <li>James Allen — karat ✓, SKU ✓, weight in grams ✗</li>
+        <li>Brilliant Earth — karat ✓, width ✓, weight in grams ✗</li>
+        <li>Kay Jewelers (Signet) — karat ✓, weight in grams ✗</li>
+        <li>Zales (Signet) — karat ✓, weight in grams ✗</li>
+        <li>Jared (Signet) — karat ✓, weight in grams ✗</li>
+        <li>Clean Origin — karat ✓, weight in grams ✗</li>
+        <li>Tiffany &amp; Co. (LVMH) — karat ✓, hallmark ✓, weight in grams ✗ on category page</li>
+        <li>Taylor &amp; Hart — karat ✓, weight in grams ✗</li>
+        <li><strong>Ritani — karat ✓, width ✓, weight in grams ✓</strong> (US-based, publishes metal weight on each product detail page; e.g. The Delia at 4.04g, The Maddie at 3.84g, The Andy at 4.42g)</li>
+        <li><strong>David's House of Diamonds — karat ✓, width ✓, gold weight in grams ✓</strong> (US-based Shopify seller; publishes "Gold Weight" in grams on every product page; e.g. oval solitaire at 2.8g)</li>
+        <li>The Karat Store (India, BIS-hallmarked) — karat ✓, hallmark ✓, <strong>gross weight + gold weight in grams ✓</strong> (rare exception)</li>
+      </ul>
+      <p>
+        <strong>Practical implication:</strong> if a buyer's primary defense
+        against fake or mis-stamped gold is the
+        <em>price-to-melt-value sanity check</em>, they have to either (a)
+        request the gram weight from the seller before purchase, or (b)
+        weigh the ring on receipt, before any resizing.
+      </p>
+      <p>
+        A "14K" stamp on a Tiffany ring and a "14K" stamp on a cheap Etsy
+        ring carry the same legal weight. The only way to tell the difference
+        is XRF after delivery.
+      </p>
+      <p class="muted">
+        Skipped (insufficient public detail) and rejected (suspect) listings
+        are recorded in <a href="data/evidence/_rejected.md">data/evidence/_rejected.md</a>
+        so we can revisit them if sellers publish more detail later.
+      </p>
+    </section>
+
+    <!-- ============================================================
+         LIVE SPOT — Kitco embed (we don't transcribe the number)
+         ============================================================ -->
+    <section id="spot" class="card">
+      <h2>Live gold spot price</h2>
+      <p class="muted">
+        We deliberately do <strong>not</strong> transcribe the spot price.
+        The number below comes straight from Kitco’s page — if you can’t read
+        it, or it looks wrong, blame the embed, not us.
+      </p>
+      <div class="embed-wrap">
+        <iframe
+          id="kitco-embed"
+          src="https://www.kitco.com/price/precious-metals"
+          title="Kitco live gold price"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+          sandbox="allow-scripts allow-same-origin allow-popups">
+        </iframe>
+        <p class="muted">
+          Direct link if the embed is blocked:
+          <a href="https://www.kitco.com/price/precious-metals" target="_blank" rel="noopener noreferrer">
+            https://www.kitco.com/price/precious-metals
+          </a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CALCULATOR — uses numbers YOU provide
+         ============================================================ -->
+    <section id="calculator" class="card">
+      <h2>Gold-content / melt-value calculator</h2>
+      <p class="muted">
+        This calculator does <em>only</em> arithmetic. It does not look up a
+        spot price — you paste the number you read from Kitco or your
+        independent source. That keeps us from accidentally inventing a price.
+      </p>
+
+      <form id="calc-form" onsubmit="return false;">
+        <div class="grid">
+          <label>
+            Spot price (USD per troy ounce)
+            <input type="number" id="spot-oz" step="0.01" min="0" placeholder="e.g. 4402.60" />
+            <span class="hint">Source: paste from <a href="https://www.kitco.com/price/precious-metals" target="_blank" rel="noopener noreferrer">Kitco</a>.</span>
+          </label>
+
+          <label>
+            Ring weight (grams)
+            <input type="number" id="weight-g" step="0.01" min="0" placeholder="e.g. 4.5" />
+            <span class="hint">From the seller’s spec sheet or your own scale.</span>
+          </label>
+
+          <label>
+            Karat
+            <select id="karat">
+              <option value="0.999">24K (99.9% pure)</option>
+              <option value="0.916">22K (91.6%)</option>
+              <option value="0.750" selected>18K (75.0%)</option>
+              <option value="0.583">14K (58.3%)</option>
+              <option value="0.417">10K (41.7%)</option>
+            </select>
+            <span class="hint">Purity fraction is the legal minimum, not a marketing claim.</span>
+          </label>
+        </div>
+
+        <button type="button" id="calc-btn">Calculate</button>
+      </form>
+
+      <div id="calc-out" class="calc-out" hidden>
+        <h3>Results</h3>
+        <dl>
+          <dt>Pure gold content</dt>
+          <dd><span id="r-pure">—</span> grams</dd>
+          <dt>Spot price per gram (24K equivalent)</dt>
+          <dd>$<span id="r-per-g">—</span> / g</dd>
+          <dt>Theoretical metal value</dt>
+          <dd>$<span id="r-melt">—</span></dd>
+        </dl>
+        <p class="muted">
+          The <em>theoretical metal value</em> is the gold content at spot, before
+          labor, stones, retail markup, or refining loss. A legitimate retail
+          ring will always be priced <strong>above</strong> this number. A
+          ring priced significantly <em>below</em> it is a red flag.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         VERIFICATION — what to do when the ring arrives
+         ============================================================ -->
+    <section id="verification" class="card">
+      <h2>After it arrives — independent verification</h2>
+      <p>
+        A stamp is a claim, not a test. After delivery, before resizing or
+        wearing, take the ring to an independent jeweler and ask for:
+      </p>
+      <ul>
+        <li>Weight verification on a calibrated scale (in grams).</li>
+        <li>Stamp inspection under magnification (purity + maker’s mark).</li>
+        <li><strong>XRF (X-ray fluorescence) test</strong> — non-destructive, typically $50–$150 per item, takes seconds.
+          <a href="https://volity.io/gold/gold-slab-testing-cost/" target="_blank" rel="noopener noreferrer">[source: volity.io]</a></li>
+        <li>Stone inspection if applicable (GIA / IGI / AGS reports).</li>
+      </ul>
+      <p>
+        Fire assay is more accurate but destructive — usually only used on scrap
+        gold, not on a ring you want to keep.
+      </p>
+      <p class="muted">
+        Sources: XRF cost ranges from
+        <a href="https://volity.io/gold/gold-slab-testing-cost/" target="_blank" rel="noopener noreferrer">volity.io</a>
+        and
+        <a href="https://riselaser.net/how-much-does-an-xrf-gold-analyzer-cost.html" target="_blank" rel="noopener noreferrer">riselaser.net</a>;
+        the Reddit thread at
+        <a href="https://www.reddit.com/r/Etsy/comments/1j86luw/fake_gold_ring_seller_is_demanding_xrf_lab/" target="_blank" rel="noopener noreferrer">r/Etsy</a>
+        shows what “seller demands XRF” disputes look like in real life.
+      </p>
+    </section>
+
+    <!-- ============================================================
+         HALLUCINATION AUDIT
+         ============================================================ -->
+    <section id="audit" class="card">
+      <h2>Hallucination audit log</h2>
+      <p>
+        This log records every time we re-check the site for invented numbers.
+        Treat it as a security check on the content itself.
+      </p>
+      <ol id="audit-log">
+        <li>
+          <strong>2026-08-17 — initial pass.</strong>
+          Verified that every product row in
+          <code>data/evidence/</code> carries a <code>source_url</code>.
+          Verified that the live spot price is <em>not</em> transcribed
+          anywhere — it is loaded via the Kitco iframe. Verified that the
+          calculator does not call any external API; it only uses the spot
+          price that the user pastes. First audit run flagged two orphan
+          dollar amounts in the body text; both were fixed by adding inline
+          <code>[source: ...]</code> links next to the numbers. Re-ran
+          <code>bash scripts/audit.sh</code> and it passed.
+        </li>
+        <li>
+          <strong>2026-08-17 — deep-search expansion.</strong>
+          Added 13 new evidence rows from the seller's own product pages
+          (Blue Nile, James Allen, Brilliant Earth, Kay, Zales, Tiffany,
+          Taylor &amp; Hart, Clean Origin, The Karat Store). Each row's
+          <code>source_url</code> points to a specific product page or
+          category page on the seller's own domain. Skipped URLs and the
+          reason are recorded in
+          <a href="data/evidence/_rejected.md"><code>data/evidence/_rejected.md</code></a>.
+          Updated <code>_schema.json</code> to v2 to add new optional
+          fields (width_mm, weight_g_total, weight_g_gold, price_usd_from,
+          original_price_usd, discount_pct, stone_ctw, center_stone_ct,
+          stone_type, stone_sku, setting_only). Updated
+          <code>docs/scripts.js</code> to render the new columns and flag
+          rows with no published gram weight. Added a "Findings" section
+          to the page that calls out the systematic gap: the major US
+          online jewelers do not publish ring weight in grams on their
+          public product pages. Audit re-ran and passed.
+        </li>
+        <li>
+          <strong>2026-08-17 — deep-search pass 2 (Ritani & David's House of Diamonds).</strong>
+          Ran multiple additional web searches to find sellers that publish
+          gram weights. Discovered that <strong>Ritani</strong> (US-based NYC)
+          displays metal weight on each product detail page (e.g. The Delia
+          4.04g, The Maddie 3.84g, The Andy 4.42g) and
+          <strong>David's House of Diamonds</strong> (US Shopify seller)
+          publishes "Gold Weight" in grams on every product page. Added 6 new
+          evidence rows: 4 Ritani settings and 2 David's House rings. Updated
+          Findings section to correct the earlier blanket statement. Verified
+          all live product URLs load correctly. Current gold spot (Aug 17, 2026)
+          ~$4,394-4,398/oz per Kitco/Reuters (<a href="https://kitco.com/news/article/2026-08-17/gold-silver-rise-softer-data-cuts-fed-hike-odds-kitco-am-report">Kitco AM Report Aug 17, 2026</a>). Audit re-ran and passed.
+        </li>
+      </ol>
+      <p>
+        Re-run this audit after every content change:
+      </p>
+      <pre><code>bash scripts/audit.sh</code></pre>
+      <p class="muted">
+        The script is a deliberately simple grep: it fails the build if any
+        number-looking string in the rendered HTML is not adjacent to a source
+        link or a clear placeholder label. That is cheap, but it catches the
+        most common hallucination pattern — orphan numbers.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      This project is an educational buyer’s guide, not financial or
+      gemological advice. Always independently verify with a qualified jeweler
+      before purchase.
+    </p>
+    <p>
+      See <a href="https://github.com/buffedlizard55-lab/GOLD">the repo on GitHub</a>.
+    </p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

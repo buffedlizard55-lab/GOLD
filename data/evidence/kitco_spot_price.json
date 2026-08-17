@@ -1,0 +1,12 @@
+{
+  "ring": "LIVE — gold spot price reference",
+  "seller": "Kitco (price feed)",
+  "karat": "24K reference",
+  "hallmark": "n/a",
+  "weight_g": null,
+  "price_usd": null,
+  "note": "We do NOT transcribe the spot price. Click the Source link and read the live number on Kitco's own page at the moment you need it. Mid-August 2026 spot has been around $4,330–$4,400/oz per multiple Kitco/Reuters headlines, but the number moves every minute — do not trust any cached value.",
+  "source_url": "https://www.kitco.com/price/precious-metals",
+  "source_label": "Kitco — Precious Metals spot (live)",
+  "verified_on": "2026-08-17"
+}
