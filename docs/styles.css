@@ -1,0 +1,184 @@
+:root {
+  --bg: #0f1115;
+  --card: #181c22;
+  --text: #e6e8eb;
+  --muted: #9aa3ad;
+  --accent: #d4af37;       /* gold accent — appropriate, not a price */
+  --accent-2: #b88a1f;
+  --danger: #d9534f;
+  --ok: #3a9b6c;
+  --border: #2a2f37;
+  --link: #6aa9ff;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+               Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.55;
+}
+
+a { color: var(--link); }
+a:hover { text-decoration: underline; }
+
+code, pre {
+  font-family: "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  background: #11151a;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+code { padding: 1px 5px; }
+pre  { padding: 12px 14px; overflow-x: auto; }
+
+/* ---------- top banner ---------- */
+.banner {
+  background: #3a1f1f;
+  color: #ffd9d9;
+  border-bottom: 2px solid var(--danger);
+  padding: 10px 18px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+.banner em { color: #fff; font-style: normal; text-decoration: underline; }
+
+/* ---------- header ---------- */
+.site-header {
+  padding: 28px 24px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+.site-header h1 {
+  margin: 0 0 6px;
+  font-size: 1.9rem;
+  letter-spacing: 0.2px;
+  color: var(--accent);
+}
+.subtitle { margin: 0 0 14px; color: var(--muted); }
+.topnav a {
+  display: inline-block;
+  margin: 0 8px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+.topnav a:hover { border-color: var(--accent); color: var(--accent); }
+
+main { max-width: 980px; margin: 0 auto; padding: 16px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin: 18px 0;
+}
+.card h2 {
+  margin-top: 0;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+}
+.muted { color: var(--muted); font-size: 0.92rem; }
+
+/* ---------- checklist ---------- */
+.checklist { padding-left: 1.2em; }
+.checklist li { margin: 8px 0; }
+.checklist li::marker { color: var(--accent); }
+
+/* ---------- evidence table ---------- */
+.table-wrap { overflow-x: auto; }
+table#evidence-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+table#evidence-table th, table#evidence-table td {
+  border: 1px solid var(--border);
+  padding: 8px 10px;
+  vertical-align: top;
+  text-align: left;
+}
+table#evidence-table thead th {
+  background: #11151a;
+  color: var(--accent);
+}
+table#evidence-table tbody tr:nth-child(even) { background: #14181e; }
+table#evidence-table a { word-break: break-all; }
+
+/* ---------- kitco embed ---------- */
+.embed-wrap iframe {
+  width: 100%;
+  height: 520px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+}
+
+/* ---------- calculator ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.grid label {
+  display: block;
+  font-size: 0.9rem;
+}
+.grid input, .grid select {
+  width: 100%;
+  padding: 7px 9px;
+  margin-top: 4px;
+  background: #11151a;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+.grid .hint {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+#calc-btn {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: var(--accent);
+  color: #1a1408;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+#calc-btn:hover { background: var(--accent-2); color: #fff; }
+
+.calc-out {
+  margin-top: 16px;
+  background: #11151a;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 16px;
+}
+.calc-out dt { color: var(--muted); margin-top: 8px; }
+.calc-out dd { margin: 2px 0 0; font-weight: 600; color: var(--accent); }
+
+/* ---------- audit log ---------- */
+#audit-log li { margin: 8px 0; }
+
+/* ---------- footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 20px 16px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}

@@ -1,0 +1,29 @@
+{
+  "$comment": "Schema for rows in the evidence table. Every ring entry MUST have a source_url. The audit script will fail if a ring row has no source_url.",
+  "schema_version": 1,
+  "required_fields": [
+    "ring",
+    "seller",
+    "karat",
+    "hallmark",
+    "source_url"
+  ],
+  "optional_fields": [
+    "weight_g",
+    "price_usd",
+    "verified_on",
+    "source_label",
+    "note"
+  ],
+  "example": {
+    "ring": "Example solitaire",
+    "seller": "Example Seller",
+    "karat": "14K",
+    "hallmark": "14K (C) EX",
+    "weight_g": 4.5,
+    "price_usd": 1495.00,
+    "source_url": "https://example.com/listing",
+    "source_label": "Product listing (cached 2026-08-17)",
+    "verified_on": "2026-08-17"
+  }
+}
