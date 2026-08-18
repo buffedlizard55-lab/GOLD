@@ -3,138 +3,127 @@
    spot price themselves. That's the no-hallucination contract. */
 
 const EVIDENCE_FILES = [
-  // --- reference: live price feed (NOT a product) ---
-  "data/evidence/kitco_spot_price.json",
+  // --- Investment Grade (24K) ---
+  { path: "data/evidence/mene_narrow_band_24k.json", category: "Investment (24K)" },
+  { path: "data/evidence/7879_wide_ring_24k.json", category: "Investment (24K)" },
+  { path: "data/evidence/7879_signet_ring_24k.json", category: "Investment (24K)" },
 
-  // --- Blue Nile (US, Signet-adjacent; part of the same parent group that owns James Allen's brand until 2024) ---
-  "data/evidence/blue_nile_18k_yellow_gold_classic_solitaire.json",
-  "data/evidence/blue_nile_petite_solitaire_14k_yellow.json",
-  "data/evidence/blue_nile_classic_comfort_fit_solitaire_14k_yellow.json",
+  // --- High Transparency (Weight Published) ---
+  { path: "data/evidence/ritani_delia_14k_white_solitaire.json", category: "High Transparency" },
+  { path: "data/evidence/ritani_andy_14k_white_eight_prong.json", category: "High Transparency" },
+  { path: "data/evidence/ritani_maddie_14k_white_octagon.json", category: "High Transparency" },
+  { path: "data/evidence/ritani_geneva_14k_yellow_solitaire.json", category: "High Transparency" },
+  { path: "data/evidence/davids_house_oval_solitaire_14k.json", category: "High Transparency" },
+  { path: "data/evidence/davids_house_round_halo_14k.json", category: "High Transparency" },
+  { path: "data/evidence/oradina_anchor_14k.json", category: "High Transparency" },
+  { path: "data/evidence/oradina_west_side_14k.json", category: "High Transparency" },
+  { path: "data/evidence/moriarty_14k_solitaire.json", category: "High Transparency" },
+  { path: "data/evidence/devata_solitaire_14k.json", category: "High Transparency" },
+  { path: "data/evidence/the_karat_store_modulation_14k_yellow.json", category: "High Transparency" },
 
-  // --- James Allen ---
-  "data/evidence/james_allen_14k_rose_gold_solitaire.json",
-  "data/evidence/james_allen_petite_solitaire_14k_yellow.json",
-  "data/evidence/james_allen_etched_profile_solitaire_14k_yellow.json",
-  "data/evidence/james_allen_presentation_solitaire_14k_yellow.json",
+  // --- Benchmarks ---
+  { path: "data/evidence/pompeii3_solitaire_benchmark.json", category: "Benchmark" },
+  { path: "data/evidence/midwest_jewellery_benchmark.json", category: "Benchmark" },
 
-  // --- Brilliant Earth ---
-  "data/evidence/brilliant_earth_14k_yellow_gold_amie_diamond.json",
-  "data/evidence/brilliant_earth_petite_elodie_14k_yellow.json",
-  "data/evidence/brilliant_earth_atelier_solitaire_14k_yellow.json",
-
-  // --- Signet-owned US chain stores (Kay, Zales) ---
-  "data/evidence/kay_solitaire_1_4ct_14k_white.json",
-  "data/evidence/kay_solitaire_1_2ct_14k_white.json",
-  "data/evidence/zales_1ct_engagement_ring_14k_yellow.json",
-
-  // --- Tiffany & Co. (LVMH) ---
-  "data/evidence/tiffany_setting_18k_yellow.json",
-  "data/evidence/tiffany_knot_18k_yellow.json",
-
-  // --- Taylor & Hart (UK-founded, US ops) ---
-  "data/evidence/taylorandhart_demure_solitaire_18k_yellow.json",
-
-  // --- Clean Origin (US, lab-grown) ---
-  "data/evidence/clean_origin_evangeline_14k_rose.json",
-  "data/evidence/clean_origin_infinity_14k_white.json",
-
-  // --- The Karat Store (India, BIS-hallmarked; one of the few that publishes weight) ---
-  "data/evidence/the_karat_store_modulation_14k_yellow.json",
-
-  // --- Ritani (US, publishes metal weight in grams on product detail pages) ---
-  "data/evidence/ritani_geneva_14k_yellow_solitaire.json",
-  "data/evidence/ritani_delia_14k_white_solitaire.json",
-  "data/evidence/ritani_maddie_14k_white_octagon.json",
-  "data/evidence/ritani_andy_14k_white_eight_prong.json",
-
-  // --- David's House of Diamonds (US, publishes gold weight in grams on all products) ---
-  "data/evidence/davids_house_oval_solitaire_14k.json",
-  "data/evidence/davids_house_round_halo_14k.json"
+  // --- Standard Retail (Weight Not Listed) ---
+  { path: "data/evidence/blue_nile_18k_yellow_gold_classic_solitaire.json", category: "Standard Retail" },
+  { path: "data/evidence/blue_nile_petite_solitaire_14k_yellow.json", category: "Standard Retail" },
+  { path: "data/evidence/blue_nile_classic_comfort_fit_solitaire_14k_yellow.json", category: "Standard Retail" },
+  { path: "data/evidence/james_allen_14k_rose_gold_solitaire.json", category: "Standard Retail" },
+  { path: "data/evidence/james_allen_petite_solitaire_14k_yellow.json", category: "Standard Retail" },
+  { path: "data/evidence/james_allen_etched_profile_solitaire_14k_yellow.json", category: "Standard Retail" },
+  { path: "data/evidence/james_allen_presentation_solitaire_14k_yellow.json", category: "Standard Retail" },
+  { path: "data/evidence/brilliant_earth_14k_yellow_gold_amie_diamond.json", category: "Standard Retail" },
+  { path: "data/evidence/brilliant_earth_petite_elodie_14k_yellow.json", category: "Standard Retail" },
+  { path: "data/evidence/brilliant_earth_atelier_solitaire_14k_yellow.json", category: "Standard Retail" },
+  { path: "data/evidence/kay_solitaire_1_4ct_14k_white.json", category: "Standard Retail" },
+  { path: "data/evidence/kay_solitaire_1_2ct_14k_white.json", category: "Standard Retail" },
+  { path: "data/evidence/zales_1ct_engagement_ring_14k_yellow.json", category: "Standard Retail" },
+  { path: "data/evidence/tiffany_setting_18k_yellow.json", category: "Standard Retail" },
+  { path: "data/evidence/tiffany_knot_18k_yellow.json", category: "Standard Retail" },
+  { path: "data/evidence/taylorandhart_demure_solitaire_18k_yellow.json", category: "Standard Retail" },
+  { path: "data/evidence/clean_origin_evangeline_14k_rose.json", category: "Standard Retail" },
+  { path: "data/evidence/clean_origin_infinity_14k_white.json", category: "Standard Retail" },
+  { path: "data/evidence/quince_bezel_14k.json", category: "Standard Retail" }
 ];
 
-// ---------- Evidence table ----------
 async function loadEvidence() {
   const tbody = document.querySelector("#evidence-table tbody");
   tbody.innerHTML = "";
 
-  for (const path of EVIDENCE_FILES) {
+  for (const entry of EVIDENCE_FILES) {
     try {
-      const res = await fetch(path, { cache: "no-store" });
-      if (!res.ok) {
-        throw new Error("HTTP " + res.status);
-      }
+      const res = await fetch(entry.path, { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
       const item = await res.json();
-      tbody.appendChild(renderRow(item));
+      tbody.appendChild(renderRow(item, entry.category));
     } catch (err) {
       const tr = document.createElement("tr");
       const td = document.createElement("td");
-      td.colSpan = 11;
+      td.colSpan = 12;
       td.className = "muted";
-      td.textContent = "Could not load " + path + " (" + err.message + ")";
+      td.textContent = "Could not load " + entry.path + " (" + err.message + ")";
       tr.appendChild(td);
       tbody.appendChild(tr);
     }
   }
 }
 
-function renderRow(item) {
+function renderRow(item, category) {
   const tr = document.createElement("tr");
+  tr.setAttribute("data-category", category);
 
-  // Weight — handle both weight_g and the (gross, gold) split.
+  // Weight
+  let weightValue = null;
   let weightCell;
   if (item.weight_g != null) {
+    weightValue = item.weight_g;
     weightCell = String(item.weight_g) + " g";
   } else if (item.weight_g_total != null) {
+    weightValue = item.weight_g_gold || item.weight_g_total;
     const gold = item.weight_g_gold != null ? " (gold " + item.weight_g_gold + " g)" : "";
     weightCell = String(item.weight_g_total) + " g" + gold;
   } else {
     weightCell = "⚠️ not listed";
   }
 
-  // Price — handle single value, range, setting-only, sale, etc.
-  let priceCell;
+  // Karat Fraction
+  const karatMap = { "24K": 0.999, "22K": 0.916, "18K": 0.750, "14K": 0.583, "10K": 0.417 };
+  const purity = karatMap[item.karat] || 0.583;
+
+  // Price
+  let priceValue = item.price_usd || item.price_usd_from;
+  let priceCell = "—";
   if (item.price_usd != null) {
-    let s = "$" + Number(item.price_usd).toLocaleString();
+    priceCell = "$" + Number(item.price_usd).toLocaleString();
     if (item.original_price_usd != null && item.original_price_usd > item.price_usd) {
-      s += " (was $" + Number(item.original_price_usd).toLocaleString();
-      if (item.discount_pct) s += ", -" + item.discount_pct + "%";
-      s += ")";
+      priceCell += " (was $" + Number(item.original_price_usd).toLocaleString() + ")";
     }
-    if (item.setting_only) s += " [setting only]";
-    priceCell = s;
   } else if (item.price_usd_from != null) {
-    priceCell = "from $" + Number(item.price_usd_from).toLocaleString() +
-                (item.setting_only ? " [setting only]" : "");
-  } else {
-    priceCell = "—";
+    priceCell = "from $" + Number(item.price_usd_from).toLocaleString();
   }
 
-  // Stone — abbreviated so the column doesn't blow up the table.
-  let stone = "—";
-  if (item.stone_ctw != null) stone = item.stone_ctw + " ctw";
-  else if (item.stone_carats != null) stone = item.stone_carats + " ct";
-  else if (item.stone_range_ctw) stone = item.stone_range_ctw + " ctw";
-  if (item.stone_type) stone += " " + item.stone_type.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
-
-  // Width
-  const width = item.width_mm != null ? item.width_mm + " mm" : "—";
-
-  // Setting-only flag
-  const setting = item.setting_only ? "setting only" : (item.stone_ctw || item.stone_carats ? "with stones" : "—");
+  // Price per Gold Gram (Value Score)
+  let valueScoreCell = "—";
+  if (priceValue && weightValue) {
+    const pureGoldG = weightValue * purity;
+    const pricePerG = priceValue / pureGoldG;
+    valueScoreCell = "$" + pricePerG.toFixed(2) + " /g";
+  }
 
   const cells = [
+    category,
     item.ring || "—",
     item.seller || "—",
     item.karat || "—",
-    item.hallmark || "—",
-    width,
     weightCell,
-    stone,
-    setting,
+    valueScoreCell,
     priceCell,
+    item.setting_only ? "Setting Only" : "Includes Stones",
     renderSource(item.source_url, item.source_label),
     item.verified_on || "—"
   ];
+
   cells.forEach(v => {
     const td = document.createElement("td");
     if (v instanceof Node) td.appendChild(v);
@@ -145,18 +134,32 @@ function renderRow(item) {
 }
 
 function renderSource(url, label) {
-  if (!url) {
-    const span = document.createElement("span");
-    span.className = "muted";
-    span.textContent = "—";
-    return span;
-  }
+  if (!url) return document.createTextNode("—");
   const a = document.createElement("a");
   a.href = url;
   a.target = "_blank";
   a.rel = "noopener noreferrer";
-  a.textContent = label || url;
+  a.textContent = label || "Source";
   return a;
+}
+
+function populateFileList() {
+  const list = document.getElementById("file-list");
+  if (!list) return;
+  list.innerHTML = "";
+  const repoUrl = "https://github.com/buffedlizard55-lab/GOLD/blob/main/data/evidence/";
+  EVIDENCE_FILES.forEach(entry => {
+    const filename = entry.path.split("/").pop();
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = repoUrl + filename;
+    a.target = "_blank";
+    const code = document.createElement("code");
+    code.textContent = filename;
+    a.appendChild(code);
+    li.appendChild(a);
+    list.appendChild(li);
+  });
 }
 
 // ---------- Calculator ----------
@@ -164,20 +167,16 @@ function runCalc() {
   const spotOz = parseFloat(document.getElementById("spot-oz").value);
   const weightG = parseFloat(document.getElementById("weight-g").value);
   const purity  = parseFloat(document.getElementById("karat").value);
-
   const out = document.getElementById("calc-out");
   if (!isFinite(spotOz) || !isFinite(weightG) || !isFinite(purity)) {
     out.hidden = false;
     out.innerHTML = "<p class='muted'>Please enter all three values.</p>";
     return;
   }
-
-  // 1 troy oz = 31.1034768 grams (the standard the spot price is quoted in)
   const TROY_OZ_TO_G = 31.1034768;
   const spotPerG24K = spotOz / TROY_OZ_TO_G;
   const pureGoldG   = weightG * purity;
   const metalValue  = pureGoldG * spotPerG24K;
-
   document.getElementById("r-pure").textContent  = pureGoldG.toFixed(3);
   document.getElementById("r-per-g").textContent = spotPerG24K.toFixed(2);
   document.getElementById("r-melt").textContent  = metalValue.toFixed(2);
@@ -186,6 +185,7 @@ function runCalc() {
 
 document.addEventListener("DOMContentLoaded", () => {
   loadEvidence();
+  populateFileList();
   const btn = document.getElementById("calc-btn");
   if (btn) btn.addEventListener("click", runCalc);
 });
