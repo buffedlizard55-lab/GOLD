@@ -1,6 +1,6 @@
 {
-  "$comment": "Schema for rows in the evidence table. Every ring entry MUST have a source_url. The audit script will fail if a ring row has no source_url.",
-  "schema_version": 1,
+  "$comment": "Schema for rows in the evidence table. Every ring entry MUST have a source_url. The audit script will fail if a ring row has no source_url. New fields added in v2: width_mm, weight_g_total, weight_g_gold, stone_carats_white, stone_carats_yellow, stone_carats, stone_ctw, center_stone_ct, stone_range_ctw, stone_type, stone_sku, original_price_usd, discount_pct, price_usd_from, price_usd_to, setting_only.",
+  "schema_version": 2,
   "required_fields": [
     "ring",
     "seller",
@@ -10,7 +10,23 @@
   ],
   "optional_fields": [
     "weight_g",
+    "weight_g_total",
+    "weight_g_gold",
+    "width_mm",
     "price_usd",
+    "price_usd_from",
+    "price_usd_to",
+    "original_price_usd",
+    "discount_pct",
+    "setting_only",
+    "stone_carats",
+    "stone_ctw",
+    "center_stone_ct",
+    "stone_range_ctw",
+    "stone_type",
+    "stone_carats_white",
+    "stone_carats_yellow",
+    "stone_sku",
     "verified_on",
     "source_label",
     "note"
@@ -19,11 +35,20 @@
     "ring": "Example solitaire",
     "seller": "Example Seller",
     "karat": "14K",
-    "hallmark": "14K (C) EX",
+    "hallmark": "14K + maker's mark",
     "weight_g": 4.5,
+    "width_mm": 2.0,
     "price_usd": 1495.00,
+    "setting_only": false,
     "source_url": "https://example.com/listing",
     "source_label": "Product listing (cached 2026-08-17)",
-    "verified_on": "2026-08-17"
+    "verified_on": "2026-08-17",
+    "note": "Free-form notes for the buyer."
+  },
+  "rules": {
+    "no_hallucination": "If you did not read a number on the source page, leave the field null or omit it. Do not estimate.",
+    "weight_g": "Use weight_g when the seller reports the whole-ring weight. Use weight_g_total + weight_g_gold if the seller reports both (e.g. The Karat Store).",
+    "price_usd": "Use price_usd for a single listed price. Use price_usd_from if the price varies (e.g. Tiffany 'starting from' pricing).",
+    "setting_only": "Set to true if the price is for the setting only and the center stone is sold separately."
   }
 }
