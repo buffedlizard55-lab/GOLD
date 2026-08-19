@@ -17,6 +17,21 @@ const EVIDENCE_FILES = [
   { path: "data/evidence/7879_stacker_ring_24k.json", category: "Investment (24K)" },
 
   // --- High Transparency (Weight Published) ---
+  { path: "data/evidence/automic_gold_curvy_bee_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_gothic_initial_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_bee_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_mix_raw_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_bezel_gemstone_bar_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_curvy_mirror_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_curvy_matte_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_industrial_hammered_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_diamond_chevron_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_chevron_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_opal_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_gemstone_bar_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_bar_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_mix_stardust_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_curvy_hammered_band_14k.json", category: "High Transparency" },
   { path: "data/evidence/automic_gold_diamond_cluster_ring_14k.json", category: "High Transparency" },
   { path: "data/evidence/automic_gold_filigree_band_14k.json", category: "High Transparency" },
   { path: "data/evidence/automic_gold_chevron_filigree_band_14k.json", category: "High Transparency" },
@@ -188,6 +203,11 @@ const EVIDENCE_FILES = [
   { path: "data/evidence/helzberg_wedding_band_14k_rose_2mm.json", category: "Standard Retail" },
   { path: "data/evidence/helzberg_wedding_band_14k_white_5mm.json", category: "Standard Retail" },
   { path: "data/evidence/kay_mens_wedding_band_14k_yellow_3mm.json", category: "Standard Retail" },
+  { path: "data/evidence/helzberg_wedding_band_14k_rose_6_5mm.json", category: "Standard Retail" },
+  { path: "data/evidence/ritani_juno_14k_white_knife_edge.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_open_diamond_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/ferkos_double_bezel_open_diamond_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/ferkos_starburst_band_14k.json", category: "Standard Retail" },
 ];
 
 async function loadEvidence() {
