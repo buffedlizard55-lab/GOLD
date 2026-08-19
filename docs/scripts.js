@@ -17,6 +17,19 @@ const EVIDENCE_FILES = [
   { path: "data/evidence/7879_stacker_ring_24k.json", category: "Investment (24K)" },
 
   // --- High Transparency (Weight Published) ---
+  { path: "data/evidence/automic_gold_tiger_eye_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_sakura_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_claddagh_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_gemstone_claddagh_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_claddagh_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_transformation_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_smoky_quartz_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_engraved_star_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_baguette_rect_signet_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_cloud_diamond_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_pine_bird_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_oval_signet_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_milgrain_diamond_band_14k.json", category: "High Transparency" },
   { path: "data/evidence/automic_gold_open_curvy_band_14k.json", category: "High Transparency" },
   { path: "data/evidence/automic_gold_branch_band_14k.json", category: "High Transparency" },
   { path: "data/evidence/automic_gold_crashing_waves_band_14k.json", category: "High Transparency" },
@@ -228,6 +241,13 @@ const EVIDENCE_FILES = [
   { path: "data/evidence/ferkos_marquise_emerald_wedding_band_14k.json", category: "Standard Retail" },
   { path: "data/evidence/ritani_hera_14k_white_petal_head.json", category: "Standard Retail" },
   { path: "data/evidence/ritani_geneva_14k_white_four_prong.json", category: "Standard Retail" },
+  { path: "data/evidence/automic_gold_gemstone_branch_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/ferkos_emerald_diamond_eternity_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/ferkos_infinity_diamond_eternity_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/ferkos_clover_ruby_diamond_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/ferkos_pear_emerald_diamond_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/ferkos_pear_ruby_diamond_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/ferkos_pear_ruby_ring_diamonds_14k.json", category: "Standard Retail" },
 ];
 
 async function loadEvidence() {
