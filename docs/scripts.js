@@ -17,6 +17,20 @@ const EVIDENCE_FILES = [
   { path: "data/evidence/7879_stacker_ring_24k.json", category: "Investment (24K)" },
 
   // --- High Transparency (Weight Published) ---
+  { path: "data/evidence/automic_gold_diamond_cluster_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_filigree_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_chevron_filigree_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_rope_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_double_leaves_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_gemstone_industrial_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_rainbow_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_mini_miami_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_zig_zag_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_figaro_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_thick_cable_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_cable_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_curb_ring_14k.json", category: "High Transparency" },
+  { path: "data/evidence/ritani_agnes_14k_white_knife_edge.json", category: "High Transparency" },
   { path: "data/evidence/automic_gold_open_filigree_chevron_14k.json", category: "High Transparency" },
   { path: "data/evidence/automic_gold_hexagon_diamond_band_14k.json", category: "High Transparency" },
   { path: "data/evidence/automic_gold_mix_organic_band_14k.json", category: "High Transparency" },
@@ -168,6 +182,12 @@ const EVIDENCE_FILES = [
   { path: "data/evidence/ritani_maude_14k_white_classic_solitaire.json", category: "Standard Retail" },
   { path: "data/evidence/ritani_lia_14k_white_six_prong_petal.json", category: "Standard Retail" },
   { path: "data/evidence/ritani_vera_14k_white_solitaire.json", category: "Standard Retail" },
+  { path: "data/evidence/automic_gold_industrial_mirror_band_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/helzberg_wedding_band_14k_yellow_6_5mm.json", category: "Standard Retail" },
+  { path: "data/evidence/helzberg_mens_bevel_edge_satin_14k_yellow_8mm.json", category: "Standard Retail" },
+  { path: "data/evidence/helzberg_wedding_band_14k_rose_2mm.json", category: "Standard Retail" },
+  { path: "data/evidence/helzberg_wedding_band_14k_white_5mm.json", category: "Standard Retail" },
+  { path: "data/evidence/kay_mens_wedding_band_14k_yellow_3mm.json", category: "Standard Retail" },
 ];
 
 async function loadEvidence() {
