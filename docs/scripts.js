@@ -17,6 +17,16 @@ const EVIDENCE_FILES = [
   { path: "data/evidence/7879_stacker_ring_24k.json", category: "Investment (24K)" },
 
   // --- High Transparency (Weight Published) ---
+  { path: "data/evidence/automic_gold_open_curvy_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_branch_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_crashing_waves_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_liquid_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_gemstone_signet_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_hexagon_signet_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_chevron_leaves_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_industrial_wood_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_mix_mirror_band_14k.json", category: "High Transparency" },
+  { path: "data/evidence/automic_gold_hammered_ring_14k.json", category: "High Transparency" },
   { path: "data/evidence/automic_gold_curvy_bee_ring_14k.json", category: "High Transparency" },
   { path: "data/evidence/automic_gold_gothic_initial_ring_14k.json", category: "High Transparency" },
   { path: "data/evidence/automic_gold_bee_ring_14k.json", category: "High Transparency" },
@@ -208,6 +218,16 @@ const EVIDENCE_FILES = [
   { path: "data/evidence/baby_gold_open_diamond_14k.json", category: "Standard Retail" },
   { path: "data/evidence/ferkos_double_bezel_open_diamond_14k.json", category: "Standard Retail" },
   { path: "data/evidence/ferkos_starburst_band_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/ferkos_slanted_baguette_round_diamond_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/ferkos_marquise_round_diamond_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/ferkos_slanted_marquise_round_diamond_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/ferkos_stackable_vertical_baguette_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/ferkos_curved_chevron_stacking_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/ferkos_diamond_chevron_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/ferkos_stacked_beaded_diamond_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/ferkos_marquise_emerald_wedding_band_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/ritani_hera_14k_white_petal_head.json", category: "Standard Retail" },
+  { path: "data/evidence/ritani_geneva_14k_white_four_prong.json", category: "Standard Retail" },
 ];
 
 async function loadEvidence() {
