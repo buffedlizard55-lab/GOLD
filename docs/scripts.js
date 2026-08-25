@@ -1,494 +1,1079 @@
-/* scripts.js — runs in the browser, does only math + table rendering.
-   Deliberately does NOT call out to any price API. The user pastes the
-   spot price themselves. That's the no-hallucination contract. */
+/* scripts.js — GOLD Evidence-Based Buyer's Guide
+   Strictly adheres to the No-Hallucination Policy.
+   Does arithmetic only; does not call external price APIs. */
 
-const EVIDENCE_FILES = [
-  // --- Investment Grade (24K) ---
-  { path: "data/evidence/mene_narrow_band_24k.json", category: "Investment (24K)" },
-  { path: "data/evidence/mene_narrow_classic_band_24k_size_45.json", category: "Investment (24K)" },
-  { path: "data/evidence/mene_narrow_classic_band_24k_engraved_size_45.json", category: "Investment (24K)" },
-  { path: "data/evidence/mene_narrow_flat_band_24k_size_45.json", category: "Investment (24K)" },
-  { path: "data/evidence/mene_classic_band_24k_size_45.json", category: "Investment (24K)" },
-  { path: "data/evidence/mene_flat_band_24k_size_45.json", category: "Investment (24K)" },
-  { path: "data/evidence/mene_wide_classic_band_24k_size_45.json", category: "Investment (24K)" },
-  { path: "data/evidence/mene_wide_flat_band_24k_size_45.json", category: "Investment (24K)" },
-  { path: "data/evidence/7879_wide_ring_24k.json", category: "Investment (24K)" },
-  { path: "data/evidence/7879_signet_ring_24k.json", category: "Investment (24K)" },
-  { path: "data/evidence/7879_stacker_ring_24k.json", category: "Investment (24K)" },
+const DATA_PATH = "data/rings.json";
+const TROY_OZ_TO_G = 31.1034768;
 
-  // --- High Transparency (Weight Published) ---
-  { path: "data/evidence/automic_gold_tiger_eye_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_sakura_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_claddagh_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_gemstone_claddagh_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_claddagh_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_transformation_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_smoky_quartz_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_engraved_star_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_baguette_rect_signet_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_cloud_diamond_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_pine_bird_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_oval_signet_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_milgrain_diamond_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_open_curvy_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_branch_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_crashing_waves_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_liquid_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_gemstone_signet_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_hexagon_signet_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_chevron_leaves_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_industrial_wood_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_mix_mirror_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_hammered_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_curvy_bee_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_gothic_initial_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_bee_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_mix_raw_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_bezel_gemstone_bar_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_curvy_mirror_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_curvy_matte_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_industrial_hammered_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_diamond_chevron_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_chevron_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_opal_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_gemstone_bar_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_bar_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_mix_stardust_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_curvy_hammered_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_diamond_cluster_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_filigree_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_chevron_filigree_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_rope_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_double_leaves_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_gemstone_industrial_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_rainbow_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_mini_miami_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_zig_zag_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_figaro_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_thick_cable_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_cable_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_curb_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_agnes_14k_white_knife_edge.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_open_filigree_chevron_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_hexagon_diamond_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_mix_organic_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_elodie_14k_white_classic_solitaire.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_nivea_14k_white_oval.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_ottilie_14k_white_marquise.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_lily_14k_white_princess.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_cordelia_14k_white_pear.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_moon_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_industrial_matte_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_thin_filigree_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_snake_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_ouroboros_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_gemstone_ouroboros_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_sun_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_sun_moon_stars_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_anais_14k_white_twisted_solitaire.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_kenzie_14k_white_braided.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_kendra_14k_white_cathedral_tulip.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_milena_14k_white_radiant.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_nivea_14k_white_cushion.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_bead_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_mountains_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_inlay_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_rainbow_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_alexandrite_cluster_14k.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_siena_14k_white_cathedral.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_priya_14k_white_diamond_collar.json", category: "High Transparency" },
-  { path: "data/evidence/costco_18k_4mm_comfort_fit_band.json", category: "High Transparency" },
-  { path: "data/evidence/costco_2_5mm_high_polish_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/costco_2_5mm_diamond_cut_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_heart_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_moissanite_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_elyse_18k_yellow_classic_solitaire.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_milena_18k_yellow_knife_edge.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_elodie_18k_yellow_classic_solitaire.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_silvia_14k_white_embellished_prong.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_nivea_18k_yellow_petal_solitaire.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_lily_14k_white_tulip_cathedral.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_rita_14k_white_micropave.json", category: "High Transparency" },
-  { path: "data/evidence/costco_4mm_comfort_fit_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/costco_5mm_comfort_fit_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/costco_6mm_comfort_fit_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_line_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_shimmer_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_wave_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_signet_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/automic_gold_beveled_edge_band_14k.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_alida_14k_white_solitaire.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_sia_18k_white_shared_prong.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_ciara_14k_white_split_double.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_amata_18k_yellow_trellis.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_ora_18k_yellow_petal_head.json", category: "High Transparency" },
-  { path: "data/evidence/quince_low_dome_band_3mm_14k.json", category: "High Transparency" },
-  { path: "data/evidence/avariah_2mm_half_round_14k_yellow_size_45.json", category: "High Transparency" },
-  { path: "data/evidence/quince_4mm_dome_band_14k_yellow.json", category: "High Transparency" },
-  { path: "data/evidence/quince_4mm_dome_band_14k_white.json", category: "High Transparency" },
-  { path: "data/evidence/quince_6mm_dome_band_14k_yellow.json", category: "High Transparency" },
-  { path: "data/evidence/jewelryweb_4mm_plain_band_14k_yellow_size_45.json", category: "High Transparency" },
-  { path: "data/evidence/saris_things_2mm_half_round_14k_yellow_size_45.json", category: "High Transparency" },
-  { path: "data/evidence/oradina_1956_curb_link_14k.json", category: "High Transparency" },
-  { path: "data/evidence/debebians_personalized_name_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/debebians_monogram_ring_14k.json", category: "High Transparency" },
-  { path: "data/evidence/debebians_ring_weight_chart_14k.json", category: "Benchmark" },
-  { path: "data/evidence/ritani_delia_14k_white_solitaire.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_andy_14k_white_eight_prong.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_maddie_14k_white_octagon.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_geneva_14k_yellow_solitaire.json", category: "High Transparency" },
-  { path: "data/evidence/davids_house_oval_solitaire_14k.json", category: "High Transparency" },
-  { path: "data/evidence/davids_house_round_halo_14k.json", category: "High Transparency" },
-  { path: "data/evidence/oradina_anchor_14k.json", category: "High Transparency" },
-  { path: "data/evidence/oradina_west_side_14k.json", category: "High Transparency" },
-  { path: "data/evidence/moriarty_14k_solitaire.json", category: "High Transparency" },
-  { path: "data/evidence/devata_solitaire_14k.json", category: "High Transparency" },
-  { path: "data/evidence/the_karat_store_modulation_14k_yellow.json", category: "High Transparency" },
+const KARAT_PURITY = {
+  "24K": 0.999,
+  "22K": 0.916,
+  "18K": 0.750,
+  "14K": 0.5833,
+  "10K": 0.4167,
+  "Platinum": 0.950,
+  "24K reference": 0.999
+};
 
-  // --- Benchmarks ---
-  { path: "data/evidence/pompeii3_solitaire_benchmark.json", category: "Benchmark" },
-  { path: "data/evidence/midwest_jewellery_benchmark.json", category: "Benchmark" },
+const STATE = {
+  rings: [],
+  filtered: [],
+  searchQuery: "",
+  category: "all",
+  seller: "all",
+  karat: "all",
+  ringType: "all",
+  ringSize: "all",
+  weightFilter: "all",
+  settingFilter: "all",
+  priceMin: null,
+  priceMax: null,
+  sortField: "price_per_gold_oz",
+  sortOrder: "asc",
+  currentPage: 1,
+  pageSize: 25,
+  activeRing: null
+};
 
-  // --- Standard Retail (Weight Not Listed) ---
-  { path: "data/evidence/quince_classic_band_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/quince_diamond_wedding_band_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/quince_diamond_line_ring_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/quince_twist_ring_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/zales_3mm_flat_square_wedding_band_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/zales_4mm_low_dome_wedding_band_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/zales_5mm_low_dome_wedding_band_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/zales_4_5mm_beveled_wedding_band_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/kay_wedding_band_14k_yellow_2mm.json", category: "Standard Retail" },
-  { path: "data/evidence/jared_wedding_band_14k_yellow_2mm.json", category: "Standard Retail" },
-  { path: "data/evidence/quince_stacker_ring_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/quince_beaded_ring_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/quince_wishbone_ring_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/oradina_after_hours_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/blue_nile_18k_yellow_gold_classic_solitaire.json", category: "Standard Retail" },
-  { path: "data/evidence/blue_nile_petite_solitaire_14k_yellow.json", category: "Standard Retail" },
-  { path: "data/evidence/blue_nile_classic_comfort_fit_solitaire_14k_yellow.json", category: "Standard Retail" },
-  { path: "data/evidence/james_allen_14k_rose_gold_solitaire.json", category: "Standard Retail" },
-  { path: "data/evidence/james_allen_petite_solitaire_14k_yellow.json", category: "Standard Retail" },
-  { path: "data/evidence/james_allen_etched_profile_solitaire_14k_yellow.json", category: "Standard Retail" },
-  { path: "data/evidence/james_allen_presentation_solitaire_14k_yellow.json", category: "Standard Retail" },
-  { path: "data/evidence/brilliant_earth_14k_yellow_gold_amie_diamond.json", category: "Standard Retail" },
-  { path: "data/evidence/brilliant_earth_petite_elodie_14k_yellow.json", category: "Standard Retail" },
-  { path: "data/evidence/brilliant_earth_atelier_solitaire_14k_yellow.json", category: "Standard Retail" },
-  { path: "data/evidence/kay_solitaire_1_4ct_14k_white.json", category: "Standard Retail" },
-  { path: "data/evidence/kay_solitaire_1_2ct_14k_white.json", category: "Standard Retail" },
-  { path: "data/evidence/zales_1ct_engagement_ring_14k_yellow.json", category: "Standard Retail" },
-  { path: "data/evidence/tiffany_setting_18k_yellow.json", category: "Standard Retail" },
-  { path: "data/evidence/tiffany_knot_18k_yellow.json", category: "Standard Retail" },
-  { path: "data/evidence/taylorandhart_demure_solitaire_18k_yellow.json", category: "Standard Retail" },
-  { path: "data/evidence/clean_origin_evangeline_14k_rose.json", category: "Standard Retail" },
-  { path: "data/evidence/clean_origin_infinity_14k_white.json", category: "Standard Retail" },
-  { path: "data/evidence/quince_bezel_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/quince_circle_eternity_band_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/quince_ridge_band_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/quince_diamond_bezel_eternity_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/quince_pave_slim_signet_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/quince_diamond_bezel_open_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/quince_3_stone_tapered_band_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/zales_baguette_diamond_wedding_band_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/catbird_mignon_memory_ring_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/quince_diamond_dot_ring_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/quince_pave_diamond_cushion_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/quince_3_stone_inlay_band_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/quince_lab_diamond_petite_pave_1ct.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_dara_14k_white_bezel.json", category: "Standard Retail" },
-  { path: "data/evidence/baby_gold_beaded_wishbone_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/baby_gold_wire_stacking_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/kay_wedding_band_14k_rose_4mm.json", category: "Standard Retail" },
-  { path: "data/evidence/kay_wedding_band_14k_white_3mm.json", category: "Standard Retail" },
-  { path: "data/evidence/debebians_cigar_monogram_14k.json", category: "High Transparency" },
-  { path: "data/evidence/baby_gold_heart_love_knot_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/jared_wedding_band_14k_yellow_5mm.json", category: "Standard Retail" },
-  { path: "data/evidence/jared_wedding_band_14k_rose_4mm.json", category: "Standard Retail" },
-  { path: "data/evidence/jared_flat_wedding_band_14k_white_3mm.json", category: "Standard Retail" },
-  { path: "data/evidence/jared_wedding_band_14k_yellow_6mm_textured.json", category: "Standard Retail" },
-  { path: "data/evidence/jared_wedding_band_14k_yellow_4mm.json", category: "Standard Retail" },
-  { path: "data/evidence/jared_wedding_band_14k_yellow_6mm.json", category: "Standard Retail" },
-  { path: "data/evidence/catbird_heart_of_gold_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/kay_wedding_band_14k_white_2mm.json", category: "Standard Retail" },
-  { path: "data/evidence/kay_wedding_band_14k_rose_2mm.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_petra_14k_white_petal.json", category: "Standard Retail" },
-  { path: "data/evidence/zales_1_5mm_rope_wedding_band_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/jared_flat_wedding_band_14k_white_2mm.json", category: "Standard Retail" },
-  { path: "data/evidence/jared_wedding_band_14k_white_2mm.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_orielle_14k_white_four_prong.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_teya_14k_white_four_prong.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_maude_14k_white_classic_solitaire.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_lia_14k_white_six_prong_petal.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_vera_14k_white_solitaire.json", category: "Standard Retail" },
-  { path: "data/evidence/automic_gold_industrial_mirror_band_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/helzberg_wedding_band_14k_yellow_6_5mm.json", category: "Standard Retail" },
-  { path: "data/evidence/helzberg_mens_bevel_edge_satin_14k_yellow_8mm.json", category: "Standard Retail" },
-  { path: "data/evidence/helzberg_wedding_band_14k_rose_2mm.json", category: "Standard Retail" },
-  { path: "data/evidence/helzberg_wedding_band_14k_white_5mm.json", category: "Standard Retail" },
-  { path: "data/evidence/kay_mens_wedding_band_14k_yellow_3mm.json", category: "Standard Retail" },
-  { path: "data/evidence/helzberg_wedding_band_14k_rose_6_5mm.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_juno_14k_white_knife_edge.json", category: "Standard Retail" },
-  { path: "data/evidence/baby_gold_open_diamond_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/ferkos_double_bezel_open_diamond_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/ferkos_starburst_band_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/ferkos_slanted_baguette_round_diamond_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/ferkos_marquise_round_diamond_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/ferkos_slanted_marquise_round_diamond_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/ferkos_stackable_vertical_baguette_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/ferkos_curved_chevron_stacking_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/ferkos_diamond_chevron_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/ferkos_stacked_beaded_diamond_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/ferkos_marquise_emerald_wedding_band_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_hera_14k_white_petal_head.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_geneva_14k_white_four_prong.json", category: "Standard Retail" },
-  { path: "data/evidence/automic_gold_gemstone_branch_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/ferkos_emerald_diamond_eternity_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/ferkos_infinity_diamond_eternity_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/ferkos_clover_ruby_diamond_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/ferkos_pear_emerald_diamond_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/ferkos_pear_ruby_diamond_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/ferkos_pear_ruby_ring_diamonds_14k.json", category: "Standard Retail" },
-  { path: "data/evidence/jasmine_platinum_emerald.json", category: "Standard Retail" },
-  { path: "data/evidence/dara_platinum_emerald.json", category: "Standard Retail" },
-  { path: "data/evidence/adele_platinum_emerald.json", category: "High Transparency" },
-  { path: "data/evidence/isadora_14k_yg_marquise.json", category: "Standard Retail" },
-  { path: "data/evidence/sybil_18k_yg_marquise.json", category: "High Transparency" },
-  { path: "data/evidence/iris_18k_yg_marquise.json", category: "Standard Retail" },
-  { path: "data/evidence/nivea_18k_yg_marquise.json", category: "Standard Retail" },
-  { path: "data/evidence/athena_18k_yg_pear.json", category: "High Transparency" },
-  { path: "data/evidence/sadie_18k_yg_heart.json", category: "Standard Retail" },
-  { path: "data/evidence/sabrina_14k_yg_pearl_bead.json", category: "Standard Retail" },
-  { path: "data/evidence/midas_14k_yg_signet_mini_heart.json", category: "Standard Retail" },
-  { path: "data/evidence/midas_14k_yg_side_by_side_heart.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_18k_wg_princess_studs.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_18k_wg_five_stone_asscher.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_18k_wg_nine_stone_asscher.json", category: "Standard Retail" },
-  { path: "data/evidence/elowen_18k_rg_pear.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_18k_rg_classic_solitaire.json", category: "Standard Retail" },
-  { path: "data/evidence/evelyn_14k_wg_marquise.json", category: "High Transparency" },
-  { path: "data/evidence/imani_18k_wg_pear.json", category: "High Transparency" },
-  { path: "data/evidence/malo_mens_classic_square_edged_3mm_14ky.json", category: "High Transparency" },
-  { path: "data/evidence/malo_mens_domed_comfort_fit_4mm_14ky.json", category: "Standard Retail" },
-  { path: "data/evidence/malo_mens_beveled_edge_6mm_14ky.json", category: "Standard Retail" },
-  { path: "data/evidence/malo_mens_satin_milgrain_6mm_18ky.json", category: "High Transparency" },
-  { path: "data/evidence/malo_mens_classic_square_edged_5mm_18ky.json", category: "High Transparency" },
-  { path: "data/evidence/malo_mens_classic_square_edged_5mm_18kw.json", category: "High Transparency" },
-  { path: "data/evidence/malo_mens_high_polish_6mm_18kw.json", category: "High Transparency" },
-  { path: "data/evidence/malo_mens_hammered_beveled_edge_7mm_pt.json", category: "Standard Retail" },
-  { path: "data/evidence/malo_mens_sandpaper_beveled_6mm_18kr.json", category: "High Transparency" },
-  { path: "data/evidence/malo_mens_beveled_edge_6mm_18kr.json", category: "Standard Retail" },
-  { path: "data/evidence/malo_mens_satin_inlay_6mm_pt.json", category: "High Transparency" },
-  { path: "data/evidence/malo_mens_satin_diamond_6mm_pt.json", category: "Standard Retail" },
-  { path: "data/evidence/malo_mens_beveled_edge_6mm_pt.json", category: "Standard Retail" },
-  { path: "data/evidence/malo_mens_hammered_beveled_8mm_pt.json", category: "Standard Retail" },
-  { path: "data/evidence/malo_mens_concave_satin_6mm_pt.json", category: "Standard Retail" },
-  { path: "data/evidence/malo_mens_high_polish_6mm_pt.json", category: "High Transparency" },
-  { path: "data/evidence/malo_mens_nine_stone_diamond_7mm_pt.json", category: "High Transparency" },
-  { path: "data/evidence/overnight_mountings_chevron_14kw.json", category: "Standard Retail" },
-  { path: "data/evidence/nivea_radiant_18k_rg.json", category: "High Transparency" },
-  { path: "data/evidence/saban_floral_marquise_14ky.json", category: "Standard Retail" },
-  { path: "data/evidence/lily_pear_18kw.json", category: "Standard Retail" },
-  { path: "data/evidence/lily_radiant_pt.json", category: "Standard Retail" },
-  { path: "data/evidence/ciela_heart_14kw.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_14ky_lg_three_prong_tennis_bracelet.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_14ky_freshwater_pearl_chain.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_14ky_puff_mariner_heart.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_14ky_malachite_station.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_14ky_diamond_initial_c.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_14kw_asscher_tennis.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_14kw_classic_halfway_bangle.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_14kw_lg_four_prong_tennis.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_14kw_classic_diamond_tennis.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_14kw_half_emerald_diamond_tennis.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_18ky_true_north_lg_pendant.json", category: "Standard Retail" },
-  { path: "data/evidence/maude_oval_18ky.json", category: "High Transparency" },
-  { path: "data/evidence/willa_pear_18ky.json", category: "High Transparency" },
-  { path: "data/evidence/valentina_princess_18ky.json", category: "High Transparency" },
-  { path: "data/evidence/elodie_round_18ky.json", category: "High Transparency" },
-  { path: "data/evidence/kris_cushion_18kw.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_18kw_round_three_prong_tennis_necklace.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_18kw_half_ruby_lg_diamond_tennis_necklace.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_18kw_alternating_sapphire_lg_diamond_tennis_necklace.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_18kw_alternating_bezel_sapphire_lg_diamond_tennis_necklace.json", category: "Standard Retail" },
-  { path: "data/evidence/malo_mens_brushed_polished_edge_6mm_pt.json", category: "Standard Retail" },
-  { path: "data/evidence/valentina_oval_pt.json", category: "High Transparency" },
-  { path: "data/evidence/juno_round_pt.json", category: "High Transparency" },
-  { path: "data/evidence/ritani_18kr_floral_halo_lg_studs.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_18kr_floral_halo_studs.json", category: "Standard Retail" },
-  { path: "data/evidence/dara_bezel_round_18kr.json", category: "Standard Retail" },
-  { path: "data/evidence/deni_radiant_18kr.json", category: "Standard Retail" },
-  { path: "data/evidence/jaclyn_emerald_18kr.json", category: "Standard Retail" },
-  { path: "data/evidence/maude_round_18kr.json", category: "Standard Retail" },
-  { path: "data/evidence/evelyn_oval_18kr.json", category: "High Transparency" },
-  { path: "data/evidence/elodie_round_18kr.json", category: "Standard Retail" },
-  { path: "data/evidence/midas_14ky_tube_hoop_earrings.json", category: "Standard Retail" },
-  { path: "data/evidence/stuller_14ky_birthstone_studs_garnet.json", category: "Standard Retail" },
-  { path: "data/evidence/midas_14ky_polished_hoop_earrings_25mm.json", category: "Standard Retail" },
-  { path: "data/evidence/midas_14ky_polished_ball_studs_4mm.json", category: "Standard Retail" },
-  { path: "data/evidence/sabrina_14ky_diamond_link_hoop.json", category: "Standard Retail" },
-  { path: "data/evidence/priya_round_pt.json", category: "High Transparency" },
-  { path: "data/evidence/remi_round_pt.json", category: "High Transparency" },
-  { path: "data/evidence/jasmine_emerald_pt.json", category: "High Transparency" },
-  { path: "data/evidence/elodie_round_pt.json", category: "Standard Retail" },
-  { path: "data/evidence/milena_oval_pt.json", category: "Standard Retail" },
-  { path: "data/evidence/jolie_princess_pt.json", category: "High Transparency" },
-  { path: "data/evidence/soleil_round_pt.json", category: "High Transparency" },
-  { path: "data/evidence/gaia_round_pt.json", category: "High Transparency" },
-  { path: "data/evidence/mastoloni_18ky_akoya_pearl_bracelet_8mm.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_14kw_classic_lg_diamond_tennis_bracelet.json", category: "Standard Retail" },
-  { path: "data/evidence/sadie_round_18ky.json", category: "Standard Retail" },
-  { path: "data/evidence/stella_round_18ky.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_18kw_lg_round_studs_0_50.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_18kw_princess_diamond_studs.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_18kw_toi_et_moi_lg_hoop.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_18kw_infinity_diamond_hoop.json", category: "Standard Retail" },
-  { path: "data/evidence/ritani_18kw_diamond_sapphire_eternity_hoop.json", category: "Standard Retail" },
-  { path: "data/evidence/multi_shape_lg_diamond_station_necklace_pt.json", category: "Standard Retail" },
-  { path: "data/evidence/stella_pear_pt.json", category: "Standard Retail" },
-  { path: "data/evidence/lg_half_bezel_tennis_bracelet_14kr.json", category: "Standard Retail" },
-  { path: "data/evidence/inlay_diamond_bangle_14kr.json", category: "Standard Retail" },
-  { path: "data/evidence/half_and_half_paper_clip_14ky.json", category: "Standard Retail" },
-];
+// ----------------- Initialization -----------------
+document.addEventListener("DOMContentLoaded", () => {
+  initApp();
+});
 
-async function loadEvidence() {
+async function initApp() {
+  await loadData();
+  setupEventListeners();
+  renderSummaryStats();
+  populateFilterOptions();
+  applyFiltersAndRender();
+  populateFileTree();
+}
+
+async function loadData() {
   const tbody = document.querySelector("#evidence-table tbody");
-  tbody.innerHTML = "";
+  if (tbody) {
+    tbody.innerHTML = '<tr><td colspan="11" class="text-center text-muted" style="padding: 40px;">Loading verified evidence records…</td></tr>';
+  }
 
-  for (const entry of EVIDENCE_FILES) {
-    try {
-      const res = await fetch(entry.path, { cache: "no-store" });
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      const item = await res.json();
-      tbody.appendChild(renderRow(item, entry.category));
-    } catch (err) {
-      const tr = document.createElement("tr");
-      const td = document.createElement("td");
-      td.colSpan = 12;
-      td.className = "muted";
-      td.textContent = "Could not load " + entry.path + " (" + err.message + ")";
-      tr.appendChild(td);
-      tbody.appendChild(tr);
+  try {
+    const res = await fetch(DATA_PATH, { cache: "no-store" });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const data = await res.json();
+    STATE.rings = data;
+    STATE.filtered = [...data];
+  } catch (err) {
+    console.error("Error loading rings data:", err);
+    if (tbody) {
+      tbody.innerHTML = '<tr><td colspan="11" class="text-center" style="color: var(--danger); padding: 30px;">Failed to load data: ' + escapeHtml(err.message) + '</td></tr>';
     }
   }
 }
 
-function renderRow(item, category) {
-  const tr = document.createElement("tr");
-  tr.setAttribute("data-category", category);
+// ----------------- Summary Statistics -----------------
+function renderSummaryStats() {
+  const total = STATE.rings.length;
+  const transparentCount = STATE.rings.filter(r => r.weight_g != null).length;
+  const investmentCount = STATE.rings.filter(r => r.karat === "24K").length;
+  
+  const sellersSet = new Set(STATE.rings.map(r => r.seller).filter(Boolean));
+  
+  const validPricedOz = STATE.rings
+    .map(r => r.price_per_gold_oz)
+    .filter(p => typeof p === "number" && p > 0);
+  
+  const lowestOz = validPricedOz.length > 0 ? Math.min(...validPricedOz) : null;
+  
+  setElText("stat-total-rings", total);
+  setElText("stat-sellers", sellersSet.size + " Brands");
+  setElText("stat-transparent", transparentCount + " Rings (" + Math.round((transparentCount / total) * 100) + "%)");
+  setElText("stat-24k", investmentCount + " Bands");
+  
+  if (lowestOz) {
+    setElText("stat-lowest-oz", "$" + formatNumber(Math.round(lowestOz)) + " /oz");
+  }
+}
 
-  // Weight
-  let weightValue = null;
-  let weightCell;
-  if (item.weight_g != null) {
-    weightValue = item.weight_g;
-    weightCell = String(item.weight_g) + " g";
-  } else if (item.weight_g_total != null) {
-    weightValue = item.weight_g_gold || item.weight_g_total;
-    const gold = item.weight_g_gold != null ? " (gold " + item.weight_g_gold + " g)" : "";
-    weightCell = String(item.weight_g_total) + " g" + gold;
-  } else {
-    weightCell = "⚠️ not listed";
+function setElText(id, val) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = String(val);
+}
+
+// ----------------- Populate Filter Options -----------------
+function populateFilterOptions() {
+  // Seller filter
+  const sellerSelect = document.getElementById("filter-seller");
+  if (sellerSelect) {
+    const sellerCounts = {};
+    STATE.rings.forEach(r => {
+      const s = r.seller || "Other";
+      sellerCounts[s] = (sellerCounts[s] || 0) + 1;
+    });
+    
+    const sortedSellers = Object.keys(sellerCounts).sort((a, b) => sellerCounts[b] - sellerCounts[a]);
+    sellerSelect.innerHTML = '<option value="all">All Sellers (' + STATE.rings.length + ')</option>';
+    sortedSellers.forEach(s => {
+      const opt = document.createElement("option");
+      opt.value = s;
+      opt.textContent = s + " (" + sellerCounts[s] + ")";
+      sellerSelect.appendChild(opt);
+    });
   }
 
-  // Karat Fraction
-  const karatMap = { "24K": 0.999, "22K": 0.916, "18K": 0.750, "14K": 0.583, "10K": 0.417 };
-  const purity = karatMap[item.karat] || 0.583;
+  // Karat filter
+  const karatSelect = document.getElementById("filter-karat");
+  if (karatSelect) {
+    const karatCounts = {};
+    STATE.rings.forEach(r => {
+      const k = r.karat || "Other";
+      karatCounts[k] = (karatCounts[k] || 0) + 1;
+    });
+    const order = ["24K", "18K", "14K", "10K", "Platinum"];
+    karatSelect.innerHTML = '<option value="all">All Metals / Karats</option>';
+    order.forEach(k => {
+      if (karatCounts[k]) {
+        const opt = document.createElement("option");
+        opt.value = k;
+        opt.textContent = k + " (" + karatCounts[k] + ")";
+        karatSelect.appendChild(opt);
+      }
+    });
+  }
 
-  // Price
-  let priceValue = item.price_usd || item.price_usd_from;
-  let priceCell = "—";
-  if (item.price_usd != null) {
-    priceCell = "$" + Number(item.price_usd).toLocaleString();
-    if (item.original_price_usd != null && item.original_price_usd > item.price_usd) {
-      priceCell += " (was $" + Number(item.original_price_usd).toLocaleString() + ")";
+  // Ring Type filter
+  const typeSelect = document.getElementById("filter-type");
+  if (typeSelect) {
+    const typeCounts = {};
+    STATE.rings.forEach(r => {
+      const t = r.ring_type || "Other";
+      typeCounts[t] = (typeCounts[t] || 0) + 1;
+    });
+    const sortedTypes = Object.keys(typeCounts).sort((a, b) => typeCounts[b] - typeCounts[a]);
+    typeSelect.innerHTML = '<option value="all">All Ring Styles</option>';
+    sortedTypes.forEach(t => {
+      const opt = document.createElement("option");
+      opt.value = t;
+      opt.textContent = t + " (" + typeCounts[t] + ")";
+      typeSelect.appendChild(opt);
+    });
+  }
+
+  // Update Category Pill counts
+  const catPills = document.querySelectorAll(".cat-pill");
+  catPills.forEach(pill => {
+    const cat = pill.getAttribute("data-cat");
+    const countEl = pill.querySelector(".pill-count");
+    if (!countEl) return;
+    if (cat === "all") {
+      countEl.textContent = STATE.rings.length;
+    } else {
+      const count = STATE.rings.filter(r => r.category === cat).length;
+      countEl.textContent = count;
     }
-  } else if (item.price_usd_from != null) {
-    priceCell = "from $" + Number(item.price_usd_from).toLocaleString();
-  }
-
-  // Price per Gold Gram (Value Score)
-  let valueScoreCell = "—";
-  if (priceValue && weightValue) {
-    const pureGoldG = weightValue * purity;
-    const pricePerG = priceValue / pureGoldG;
-    valueScoreCell = "$" + pricePerG.toFixed(2) + " /g";
-  }
-
-  const cells = [
-    category,
-    item.ring || "—",
-    item.seller || "—",
-    item.karat || "—",
-    weightCell,
-    valueScoreCell,
-    priceCell,
-    item.setting_only ? "Setting Only" : "Includes Stones",
-    renderSource(item.source_url, item.source_label),
-    item.verified_on || "—"
-  ];
-
-  cells.forEach(v => {
-    const td = document.createElement("td");
-    if (v instanceof Node) td.appendChild(v);
-    else td.textContent = String(v);
-    tr.appendChild(td);
   });
+}
+
+// ----------------- Filter & Search Logic -----------------
+function applyFiltersAndRender() {
+  const q = STATE.searchQuery.toLowerCase().trim();
+  
+  STATE.filtered = STATE.rings.filter(item => {
+    // Search query
+    if (q) {
+      const haystack = (
+        (item.ring || "") + " " +
+        (item.seller || "") + " " +
+        (item.karat || "") + " " +
+        (item.ring_size || "") + " " +
+        (item.hallmark || "") + " " +
+        (item.note || "") + " " +
+        (item.ring_type || "") + " " +
+        (item.stone_type || "")
+      ).toLowerCase();
+      if (!haystack.includes(q)) return false;
+    }
+
+    // Category
+    if (STATE.category !== "all" && item.category !== STATE.category) {
+      return false;
+    }
+
+    // Seller
+    if (STATE.seller !== "all" && item.seller !== STATE.seller) {
+      return false;
+    }
+
+    // Karat
+    if (STATE.karat !== "all" && item.karat !== STATE.karat) {
+      return false;
+    }
+
+    // Ring Type
+    if (STATE.ringType !== "all" && item.ring_type !== STATE.ringType) {
+      return false;
+    }
+
+    // Ring Size
+    if (STATE.ringSize === "size_45") {
+      const sizeStr = (item.ring_size || "").toLowerCase();
+      if (!sizeStr.includes("4.5") && !sizeStr.includes("4.0")) return false;
+    }
+
+    // Weight Transparency
+    if (STATE.weightFilter === "published" && item.weight_g == null) {
+      return false;
+    }
+    if (STATE.weightFilter === "unlisted" && item.weight_g != null) {
+      return false;
+    }
+
+    // Setting Filter
+    if (STATE.settingFilter === "setting_only" && !item.setting_only) {
+      return false;
+    }
+    if (STATE.settingFilter === "with_stones" && item.setting_only) {
+      return false;
+    }
+
+    // Price Range
+    const price = item.price_usd != null ? item.price_usd : item.price_usd_from;
+    if (STATE.priceMin != null && (price == null || price < STATE.priceMin)) {
+      return false;
+    }
+    if (STATE.priceMax != null && (price == null || price > STATE.priceMax)) {
+      return false;
+    }
+
+    return true;
+  });
+
+  // Sorting
+  sortFilteredData();
+
+  // Reset to page 1 on filter changes
+  STATE.currentPage = 1;
+
+  renderTable();
+  renderPagination();
+  updateResultsCount();
+}
+
+function sortFilteredData() {
+  const field = STATE.sortField;
+  const isAsc = STATE.sortOrder === "asc";
+
+  STATE.filtered.sort((a, b) => {
+    let valA = a[field];
+    let valB = b[field];
+
+    // Handle price fallback
+    if (field === "price_usd") {
+      valA = a.price_usd != null ? a.price_usd : a.price_usd_from;
+      valB = b.price_usd != null ? b.price_usd : b.price_usd_from;
+    }
+
+    // Place null / undefined values at the end regardless of sort direction
+    if (valA == null && valB == null) return 0;
+    if (valA == null) return 1;
+    if (valB == null) return -1;
+
+    if (typeof valA === "string") {
+      return isAsc
+        ? valA.localeCompare(valB)
+        : valB.localeCompare(valA);
+    }
+
+    return isAsc ? valA - valB : valB - valA;
+  });
+}
+
+// ----------------- Table Rendering -----------------
+function renderTable() {
+  const tbody = document.querySelector("#evidence-table tbody");
+  if (!tbody) return;
+  tbody.innerHTML = "";
+
+  if (STATE.filtered.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="11" class="text-center text-muted" style="padding: 40px;">No verified rings match the selected filters. <button class="btn btn-secondary btn-sm" onclick="resetFilters()">Reset Filters</button></td></tr>';
+    return;
+  }
+
+  // Pagination slice
+  let displayItems = STATE.filtered;
+  if (STATE.pageSize > 0) {
+    const start = (STATE.currentPage - 1) * STATE.pageSize;
+    const end = start + STATE.pageSize;
+    displayItems = STATE.filtered.slice(start, end);
+  }
+
+  const fragment = document.createDocumentFragment();
+  displayItems.forEach(item => {
+    fragment.appendChild(createTableRow(item));
+  });
+  tbody.appendChild(fragment);
+
+  updateSortHeaders();
+}
+
+function createTableRow(item) {
+  const tr = document.createElement("tr");
+  tr.setAttribute("data-category", item.category || "Standard Retail");
+  tr.setAttribute("data-id", item.id);
+
+  // Category Badge
+  const tdCat = document.createElement("td");
+  const catBadge = document.createElement("span");
+  catBadge.className = "badge " + getCategoryBadgeClass(item.category);
+  catBadge.textContent = item.category || "Standard";
+  tdCat.appendChild(catBadge);
+  tr.appendChild(tdCat);
+
+  // Ring Name & Details
+  const tdName = document.createElement("td");
+  tdName.className = "cell-ring-name";
+  
+  const nameLink = document.createElement("a");
+  nameLink.href = "javascript:void(0)";
+  nameLink.textContent = item.ring || "—";
+  nameLink.style.color = "var(--text-primary)";
+  nameLink.style.textDecoration = "none";
+  nameLink.style.fontWeight = "600";
+  nameLink.onclick = () => openRingModal(item);
+  tdName.appendChild(nameLink);
+
+  // Subtitle with setting badge / style
+  const subDiv = document.createElement("div");
+  subDiv.style.fontSize = "0.76rem";
+  subDiv.style.color = "var(--text-muted)";
+  subDiv.style.marginTop = "3px";
+  subDiv.style.display = "flex";
+  subDiv.style.gap = "6px";
+  subDiv.style.flexWrap = "wrap";
+  subDiv.style.alignItems = "center";
+
+  if (item.setting_only) {
+    const setBadge = document.createElement("span");
+    setBadge.style.color = "#b45309";
+    setBadge.style.fontWeight = "600";
+    setBadge.textContent = "Setting Only";
+    subDiv.appendChild(setBadge);
+  } else if (item.stone_type || item.stone_ctw) {
+    const stoneBadge = document.createElement("span");
+    stoneBadge.textContent = (item.stone_type || "Diamond") + (item.stone_ctw ? " (" + item.stone_ctw + "ctw)" : "");
+    subDiv.appendChild(stoneBadge);
+  }
+
+  if (item.width_mm) {
+    const widthSpan = document.createElement("span");
+    widthSpan.textContent = "• " + item.width_mm + "mm";
+    subDiv.appendChild(widthSpan);
+  }
+
+  tdName.appendChild(subDiv);
+  tr.appendChild(tdName);
+
+  // Seller
+  const tdSeller = document.createElement("td");
+  tdSeller.className = "cell-seller";
+  tdSeller.textContent = item.seller || "—";
+  tr.appendChild(tdSeller);
+
+  // Karat / Metal
+  const tdKarat = document.createElement("td");
+  const karatBadge = document.createElement("span");
+  karatBadge.className = "badge badge-metal";
+  karatBadge.textContent = item.karat || "14K";
+  tdKarat.appendChild(karatBadge);
+  tr.appendChild(tdKarat);
+
+  // Ring Size
+  const tdSize = document.createElement("td");
+  tdSize.className = "cell-num";
+  const sizeBadge = document.createElement("span");
+  sizeBadge.className = "badge badge-size";
+  sizeBadge.textContent = item.ring_size || "Standard";
+  tdSize.appendChild(sizeBadge);
+  tr.appendChild(tdSize);
+
+  // Total Weight (g)
+  const tdWeight = document.createElement("td");
+  tdWeight.className = "cell-num";
+  if (item.weight_g != null) {
+    tdWeight.textContent = Number(item.weight_g).toFixed(2) + " g";
+  } else if (item.weight_g_total != null) {
+    tdWeight.textContent = Number(item.weight_g_total).toFixed(2) + " g";
+  } else {
+    tdWeight.innerHTML = '<span class="text-muted" title="Seller does not publish metal weight">⚠️ Not listed</span>';
+  }
+  tr.appendChild(tdWeight);
+
+  // Raw Gold Weight (pure gold g and troy oz)
+  const tdGold = document.createElement("td");
+  tdGold.className = "cell-num";
+  if (item.raw_gold_g != null) {
+    tdGold.innerHTML = '<strong>' + item.raw_gold_g.toFixed(2) + ' g</strong> <span class="text-muted" style="font-size:0.75rem;">(' + item.raw_gold_oz.toFixed(3) + ' oz)</span>';
+  } else {
+    tdGold.innerHTML = '<span class="text-muted">—</span>';
+  }
+  tr.appendChild(tdGold);
+
+  // Price (USD)
+  const tdPrice = document.createElement("td");
+  tdPrice.className = "cell-num";
+  if (item.price_usd != null) {
+    let pStr = "$" + formatNumber(item.price_usd);
+    if (item.original_price_usd != null && item.original_price_usd > item.price_usd) {
+      pStr += ' <span class="text-muted" style="text-decoration:line-through; font-size:0.75rem;">$' + formatNumber(item.original_price_usd) + '</span>';
+    }
+    tdPrice.innerHTML = pStr;
+  } else if (item.price_usd_from != null) {
+    tdPrice.textContent = "from $" + formatNumber(item.price_usd_from);
+  } else {
+    tdPrice.textContent = "—";
+  }
+  tr.appendChild(tdPrice);
+
+  // Price per Gold Oz & Gram
+  const tdPriceOz = document.createElement("td");
+  tdPriceOz.className = "cell-num";
+  if (item.price_per_gold_oz != null) {
+    const ozScoreClass = getPriceScoreClass(item.price_per_gold_oz);
+    tdPriceOz.innerHTML = '<div class="score-badge ' + ozScoreClass + '">$' + formatNumber(Math.round(item.price_per_gold_oz)) + '/oz</div><div style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">$' + item.price_per_gold_g.toFixed(2) + '/g</div>';
+  } else {
+    tdPriceOz.innerHTML = '<span class="text-muted">—</span>';
+  }
+  tr.appendChild(tdPriceOz);
+
+  // Official Source Link
+  const tdSource = document.createElement("td");
+  if (item.source_url) {
+    const a = document.createElement("a");
+    a.href = item.source_url;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.className = "source-btn";
+    a.title = item.source_label || "View official seller page";
+    a.innerHTML = 'Source ↗';
+    tdSource.appendChild(a);
+  } else {
+    tdSource.textContent = "—";
+  }
+  tr.appendChild(tdSource);
+
+  // Verified & Actions
+  const tdActions = document.createElement("td");
+  const actionsDiv = document.createElement("div");
+  actionsDiv.className = "row-actions";
+
+  const calcBtn = document.createElement("button");
+  calcBtn.className = "action-icon-btn";
+  calcBtn.title = "Load weight & karat into Melt Calculator";
+  calcBtn.textContent = "Calc Melt";
+  calcBtn.onclick = () => loadIntoCalculator(item);
+  actionsDiv.appendChild(calcBtn);
+
+  const detailBtn = document.createElement("button");
+  detailBtn.className = "action-icon-btn";
+  detailBtn.title = "View complete specifications";
+  detailBtn.textContent = "Specs";
+  detailBtn.onclick = () => openRingModal(item);
+  actionsDiv.appendChild(detailBtn);
+
+  tdActions.appendChild(actionsDiv);
+  tr.appendChild(tdActions);
+
   return tr;
 }
 
-function renderSource(url, label) {
-  if (!url) return document.createTextNode("—");
-  const a = document.createElement("a");
-  a.href = url;
-  a.target = "_blank";
-  a.rel = "noopener noreferrer";
-  a.textContent = label || "Source";
-  return a;
+function getCategoryBadgeClass(category) {
+  if (category === "Investment (24K)") return "badge-24k";
+  if (category === "High Transparency") return "badge-trans";
+  if (category === "Benchmark") return "badge-bench";
+  return "badge-retail";
 }
 
-function populateFileList() {
-  const list = document.getElementById("file-list");
-  if (!list) return;
-  list.innerHTML = "";
-  const repoUrl = "https://github.com/buffedlizard55-lab/GOLD/blob/main/data/evidence/";
-  EVIDENCE_FILES.forEach(entry => {
-    const filename = entry.path.split("/").pop();
-    const li = document.createElement("li");
-    const a = document.createElement("a");
-    a.href = repoUrl + filename;
-    a.target = "_blank";
-    const code = document.createElement("code");
-    code.textContent = filename;
-    a.appendChild(code);
-    li.appendChild(a);
-    list.appendChild(li);
+function getPriceScoreClass(priceOz) {
+  if (priceOz < 6500) return "score-great";
+  if (priceOz < 15000) return "score-good";
+  return "score-high";
+}
+
+function updateSortHeaders() {
+  const ths = document.querySelectorAll("#evidence-table thead th[data-sort]");
+  ths.forEach(th => {
+    const field = th.getAttribute("data-sort");
+    th.classList.remove("sort-asc", "sort-desc");
+    if (field === STATE.sortField) {
+      th.classList.add(STATE.sortOrder === "asc" ? "sort-asc" : "sort-desc");
+    }
   });
 }
 
-// ---------- Calculator ----------
-function runCalc() {
-  const spotOz = parseFloat(document.getElementById("spot-oz").value);
-  const weightG = parseFloat(document.getElementById("weight-g").value);
-  const purity  = parseFloat(document.getElementById("karat").value);
-  const out = document.getElementById("calc-out");
-  if (!isFinite(spotOz) || !isFinite(weightG) || !isFinite(purity)) {
-    out.hidden = false;
-    out.innerHTML = "<p class='muted'>Please enter all three values.</p>";
-    return;
+function updateResultsCount() {
+  const info = document.getElementById("results-counter");
+  if (!info) return;
+  const total = STATE.rings.length;
+  const count = STATE.filtered.length;
+  if (count === total) {
+    info.innerHTML = 'Showing all <span>' + total + '</span> verified entries';
+  } else {
+    info.innerHTML = 'Showing <span>' + count + '</span> of ' + total + ' verified entries';
   }
-  const TROY_OZ_TO_G = 31.1034768;
-  const spotPerG24K = spotOz / TROY_OZ_TO_G;
-  const pureGoldG   = weightG * purity;
-  const metalValue  = pureGoldG * spotPerG24K;
-  document.getElementById("r-pure").textContent  = pureGoldG.toFixed(3);
-  document.getElementById("r-per-g").textContent = spotPerG24K.toFixed(2);
-  document.getElementById("r-melt").textContent  = metalValue.toFixed(2);
-  out.hidden = false;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  loadEvidence();
-  populateFileList();
-  const btn = document.getElementById("calc-btn");
-  if (btn) btn.addEventListener("click", runCalc);
-});
+// ----------------- Pagination -----------------
+function renderPagination() {
+  const container = document.getElementById("pagination-controls");
+  if (!container) return;
+  container.innerHTML = "";
+
+  const total = STATE.filtered.length;
+  if (STATE.pageSize <= 0 || total <= STATE.pageSize) {
+    return;
+  }
+
+  const totalPages = Math.ceil(total / STATE.pageSize);
+  const current = STATE.currentPage;
+
+  // Prev Button
+  const prevBtn = document.createElement("button");
+  prevBtn.className = "page-btn";
+  prevBtn.innerHTML = "‹";
+  prevBtn.disabled = current <= 1;
+  prevBtn.onclick = () => {
+    if (STATE.currentPage > 1) {
+      STATE.currentPage--;
+      renderTable();
+      renderPagination();
+    }
+  };
+  container.appendChild(prevBtn);
+
+  // Page Numbers
+  let startPage = Math.max(1, current - 2);
+  let endPage = Math.min(totalPages, current + 2);
+
+  if (startPage > 1) {
+    const p1 = createPageNumBtn(1);
+    container.appendChild(p1);
+    if (startPage > 2) {
+      const dots = document.createElement("span");
+      dots.textContent = "…";
+      dots.style.padding = "0 4px";
+      dots.style.color = "var(--text-muted)";
+      container.appendChild(dots);
+    }
+  }
+
+  for (let p = startPage; p <= endPage; p++) {
+    container.appendChild(createPageNumBtn(p));
+  }
+
+  if (endPage < totalPages) {
+    if (endPage < totalPages - 1) {
+      const dots = document.createElement("span");
+      dots.textContent = "…";
+      dots.style.padding = "0 4px";
+      dots.style.color = "var(--text-muted)";
+      container.appendChild(dots);
+    }
+    container.appendChild(createPageNumBtn(totalPages));
+  }
+
+  // Next Button
+  const nextBtn = document.createElement("button");
+  nextBtn.className = "page-btn";
+  nextBtn.innerHTML = "›";
+  nextBtn.disabled = current >= totalPages;
+  nextBtn.onclick = () => {
+    if (STATE.currentPage < totalPages) {
+      STATE.currentPage++;
+      renderTable();
+      renderPagination();
+    }
+  };
+  container.appendChild(nextBtn);
+}
+
+function createPageNumBtn(pageNum) {
+  const btn = document.createElement("button");
+  btn.className = "page-btn" + (pageNum === STATE.currentPage ? " active" : "");
+  btn.textContent = String(pageNum);
+  btn.onclick = () => {
+    STATE.currentPage = pageNum;
+    renderTable();
+    renderPagination();
+  };
+  return btn;
+}
+
+// ----------------- Event Listeners -----------------
+function setupEventListeners() {
+  // Search
+  const searchInput = document.getElementById("search-input");
+  const clearSearchBtn = document.getElementById("search-clear-btn");
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      STATE.searchQuery = e.target.value;
+      if (clearSearchBtn) {
+        clearSearchBtn.style.display = e.target.value ? "block" : "none";
+      }
+      applyFiltersAndRender();
+    });
+  }
+
+  if (clearSearchBtn && searchInput) {
+    clearSearchBtn.addEventListener("click", () => {
+      searchInput.value = "";
+      STATE.searchQuery = "";
+      clearSearchBtn.style.display = "none";
+      applyFiltersAndRender();
+      searchInput.focus();
+    });
+  }
+
+  // Category Pills
+  const catPills = document.querySelectorAll(".cat-pill");
+  catPills.forEach(pill => {
+    pill.addEventListener("click", () => {
+      catPills.forEach(p => p.classList.remove("active"));
+      pill.classList.add("active");
+      STATE.category = pill.getAttribute("data-cat") || "all";
+      applyFiltersAndRender();
+    });
+  });
+
+  // Dropdown Filters
+  bindSelectFilter("filter-seller", "seller");
+  bindSelectFilter("filter-karat", "karat");
+  bindSelectFilter("filter-type", "ringType");
+  bindSelectFilter("filter-size", "ringSize");
+  bindSelectFilter("filter-weight", "weightFilter");
+  bindSelectFilter("filter-setting", "settingFilter");
+
+  // Price Filters
+  const minInput = document.getElementById("filter-price-min");
+  const maxInput = document.getElementById("filter-price-max");
+  if (minInput) {
+    minInput.addEventListener("input", (e) => {
+      STATE.priceMin = e.target.value ? parseFloat(e.target.value) : null;
+      applyFiltersAndRender();
+    });
+  }
+  if (maxInput) {
+    maxInput.addEventListener("input", (e) => {
+      STATE.priceMax = e.target.value ? parseFloat(e.target.value) : null;
+      applyFiltersAndRender();
+    });
+  }
+
+  // Sort Select
+  const sortSelect = document.getElementById("filter-sort");
+  if (sortSelect) {
+    sortSelect.addEventListener("change", (e) => {
+      const parts = e.target.value.split(":");
+      STATE.sortField = parts[0];
+      STATE.sortOrder = parts[1] || "asc";
+      applyFiltersAndRender();
+    });
+  }
+
+  // Page Size Select
+  const pageSizeSelect = document.getElementById("page-size-select");
+  if (pageSizeSelect) {
+    pageSizeSelect.addEventListener("change", (e) => {
+      STATE.pageSize = parseInt(e.target.value, 10);
+      STATE.currentPage = 1;
+      renderTable();
+      renderPagination();
+    });
+  }
+
+  // Sort Headers on Table
+  const sortHeaders = document.querySelectorAll("#evidence-table thead th[data-sort]");
+  sortHeaders.forEach(th => {
+    th.addEventListener("click", () => {
+      const field = th.getAttribute("data-sort");
+      if (STATE.sortField === field) {
+        STATE.sortOrder = STATE.sortOrder === "asc" ? "desc" : "asc";
+      } else {
+        STATE.sortField = field;
+        STATE.sortOrder = (field === "price_per_gold_oz" || field === "price_usd") ? "asc" : "desc";
+      }
+      if (sortSelect) {
+        sortSelect.value = STATE.sortField + ":" + STATE.sortOrder;
+      }
+      applyFiltersAndRender();
+    });
+  });
+
+  // Calculator Form
+  const calcBtn = document.getElementById("calc-btn");
+  if (calcBtn) calcBtn.addEventListener("click", runCalculator);
+
+  const calcInputs = ["calc-spot-oz", "calc-weight-g", "calc-karat", "calc-retail-price"];
+  calcInputs.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener("input", runCalculator);
+  });
+
+  // Modal Backdrop Close
+  const modal = document.getElementById("ring-modal");
+  if (modal) {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeRingModal();
+    });
+  }
+
+  const closeBtn = document.getElementById("modal-close-btn");
+  if (closeBtn) closeBtn.addEventListener("click", closeRingModal);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeRingModal();
+  });
+}
+
+function bindSelectFilter(elementId, stateProp) {
+  const el = document.getElementById(elementId);
+  if (el) {
+    el.addEventListener("change", (e) => {
+      STATE[stateProp] = e.target.value;
+      applyFiltersAndRender();
+    });
+  }
+}
+
+function resetFilters() {
+  STATE.searchQuery = "";
+  STATE.category = "all";
+  STATE.seller = "all";
+  STATE.karat = "all";
+  STATE.ringType = "all";
+  STATE.ringSize = "all";
+  STATE.weightFilter = "all";
+  STATE.settingFilter = "all";
+  STATE.priceMin = null;
+  STATE.priceMax = null;
+  STATE.sortField = "price_per_gold_oz";
+  STATE.sortOrder = "asc";
+  STATE.currentPage = 1;
+
+  // Reset inputs
+  const searchInput = document.getElementById("search-input");
+  if (searchInput) searchInput.value = "";
+  
+  const clearBtn = document.getElementById("search-clear-btn");
+  if (clearBtn) clearBtn.style.display = "none";
+
+  const selects = [
+    "filter-seller", "filter-karat", "filter-type", 
+    "filter-size", "filter-weight", "filter-setting"
+  ];
+  selects.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = "all";
+  });
+
+  const minInput = document.getElementById("filter-price-min");
+  const maxInput = document.getElementById("filter-price-max");
+  if (minInput) minInput.value = "";
+  if (maxInput) maxInput.value = "";
+
+  const sortSelect = document.getElementById("filter-sort");
+  if (sortSelect) sortSelect.value = "price_per_gold_oz:asc";
+
+  const catPills = document.querySelectorAll(".cat-pill");
+  catPills.forEach(p => {
+    p.classList.toggle("active", p.getAttribute("data-cat") === "all");
+  });
+
+  applyFiltersAndRender();
+}
+
+// ----------------- Ring Modal -----------------
+function openRingModal(item) {
+  STATE.activeRing = item;
+  const modal = document.getElementById("ring-modal");
+  if (!modal) return;
+
+  setElText("modal-title", item.ring || "Ring Details");
+  setElText("modal-seller", item.seller || "—");
+  setElText("modal-karat", item.karat || "—");
+  setElText("modal-hallmark", item.hallmark || "—");
+  setElText("modal-size", item.ring_size || "—");
+  
+  const weightStr = item.weight_g != null ? item.weight_g.toFixed(2) + " g" : "⚠️ Not published";
+  setElText("modal-weight", weightStr);
+
+  const rawGoldStr = item.raw_gold_g != null 
+    ? item.raw_gold_g.toFixed(2) + " g (" + item.raw_gold_oz.toFixed(3) + " troy oz)"
+    : "—";
+  setElText("modal-raw-gold", rawGoldStr);
+
+  const priceStr = item.price_usd != null 
+    ? "$" + formatNumber(item.price_usd) 
+    : (item.price_usd_from != null ? "from $" + formatNumber(item.price_usd_from) : "—");
+  setElText("modal-price", priceStr);
+
+  const priceOzStr = item.price_per_gold_oz != null 
+    ? "$" + formatNumber(Math.round(item.price_per_gold_oz)) + " /oz ($" + item.price_per_gold_g.toFixed(2) + " /g)"
+    : "—";
+  setElText("modal-price-oz", priceOzStr);
+
+  setElText("modal-width", item.width_mm ? item.width_mm + " mm" : "—");
+  setElText("modal-setting", item.setting_only ? "Setting Only (Diamond sold separately)" : "Complete Ring (Includes stones / metal)");
+  
+  const stonesStr = (item.stone_type || "None") + (item.stone_ctw ? " (" + item.stone_ctw + " ctw)" : "");
+  setElText("modal-stones", stonesStr);
+  
+  setElText("modal-verified", item.verified_on || "—");
+
+  // Note
+  const noteBox = document.getElementById("modal-note");
+  if (noteBox) {
+    noteBox.textContent = item.note || "No specific buyer notes recorded for this listing.";
+  }
+
+  // Source link
+  const sourceLink = document.getElementById("modal-source-link");
+  if (sourceLink) {
+    sourceLink.href = item.source_url || "#";
+    sourceLink.textContent = item.source_label || "View Official Product Listing ↗";
+  }
+
+  // Category Badge
+  const catBadge = document.getElementById("modal-cat-badge");
+  if (catBadge) {
+    catBadge.className = "badge " + getCategoryBadgeClass(item.category);
+    catBadge.textContent = item.category || "Standard";
+  }
+
+  modal.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeRingModal() {
+  const modal = document.getElementById("ring-modal");
+  if (modal) modal.classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+function loadActiveIntoCalculator() {
+  if (!STATE.activeRing) return;
+  loadIntoCalculator(STATE.activeRing);
+  closeRingModal();
+}
+
+// ----------------- Calculator -----------------
+function loadIntoCalculator(item) {
+  if (item.weight_g != null) {
+    const weightInput = document.getElementById("calc-weight-g");
+    if (weightInput) weightInput.value = item.weight_g;
+  }
+
+  const karatSelect = document.getElementById("calc-karat");
+  if (karatSelect) {
+    if (item.karat === "24K") karatSelect.value = "0.999";
+    else if (item.karat === "18K") karatSelect.value = "0.750";
+    else if (item.karat === "14K") karatSelect.value = "0.5833";
+    else if (item.karat === "10K") karatSelect.value = "0.4167";
+  }
+
+  const priceInput = document.getElementById("calc-retail-price");
+  if (priceInput) {
+    const p = item.price_usd || item.price_usd_from;
+    priceInput.value = p != null ? p : "";
+  }
+
+  runCalculator();
+
+  const calcSec = document.getElementById("calculator");
+  if (calcSec) {
+    calcSec.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+function loadCalculatorPreset(weightG, purityVal, priceVal) {
+  const weightInput = document.getElementById("calc-weight-g");
+  const karatSelect = document.getElementById("calc-karat");
+  const priceInput = document.getElementById("calc-retail-price");
+
+  if (weightInput) weightInput.value = weightG;
+  if (karatSelect) karatSelect.value = purityVal;
+  if (priceInput) priceInput.value = priceVal || "";
+
+  runCalculator();
+}
+
+function runCalculator() {
+  const spotOzInput = document.getElementById("calc-spot-oz");
+  const weightInput = document.getElementById("calc-weight-g");
+  const karatSelect = document.getElementById("calc-karat");
+  const retailInput = document.getElementById("calc-retail-price");
+
+  const spotOz = parseFloat(spotOzInput.value);
+  const weightG = parseFloat(weightInput.value);
+  const purity = parseFloat(karatSelect.value);
+  const retailPrice = retailInput.value ? parseFloat(retailInput.value) : null;
+
+  if (isNaN(spotOz) || isNaN(weightG) || isNaN(purity) || weightG <= 0 || spotOz <= 0) {
+    setElText("calc-out-pure-g", "—");
+    setElText("calc-out-pure-oz", "—");
+    setElText("calc-out-melt-val", "—");
+    setElText("calc-out-spot-g", "—");
+    setElText("calc-out-markup-dlr", "—");
+    setElText("calc-out-markup-pct", "—");
+    return;
+  }
+
+  const spotPerGramPure = spotOz / TROY_OZ_TO_G;
+  const pureGoldG = weightG * purity;
+  const pureGoldOz = pureGoldG / TROY_OZ_TO_G;
+  const meltValueUSD = pureGoldG * spotPerGramPure;
+
+  setElText("calc-out-pure-g", pureGoldG.toFixed(2) + " g");
+  setElText("calc-out-pure-oz", pureGoldOz.toFixed(3) + " oz t");
+  setElText("calc-out-melt-val", "$" + formatNumber(meltValueUSD.toFixed(2)));
+  setElText("calc-out-spot-g", "$" + spotPerGramPure.toFixed(2) + "/g");
+
+  if (retailPrice != null && !isNaN(retailPrice) && retailPrice > 0) {
+    const markupDollar = retailPrice - meltValueUSD;
+    const markupPct = ((retailPrice - meltValueUSD) / meltValueUSD) * 100;
+
+    const markupSign = markupDollar >= 0 ? "+" : "";
+    setElText("calc-out-markup-dlr", markupSign + "$" + formatNumber(markupDollar.toFixed(2)));
+    setElText("calc-out-markup-pct", markupSign + markupPct.toFixed(1) + "%");
+  } else {
+    setElText("calc-out-markup-dlr", "—");
+    setElText("calc-out-markup-pct", "—");
+  }
+}
+
+// ----------------- Export Functions -----------------
+function exportCSV() {
+  if (STATE.filtered.length === 0) {
+    alert("No records to export.");
+    return;
+  }
+
+  const headers = [
+    "Category", "Ring Name", "Seller", "Karat", "Hallmark",
+    "Ring Size", "Weight (g)", "Raw Pure Gold (g)", "Raw Pure Gold (oz t)",
+    "Price (USD)", "Price / Gold Oz", "Price / Gold Gram", "Width (mm)",
+    "Setting Only", "Stone Type", "Stone CTW", "Source URL", "Verified Date", "Note"
+  ];
+
+  const rows = STATE.filtered.map(r => [
+    r.category || "",
+    r.ring || "",
+    r.seller || "",
+    r.karat || "",
+    r.hallmark || "",
+    r.ring_size || "",
+    r.weight_g != null ? r.weight_g : "",
+    r.raw_gold_g != null ? r.raw_gold_g : "",
+    r.raw_gold_oz != null ? r.raw_gold_oz : "",
+    r.price_usd != null ? r.price_usd : (r.price_usd_from || ""),
+    r.price_per_gold_oz != null ? r.price_per_gold_oz : "",
+    r.price_per_gold_g != null ? r.price_per_gold_g : "",
+    r.width_mm != null ? r.width_mm : "",
+    r.setting_only ? "Yes" : "No",
+    r.stone_type || "",
+    r.stone_ctw || "",
+    r.source_url || "",
+    r.verified_on || "",
+    (r.note || "").replace(/"/g, '""')
+  ]);
+
+  const csvContent = [
+    headers.join(","),
+    ...rows.map(row => row.map(cell => '"' + String(cell).replace(/"/g, '""') + '"').join(","))
+  ].join("\n");
+
+  downloadBlob(csvContent, "gold_rings_evidence.csv", "text/csv;charset=utf-8;");
+}
+
+function exportJSON() {
+  if (STATE.filtered.length === 0) {
+    alert("No records to export.");
+    return;
+  }
+  const jsonContent = JSON.stringify(STATE.filtered, null, 2);
+  downloadBlob(jsonContent, "gold_rings_evidence.json", "application/json;charset=utf-8;");
+}
+
+function downloadBlob(content, filename, mimeType) {
+  const blob = new Blob([content], { type: mimeType });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// ----------------- Repository File Tree Browser -----------------
+function populateFileTree() {
+  const list = document.getElementById("file-list");
+  if (!list) return;
+  list.innerHTML = "";
+
+  const countBadge = document.getElementById("file-count-badge");
+  if (countBadge) countBadge.textContent = STATE.rings.length + " files";
+
+  const searchInput = document.getElementById("file-search-input");
+  
+  function renderFiles(filterText = "") {
+    list.innerHTML = "";
+    const filter = filterText.toLowerCase();
+    
+    STATE.rings.forEach(entry => {
+      const filename = (entry.file || "").split("/").pop();
+      if (!filename || (filter && !filename.toLowerCase().includes(filter))) return;
+
+      const li = document.createElement("li");
+      li.style.marginBottom = "4px";
+      
+      const code = document.createElement("code");
+      code.textContent = filename;
+      code.style.color = "#9cdcfe";
+      code.style.cursor = "pointer";
+      code.onclick = () => openRingModal(entry);
+      
+      const noteSpan = document.createElement("span");
+      noteSpan.style.color = "#6a9955";
+      noteSpan.style.marginLeft = "10px";
+      noteSpan.style.fontSize = "0.78rem";
+      noteSpan.textContent = "// " + entry.seller + " - " + entry.ring.slice(0, 40);
+
+      li.appendChild(code);
+      li.appendChild(noteSpan);
+      list.appendChild(li);
+    });
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => renderFiles(e.target.value));
+  }
+
+  renderFiles();
+}
+
+// ----------------- Utility Helpers -----------------
+function formatNumber(num) {
+  if (num == null || isNaN(num)) return "—";
+  const parts = Number(num).toFixed(2).split(".");
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return parts[1] === "00" ? parts[0] : parts.join(".");
+}
+
+function escapeHtml(str) {
+  if (!str) return "";
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
