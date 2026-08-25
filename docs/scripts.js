@@ -248,6 +248,28 @@ const EVIDENCE_FILES = [
   { path: "data/evidence/ferkos_pear_emerald_diamond_14k.json", category: "Standard Retail" },
   { path: "data/evidence/ferkos_pear_ruby_diamond_14k.json", category: "Standard Retail" },
   { path: "data/evidence/ferkos_pear_ruby_ring_diamonds_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/costco_green_quartz_diamond_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/costco_round_brilliant_0_75_ctw_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_linear_double_name_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_linear_name_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_custom_name_band_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_wishbone_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_kyanite_stone_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_ruby_oval_eternity_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_interlocked_engravable_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_domed_eternity_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_lucky_seven_diamond_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_diamond_wishbone_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/quince_circle_ring_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/quince_diamond_floral_eternity_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/quince_diamond_infinity_band_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/quince_diamond_slanted_marquise_round_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/quince_pave_diamond_gemstone_band_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/quince_pear_diamond_half_eternity_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/quince_diamond_orbit_ring_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/quince_square_edge_stacker_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/automic_gold_alexandrite_ring_14k.json", category: "High Transparency" },
+
 ];
 
 async function loadEvidence() {
@@ -325,6 +347,28 @@ function renderRow(item, category) {
     item.setting_only ? "Setting Only" : "Includes Stones",
     renderSource(item.source_url, item.source_label),
     item.verified_on || "—"
+  { path: "data/evidence/costco_green_quartz_diamond_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/costco_round_brilliant_0_75_ctw_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_linear_double_name_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_linear_name_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_custom_name_band_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_wishbone_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_kyanite_stone_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_ruby_oval_eternity_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_interlocked_engravable_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_domed_eternity_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_lucky_seven_diamond_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/baby_gold_diamond_wishbone_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/quince_circle_ring_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/quince_diamond_floral_eternity_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/quince_diamond_infinity_band_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/quince_diamond_slanted_marquise_round_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/quince_pave_diamond_gemstone_band_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/quince_pear_diamond_half_eternity_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/quince_diamond_orbit_ring_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/quince_square_edge_stacker_14k.json", category: "Standard Retail" },
+  { path: "data/evidence/automic_gold_alexandrite_ring_14k.json", category: "High Transparency" },
+
   ];
 
   cells.forEach(v => {

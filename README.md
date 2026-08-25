@@ -47,7 +47,8 @@ The audit enforces:
 ## Local preview
 
 ```bash
-# from the repo root
+# from the repo root, first copy data to docs (for local dev)
+cp -r data docs/
 python3 -m http.server --directory docs 8000
 # then open http://localhost:8000
 ```
