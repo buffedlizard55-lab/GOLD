@@ -3,639 +3,171 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GOLD — Solid Gold Engagement Ring Buyer’s Guide & Directory</title>
-  <meta name="description" content="A buyer-first, evidence-based reference directory for solid gold engagement rings and wedding bands. Every product price, weight in grams, hallmark, and spot-price calculation is backed by verified official source links." />
+  <title>GOLD — Solid Gold Ring Directory</title>
+  <meta name="description" content="487 verified solid gold and platinum rings with official source links, weights, prices, and price-per-gold-ounce calculations." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Top No-Hallucination Banner -->
-  <div class="banner" role="alert">
-    <span class="badge-pill">Strict Verification</span>
-    <strong>No-Hallucination Policy:</strong> Every product price, metal weight, and hallmark is verified line by line with an official source link.
-  </div>
-
-  <!-- Header & Navigation -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="brand-row">
-        <div class="brand-title-wrap">
-          <div class="brand-logo" aria-hidden="true">Au</div>
-          <div>
-            <h1 class="site-title">GOLD — Evidence-Based Gold Ring Directory</h1>
-            <p class="site-subtitle">
-              Transparent, verified buyer’s guide for solid gold engagement rings, wedding bands, and investment jewelry.
-            </p>
-          </div>
-        </div>
-        <div class="header-badges">
-          <span class="header-badge highlight">✓ 487 Verified Entries</span>
-          <span class="header-badge">Size 4.5 Focus</span>
-          <a href="https://github.com/buffedlizard55-lab/GOLD" target="_blank" rel="noopener noreferrer" class="header-badge">GitHub Repo ↗</a>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-logo">Au</div>
+        <div>
+          <h1 class="brand-title">GOLD</h1>
+          <p class="brand-sub">Evidence-Based Solid Gold Ring Directory</p>
         </div>
       </div>
-
-      <nav class="topnav" aria-label="Main Navigation">
-        <a href="#stats">Overview & Stats</a>
-        <a href="#evidence">Evidence Table</a>
-        <a href="#calculator">Melt Calculator</a>
-        <a href="#findings">Size 4.5 Findings</a>
-        <a href="#checklist">Buyer’s Checklist</a>
-        <a href="#verification">Verification Guide</a>
-        <a href="#spot">Live Spot Price</a>
-        <a href="#audit">Audit Log</a>
-        <a href="#structure">Repository Data</a>
-      </nav>
+      <div class="header-stats">
+        <div class="h-stat">
+          <span class="h-stat-val" id="hdr-total">487</span>
+          <span class="h-stat-label">Verified Rings</span>
+        </div>
+        <div class="h-stat">
+          <span class="h-stat-val" id="hdr-sellers">35</span>
+          <span class="h-stat-label">Retailers</span>
+        </div>
+        <div class="h-stat">
+          <span class="h-stat-val" id="hdr-best">—</span>
+          <span class="h-stat-label">Best Price/Oz</span>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main>
-    <!-- STATS OVERVIEW SECTION -->
-    <section id="stats" class="card">
-      <div class="card-header">
-        <div class="card-title-group">
-          <h2>Market Overview & Verification Statistics</h2>
-          <p class="card-desc">
-            Aggregated metrics across all tracked solid gold and platinum ring listings.
-          </p>
+  <!-- Policy Banner -->
+  <div class="policy-banner">
+    <div class="container">
+      <strong>Zero-Hallucination Policy:</strong> Every price, weight, and link is verified against an official source.
+      <a href="https://github.com/buffedlizard55-lab/GOLD" target="_blank" rel="noopener">View on GitHub ↗</a>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <!-- Search & Filters -->
+    <section class="controls">
+      <div class="search-row">
+        <div class="search-wrap">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" id="search" class="search-input" placeholder="Search rings, sellers, karat, stones..." aria-label="Search rings" />
+          <button id="search-clear" class="search-clear" title="Clear" aria-label="Clear search">&times;</button>
+        </div>
+        <div class="filter-row">
+          <select id="f-seller" class="sel" aria-label="Filter by seller"><option value="">All Sellers</option></select>
+          <select id="f-karat" class="sel" aria-label="Filter by karat"><option value="">All Karats</option></select>
+          <select id="f-type" class="sel" aria-label="Filter by ring type"><option value="">All Types</option></select>
+          <select id="f-weight" class="sel" aria-label="Filter by weight">
+            <option value="">All Listings</option>
+            <option value="yes">Weight Published</option>
+            <option value="no">Weight Not Listed</option>
+          </select>
+          <select id="f-sort" class="sel" aria-label="Sort by">
+            <option value="price_per_gold_oz:asc">Price/Oz: Low → High</option>
+            <option value="price_per_gold_oz:desc">Price/Oz: High → Low</option>
+            <option value="price_usd:asc">Price: Low → High</option>
+            <option value="price_usd:desc">Price: High → Low</option>
+            <option value="weight_g:desc">Weight: Heavy → Light</option>
+            <option value="seller:asc">Seller: A → Z</option>
+            <option value="ring:asc">Name: A → Z</option>
+            <option value="verified_on:desc">Verified: Newest</option>
+          </select>
         </div>
       </div>
-
-      <div class="stats-grid">
-        <div class="stat-box gold">
-          <span class="stat-label">Total Verified Rings</span>
-          <span id="stat-total-rings" class="stat-number">487</span>
-          <span class="stat-sub">100% with official source links</span>
-        </div>
-        <div class="stat-box green">
-          <span class="stat-label">High Transparency</span>
-          <span id="stat-transparent" class="stat-number">219+</span>
-          <span class="stat-sub">Explicit metal weight published</span>
-        </div>
-        <div class="stat-box gold">
-          <span class="stat-label">Investment Grade</span>
-          <span id="stat-24k" class="stat-number">11 Bands</span>
-          <span class="stat-sub">Pure 24K gold (99.9% purity)</span>
-        </div>
-        <div class="stat-box blue">
-          <span class="stat-label">Tracked Retailers</span>
-          <span id="stat-sellers" class="stat-number">35 Brands</span>
-          <span class="stat-sub">From luxury jewelers to bullion makers</span>
-        </div>
-        <div class="stat-box purple">
-          <span class="stat-label">Best Value Price/Oz</span>
-          <span id="stat-lowest-oz" class="stat-number">—</span>
-          <span class="stat-sub">Closest to live gold melt spot</span>
+      <div class="controls-footer">
+        <span id="result-count" class="result-count">Loading...</span>
+        <div class="controls-actions">
+          <button class="btn btn-sm" id="btn-reset">Reset Filters</button>
+          <button class="btn btn-sm" id="btn-csv">Export CSV</button>
+          <button class="btn btn-sm" id="btn-json">Export JSON</button>
         </div>
       </div>
     </section>
 
-    <!-- EVIDENCE TABLE & EXPLORER SECTION -->
-    <section id="evidence" class="card">
-      <div class="card-header">
-        <div class="card-title-group">
-          <h2>Verified Ring Evidence Table</h2>
-          <p class="card-desc">
-            Explore and compare solid gold rings by <strong>raw gold weight</strong>, <strong>price</strong>, and <strong>price per pure gold ounce / gram</strong>. Click any row or 'Specs' to view complete details.
-          </p>
-        </div>
-        <div class="action-buttons">
-          <button class="btn btn-secondary btn-sm" onclick="exportCSV()" title="Export filtered records to CSV spreadsheet">📥 Export CSV</button>
-          <button class="btn btn-secondary btn-sm" onclick="exportJSON()" title="Export filtered records to JSON">📥 Export JSON</button>
-        </div>
-      </div>
-
-      <!-- Filter & Search Toolbar -->
-      <div class="toolbar-wrap">
-        <!-- Search Row & Category Pills -->
-        <div class="search-main-row">
-          <div class="search-input-wrap">
-            <span class="search-icon">🔍</span>
-            <input type="text" id="search-input" class="search-input" placeholder="Search by ring name, seller, karat (14K, 18K, 24K), size, hallmark, stone..." aria-label="Search rings" />
-            <button id="search-clear-btn" class="search-clear-btn" title="Clear search">×</button>
-          </div>
-
-          <div class="category-pills">
-            <button class="cat-pill active" data-cat="all">All Rings <span class="pill-count">487</span></button>
-            <button class="cat-pill" data-cat="Investment (24K)">Investment 24K <span class="pill-count">11</span></button>
-            <button class="cat-pill" data-cat="High Transparency">High Transparency <span class="pill-count">219</span></button>
-            <button class="cat-pill" data-cat="Standard Retail">Standard Retail <span class="pill-count">253</span></button>
-            <button class="cat-pill" data-cat="Benchmark">Benchmarks <span class="pill-count">4</span></button>
-          </div>
-        </div>
-
-        <!-- Advanced Filter Dropdowns -->
-        <div class="filter-grid">
-          <div class="filter-group">
-            <label for="filter-seller">Seller / Brand</label>
-            <select id="filter-seller" class="filter-select">
-              <option value="all">All Sellers</option>
-            </select>
-          </div>
-
-          <div class="filter-group">
-            <label for="filter-karat">Metal / Karat</label>
-            <select id="filter-karat" class="filter-select">
-              <option value="all">All Metals / Karats</option>
-            </select>
-          </div>
-
-          <div class="filter-group">
-            <label for="filter-type">Ring Style</label>
-            <select id="filter-type" class="filter-select">
-              <option value="all">All Ring Styles</option>
-            </select>
-          </div>
-
-          <div class="filter-group">
-            <label for="filter-size">Ring Size</label>
-            <select id="filter-size" class="filter-select">
-              <option value="all">All Ring Sizes</option>
-              <option value="size_45">Size 4.5 Focused / Verified</option>
-            </select>
-          </div>
-
-          <div class="filter-group">
-            <label for="filter-weight">Metal Weight</label>
-            <select id="filter-weight" class="filter-select">
-              <option value="all">All Listings</option>
-              <option value="published">Weight Published Only (Transparent)</option>
-              <option value="unlisted">Weight Not Listed</option>
-            </select>
-          </div>
-
-          <div class="filter-group">
-            <label for="filter-setting">Setting Type</label>
-            <select id="filter-setting" class="filter-select">
-              <option value="all">All Settings</option>
-              <option value="setting_only">Setting Only</option>
-              <option value="with_stones">Complete Ring (Stones Included)</option>
-            </select>
-          </div>
-
-          <div class="filter-group">
-            <label for="filter-price-min">Min Price ($)</label>
-            <input type="number" id="filter-price-min" class="filter-input" placeholder="Min $" min="0" step="50" />
-          </div>
-
-          <div class="filter-group">
-            <label for="filter-price-max">Max Price ($)</label>
-            <input type="number" id="filter-price-max" class="filter-input" placeholder="Max $" min="0" step="100" />
-          </div>
-
-          <div class="filter-group">
-            <label for="filter-sort">Sort By</label>
-            <select id="filter-sort" class="filter-select">
-              <option value="price_per_gold_oz:asc">Price / Gold Oz (Best Value)</option>
-              <option value="price_per_gold_oz:desc">Price / Gold Oz (Highest Markup)</option>
-              <option value="price_usd:asc">Price: Low to High</option>
-              <option value="price_usd:desc">Price: High to Low</option>
-              <option value="weight_g:desc">Total Weight: High to Low</option>
-              <option value="raw_gold_g:desc">Raw Pure Gold: High to Low</option>
-              <option value="seller:asc">Seller (A to Z)</option>
-              <option value="ring:asc">Ring Name (A to Z)</option>
-              <option value="verified_on:desc">Verified Date (Newest)</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Toolbar Footer / Results Info -->
-        <div class="toolbar-actions">
-          <div id="results-counter" class="results-info">
-            Showing all <span>487</span> verified entries
-          </div>
-          <div class="action-buttons">
-            <button class="btn btn-secondary btn-sm" onclick="resetFilters()">Reset All Filters</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Main Data Table -->
-      <div class="table-wrap mt-12">
-        <table id="evidence-table">
+    <!-- Data Table -->
+    <section class="table-section">
+      <div class="table-scroll">
+        <table id="ring-table">
           <thead>
             <tr>
-              <th data-sort="category">Category</th>
-              <th data-sort="ring">Ring Description</th>
-              <th data-sort="seller">Seller</th>
-              <th data-sort="karat">Karat</th>
-              <th data-sort="ring_size">Size</th>
-              <th data-sort="weight_g">Total Wt (g)</th>
-              <th data-sort="raw_gold_g">Raw Pure Gold</th>
-              <th data-sort="price_usd">Price (USD)</th>
-              <th data-sort="price_per_gold_oz">Price / Gold Oz</th>
-              <th>Official Source</th>
-              <th>Actions</th>
+              <th class="sortable" data-col="ring">Ring</th>
+              <th class="sortable" data-col="seller">Seller</th>
+              <th class="sortable" data-col="karat">Karat</th>
+              <th class="sortable" data-col="ring_size">Size</th>
+              <th class="sortable" data-col="weight_g">Weight (g)</th>
+              <th class="sortable" data-col="raw_gold_g">Raw Gold</th>
+              <th class="sortable" data-col="price_usd">Price</th>
+              <th class="sortable" data-col="price_per_gold_oz">Price / Gold Oz</th>
+              <th>Source</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td colspan="11" class="text-center text-muted" style="padding: 40px;">
-                Loading verified evidence records…
-              </td>
-            </tr>
+          <tbody id="tbody">
+            <tr><td colspan="9" class="loading-cell">Loading verified ring data...</td></tr>
           </tbody>
         </table>
       </div>
 
       <!-- Pagination -->
-      <div class="pagination-wrap">
-        <div class="page-size-selector">
-          <label for="page-size-select">Show entries:</label>
-          <select id="page-size-select" class="filter-select" style="width: auto; padding: 4px 8px;">
-            <option value="25">25 per page</option>
-            <option value="50">50 per page</option>
-            <option value="100">100 per page</option>
-            <option value="-1">Show All (487)</option>
+      <div class="pagination">
+        <div class="page-size">
+          <label for="page-size">Show:</label>
+          <select id="page-size" class="sel sel-sm">
+            <option value="25">25</option>
+            <option value="50" selected>50</option>
+            <option value="100">100</option>
+            <option value="0">All</option>
           </select>
         </div>
-        <div id="pagination-controls" class="pagination-controls"></div>
+        <div id="page-controls" class="page-controls"></div>
       </div>
     </section>
 
-    <!-- INTERACTIVE MELT-VALUE CALCULATOR -->
-    <section id="calculator" class="card">
-      <div class="card-header">
-        <div class="card-title-group">
-          <h2>Interactive Gold Content & Melt-Value Calculator</h2>
-          <p class="card-desc">
-            Calculate the exact raw gold content and melt value for any ring weight and karat. Compare directly against retail prices to uncover markup.
-          </p>
+    <!-- Detail Modal -->
+    <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Ring details">
+      <div class="modal">
+        <div class="modal-head">
+          <h2 id="m-title">Ring Details</h2>
+          <button id="m-close" class="modal-close" aria-label="Close">&times;</button>
         </div>
-      </div>
-
-      <div class="calc-grid-layout">
-        <!-- Form Inputs -->
-        <div class="calc-form">
-          <div class="filter-group">
-            <label for="calc-spot-oz">Live Gold Spot Price (USD / Troy Oz)</label>
-            <input type="number" id="calc-spot-oz" class="filter-input" value="4400.00" step="0.50" min="1" />
-            <small class="text-muted">Enter current gold spot benchmark (check Kitco live link below).</small>
+        <div class="modal-body">
+          <div class="spec-grid">
+            <div class="spec"><span class="spec-label">Seller</span><span id="m-seller" class="spec-val">—</span></div>
+            <div class="spec"><span class="spec-label">Karat / Metal</span><span id="m-karat" class="spec-val">—</span></div>
+            <div class="spec"><span class="spec-label">Hallmark</span><span id="m-hallmark" class="spec-val">—</span></div>
+            <div class="spec"><span class="spec-label">Ring Size</span><span id="m-size" class="spec-val">—</span></div>
+            <div class="spec"><span class="spec-label">Band Width</span><span id="m-width" class="spec-val">—</span></div>
+            <div class="spec"><span class="spec-label">Total Weight</span><span id="m-weight" class="spec-val">—</span></div>
+            <div class="spec"><span class="spec-label">Raw Pure Gold</span><span id="m-rawgold" class="spec-val">—</span></div>
+            <div class="spec"><span class="spec-label">Price (USD)</span><span id="m-price" class="spec-val">—</span></div>
+            <div class="spec"><span class="spec-label">Price / Gold Oz</span><span id="m-ppoz" class="spec-val">—</span></div>
+            <div class="spec"><span class="spec-label">Price / Gold Gram</span><span id="m-ppg" class="spec-val">—</span></div>
+            <div class="spec"><span class="spec-label">Ring Type</span><span id="m-type" class="spec-val">—</span></div>
+            <div class="spec"><span class="spec-label">Category</span><span id="m-cat" class="spec-val">—</span></div>
+            <div class="spec"><span class="spec-label">Setting</span><span id="m-setting" class="spec-val">—</span></div>
+            <div class="spec"><span class="spec-label">Stones</span><span id="m-stones" class="spec-val">—</span></div>
+            <div class="spec"><span class="spec-label">Verified On</span><span id="m-verified" class="spec-val">—</span></div>
           </div>
-
-          <div class="filter-group">
-            <label for="calc-weight-g">Ring Total Metal Weight (Grams)</label>
-            <input type="number" id="calc-weight-g" class="filter-input" placeholder="e.g. 4.50" step="0.01" min="0.01" />
-          </div>
-
-          <div class="filter-group">
-            <label for="calc-karat">Gold Karat / Purity Fraction</label>
-            <select id="calc-karat" class="filter-select">
-              <option value="0.999">24K Solid Gold (99.9% Pure)</option>
-              <option value="0.916">22K Solid Gold (91.6% Pure)</option>
-              <option value="0.750">18K Solid Gold (75.0% Pure)</option>
-              <option value="0.5833" selected>14K Solid Gold (58.33% Pure)</option>
-              <option value="0.4167">10K Solid Gold (41.67% Pure)</option>
-            </select>
-          </div>
-
-          <div class="filter-group">
-            <label for="calc-retail-price">Listed Retail Price (USD, Optional)</label>
-            <input type="number" id="calc-retail-price" class="filter-input" placeholder="e.g. 850.00" step="1" min="0" />
-            <small class="text-muted">Used to calculate retail markup percentage above melt.</small>
-          </div>
-
-          <div class="calc-presets">
-            <label>Quick Benchmark Presets:</label>
-            <div class="preset-pills">
-              <button type="button" class="preset-btn" onclick="loadCalculatorPreset(3.62, '0.5833', 329.99)">Costco 14K Band (3.62g)</button>
-              <button type="button" class="preset-btn" onclick="loadCalculatorPreset(10.15, '0.999', 1872.00)">Menē 24K Band (10.15g)</button>
-              <button type="button" class="preset-btn" onclick="loadCalculatorPreset(3.10, '0.5833', 2862.00)">Automic Diamond (3.10g)</button>
-              <button type="button" class="preset-btn" onclick="loadCalculatorPreset(14.50, '0.999', 4617.00)">7879 Signet 24K (14.5g)</button>
-            </div>
-          </div>
-
-          <button type="button" id="calc-btn" class="btn btn-gold" style="margin-top: 8px;">Recalculate Value</button>
+          <div class="note-box" id="m-note">No notes recorded.</div>
         </div>
-
-        <!-- Form Results -->
-        <div class="calc-results-panel">
-          <h3 style="font-size: 1.1rem; color: var(--text-primary); border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
-            Gold Content & Valuation Results
-          </h3>
-
-          <div class="calc-stat-row">
-            <div class="calc-stat-card">
-              <span class="calc-stat-title">Pure Gold (Grams)</span>
-              <span id="calc-out-pure-g" class="calc-stat-val">—</span>
-            </div>
-            <div class="calc-stat-card">
-              <span class="calc-stat-title">Pure Gold (Troy Oz)</span>
-              <span id="calc-out-pure-oz" class="calc-stat-val">—</span>
-            </div>
-          </div>
-
-          <div class="calc-stat-row">
-            <div class="calc-stat-card highlight">
-              <span class="calc-stat-title">Melt Value (USD)</span>
-              <span id="calc-out-melt-val" class="calc-stat-val">—</span>
-            </div>
-            <div class="calc-stat-card">
-              <span class="calc-stat-title">Pure Gold Spot / Gram</span>
-              <span id="calc-out-spot-g" class="calc-stat-val">—</span>
-            </div>
-          </div>
-
-          <div class="calc-markup-box">
-            <div class="flex-between">
-              <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Retail Premium / Markup:</span>
-              <span id="calc-out-markup-dlr" style="font-size: 1.1rem; font-weight: 800; font-family: var(--font-mono); color: var(--text-primary);">—</span>
-            </div>
-            <div class="flex-between">
-              <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Markup Percentage:</span>
-              <span id="calc-out-markup-pct" style="font-size: 1.1rem; font-weight: 800; font-family: var(--font-mono); color: var(--gold-dark);">—</span>
-            </div>
-          </div>
+        <div class="modal-foot">
+          <a id="m-source" href="#" target="_blank" rel="noopener" class="btn btn-gold">View Official Source ↗</a>
         </div>
-      </div>
-    </section>
-
-    <!-- LIVE GOLD SPOT REFERENCE -->
-    <section id="spot" class="card">
-      <div class="card-header">
-        <div class="card-title-group">
-          <h2>Live Gold Spot Price Feed</h2>
-          <p class="card-desc">
-            Direct real-time precious metals feed from Kitco. Under our no-hallucination contract, we link directly to official feeds rather than caching stale numbers.
-          </p>
-        </div>
-        <a href="https://www.kitco.com/price/precious-metals" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">Kitco Official Live Feed ↗</a>
-      </div>
-
-      <div style="width: 100%; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); background: #ffffff;">
-        <iframe src="https://www.kitco.com/price/precious-metals" title="Kitco Precious Metals Spot Price Feed" style="width: 100%; height: 380px; border: none;" loading="lazy"></iframe>
-      </div>
-    </section>
-
-    <!-- FINDINGS SECTION -->
-    <section id="findings" class="card">
-      <div class="card-header">
-        <div class="card-title-group">
-          <h2>Findings: Ring Size 4.5 Market & Transparency Analysis</h2>
-          <p class="card-desc">
-            Investigation of small-size ring availability, weight disclosures, and retail pricing patterns.
-          </p>
-        </div>
-      </div>
-
-      <p style="margin-bottom: 14px; color: var(--text-secondary);">
-        Our investigation into solid gold rings in <strong>US size 4.5</strong> (~48mm circumference, ~15.3mm diameter) revealed that small ring sizes represent an acute transparency test. Many mass-market retailers start sizing at 5 or 6, while others offer size 4.5 only as custom non-returnable orders without publishing gram weights.
-      </p>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 16px;">
-        <div style="background: var(--bg-subtle); padding: 18px; border-radius: var(--radius-md); border-left: 4px solid var(--ok);">
-          <h3 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 8px;">Top High-Transparency Brands</h3>
-          <ul style="padding-left: 18px; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
-            <li><strong>Automic Gold:</strong> Publishes approx gram weight on every ring page, offers sizes 2–16 in quarter increments.</li>
-            <li><strong>Costco:</strong> Publishes exact weight charts per ring size range (e.g. 4.56g for 18K 4mm band).</li>
-            <li><strong>Menē:</strong> Pure 24K investment bands with exact gram weights and transparent spot-linked pricing.</li>
-            <li><strong>Ritani:</strong> Publishes metal weight on settings and supports full quarter sizing (3–9 range).</li>
-            <li><strong>7879:</strong> Full bullion transparency with itemized metal value and manufacturing cost.</li>
-          </ul>
-        </div>
-
-        <div style="background: var(--bg-subtle); padding: 18px; border-radius: var(--radius-md); border-left: 4px solid var(--warn);">
-          <h3 style="font-size: 1rem; color: var(--text-primary); margin-bottom: 8px;">Flagged Irregularities & Exclusions</h3>
-          <ul style="padding-left: 18px; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
-            <li><strong>Macy’s 4mm Band (Excluded):</strong> Customer review verified stamp reads '14k fg' (gold-filled), contradicting solid 14K title.</li>
-            <li><strong>Quince Low Dome Single Weight:</strong> Publishes one weight for 3mm bands without distinguishing size variants.</li>
-            <li><strong>Zales Price Drift:</strong> Live schema pricing differed from cache snapshots; live page recorded.</li>
-            <li><strong>Catbird Mignon Stock:</strong> Size 4.5 variant marked out of stock; noted in catalog for completeness.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- BUYER'S CHECKLIST -->
-    <section id="checklist" class="card">
-      <div class="card-header">
-        <div class="card-title-group">
-          <h2>Solid Gold Buyer’s Checklist</h2>
-          <p class="card-desc">
-            Essential 5-step checklist to protect yourself when purchasing solid gold jewelry online.
-          </p>
-        </div>
-      </div>
-
-      <ol class="checklist">
-        <li class="checklist-item">
-          <div class="check-num">1</div>
-          <div class="check-content">
-            <strong>Demand Explicit 'Solid Gold' Language</strong>
-            <p>Reject ambiguous terms like 'gold finish', 'gold vermeil' (plated sterling silver), 'gold-filled' (brass core with thin gold shell), or 'bonded gold'. FTC guidelines strictly define solid gold.</p>
-          </div>
-        </li>
-        <li class="checklist-item">
-          <div class="check-num">2</div>
-          <div class="check-content">
-            <strong>Verify Metal Weight in Grams Before Ordering</strong>
-            <p>Never purchase without knowing the gram weight. Legitimate sellers (see High Transparency filter in the table) publish exact or approximate gram weights for each ring size.</p>
-          </div>
-        </li>
-        <li class="checklist-item">
-          <div class="check-num">3</div>
-          <div class="check-content">
-            <strong>Perform a Melt-Value Sanity Check</strong>
-            <p>Multiply: <em>Total Weight (g) × Karat Purity × Spot Price per Gram</em>. Any listing priced below raw melt value is almost certainly fraudulent or hollow.</p>
-          </div>
-        </li>
-        <li class="checklist-item">
-          <div class="check-num">4</div>
-          <div class="check-content">
-            <strong>Pay Exclusively with Credit Card</strong>
-            <p>Ensure credit card chargeback protection under Fair Credit Billing laws in case independent testing discovers lower gold purity than advertised.</p>
-          </div>
-        </li>
-        <li class="checklist-item">
-          <div class="check-num">5</div>
-          <div class="check-content">
-            <strong>Independent Post-Delivery Verification</strong>
-            <p>Immediately test with a 0.01g digital scale, inspect hallmarks under 10× loupe, and obtain non-destructive XRF spectrometry testing at an independent jeweler.</p>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <!-- VERIFICATION TESTING GUIDE -->
-    <section id="verification" class="card">
-      <div class="card-header">
-        <div class="card-title-group">
-          <h2>Independent Post-Delivery Testing Guide</h2>
-          <p class="card-desc">
-            How to verify metal authenticity, karat purity, and weight once your ring arrives.
-          </p>
-        </div>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
-        <div style="background: var(--bg-subtle); padding: 18px; border-radius: var(--radius-md);">
-          <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">1. Precision Scale Test</h3>
-          <p style="font-size: 0.86rem; color: var(--text-secondary);">Weigh the ring on a calibrated 0.01g digital jewelry scale. Compare directly against the seller's published weight (should be within ±5% tolerance).</p>
-        </div>
-        <div style="background: var(--bg-subtle); padding: 18px; border-radius: var(--radius-md);">
-          <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">2. Hallmark & Maker's Mark</h3>
-          <p style="font-size: 0.86rem; color: var(--text-secondary);">Examine the inner band under a 10× loupe. Look for legal millesimal fineness stamps: <strong>585</strong> (14K), <strong>750</strong> (18K), <strong>999</strong> (24K), or <strong>950</strong> (Platinum).</p>
-        </div>
-        <div style="background: var(--bg-subtle); padding: 18px; border-radius: var(--radius-md);">
-          <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">3. Specific Gravity Test</h3>
-          <p style="font-size: 0.86rem; color: var(--text-secondary);">Determine density using Archimedes' water displacement method. 14K yellow gold has density ~13.0–13.5 g/cm³; 18K is ~15.2–15.6 g/cm³; 24K is 19.3 g/cm³.</p>
-        </div>
-        <div style="background: var(--bg-subtle); padding: 18px; border-radius: var(--radius-md);">
-          <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">4. XRF Spectrometry</h3>
-          <p style="font-size: 0.86rem; color: var(--text-secondary);">Visit a qualified independent jeweler with an X-ray fluorescence (XRF) analyzer. Provides non-destructive elemental breakdown in under 30 seconds.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- AUDIT LOG SECTION -->
-    <section id="audit" class="card">
-      <div class="card-header">
-        <div class="card-title-group">
-          <h2>Anti-Hallucination Audit Log</h2>
-          <p class="card-desc">
-            All additions and modifications are audited with <code>bash scripts/audit.sh</code> to guarantee zero unverified numbers.
-          </p>
-        </div>
-      </div>
-
-      <ul class="audit-timeline">
-        <li class="audit-timeline-item">
-          <strong>2026-08-25 (Round 15 — UI & Directory Overhaul)</strong>: Built clean, responsive GitHub Pages application with interactive table, dynamic multi-field filtering, sorting by price per gold ounce, raw gold weight calculation, interactive melt calculator, and full data export. Passed strict hallucination audit.
-        </li>
-        <li class="audit-timeline-item">
-          <strong>2026-08-25 (Round 14)</strong>: Added 100 verified solid gold and platinum entries from Ritani and other trusted sources. Total dataset expanded to 487 verified records.
-        </li>
-        <li class="audit-timeline-item">
-          <strong>2026-08-25 (Round 13)</strong>: Added 29 verified solid gold ring entries (14K, 18K) extracted directly from verified catalog pages.
-        </li>
-        <li class="audit-timeline-item">
-          <strong>2026-08-25 (Round 12)</strong>: Added 98 verified entries from Ritani and Automic Gold parsed from live cached JSON-LD product data.
-        </li>
-        <li class="audit-timeline-item">
-          <strong>2026-08-25 (Round 11)</strong>: Added 21 verified entries: 2 Costco diamond/gemstone rings, 10 Baby Gold solid 14K rings, 8 Quince rings, and 1 Automic Gold Alexandrite ring.
-        </li>
-        <li class="audit-timeline-item">
-          <strong>2026-08-19 (Rounds 1–10)</strong>: Initial investigation and verification of 200+ rings across Menē, Automic Gold, Costco, Quince, 7879, Ferko’s Fine Jewelry, Helzberg, Kay, and Jared with specific focus on ring size 4.5.
-        </li>
-      </ul>
-    </section>
-
-    <!-- REPOSITORY STRUCTURE & FILE BROWSER -->
-    <section id="structure" class="card">
-      <div class="card-header">
-        <div class="card-title-group">
-          <h2>Repository Data Files</h2>
-          <p class="card-desc">
-            Explore the raw JSON evidence files stored in <code>data/evidence/</code>.
-          </p>
-        </div>
-        <span id="file-count-badge" class="badge badge-metal">487 files</span>
-      </div>
-
-      <div style="margin-bottom: 12px;">
-        <input type="text" id="file-search-input" class="filter-input" placeholder="Filter raw evidence files..." style="max-width: 320px;" />
-      </div>
-
-      <div class="repo-file-tree">
-        <ul id="file-list" style="list-style: none;">
-          <li class="text-muted">Loading file list…</li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <!-- RING SPECIFICATION MODAL / DRAWER -->
-  <div id="ring-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-dialog">
-      <div class="modal-header">
-        <div>
-          <span id="modal-cat-badge" class="badge badge-trans" style="margin-bottom: 6px;">Category</span>
-          <h3 id="modal-title" style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); line-height: 1.3;">Ring Specifications</h3>
-        </div>
-        <button id="modal-close-btn" class="modal-close-btn" title="Close details">×</button>
-      </div>
-
-      <div class="modal-body">
-        <div class="modal-specs-grid">
-          <div class="spec-item">
-            <span class="spec-item-label">Seller / Brand</span>
-            <span id="modal-seller" class="spec-item-val">—</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-item-label">Karat & Metal</span>
-            <span id="modal-karat" class="spec-item-val">—</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-item-label">Hallmark / Stamp</span>
-            <span id="modal-hallmark" class="spec-item-val">—</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-item-label">Ring Size</span>
-            <span id="modal-size" class="spec-item-val">—</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-item-label">Band Width</span>
-            <span id="modal-width" class="spec-item-val">—</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-item-label">Total Metal Weight</span>
-            <span id="modal-weight" class="spec-item-val">—</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-item-label">Raw Pure Gold Weight</span>
-            <span id="modal-raw-gold" class="spec-item-val">—</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-item-label">Listed Price (USD)</span>
-            <span id="modal-price" class="spec-item-val">—</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-item-label">Price / Gold Oz & Gram</span>
-            <span id="modal-price-oz" class="spec-item-val">—</span>
-          </div>
-          <div class="spec-item">
-            <span class="spec-item-label">Setting Type</span>
-            <span id="modal-setting" class="spec-item-val">—</span>
-          </div>
-          <div class="spec-item" style="grid-column: 1 / -1;">
-            <span class="spec-item-label">Gemstones / Diamonds</span>
-            <span id="modal-stones" class="spec-item-val">—</span>
-          </div>
-          <div class="spec-item" style="grid-column: 1 / -1;">
-            <span class="spec-item-label">Verification Date</span>
-            <span id="modal-verified" class="spec-item-val">—</span>
-          </div>
-        </div>
-
-        <div>
-          <h4 style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px;">
-            Buyer Notes & Fraud Caveats
-          </h4>
-          <div id="modal-note" class="modal-note-box">
-            No specific notes recorded.
-          </div>
-        </div>
-      </div>
-
-      <div class="modal-footer">
-        <a id="modal-source-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
-          Official Product Page ↗
-        </a>
-        <button type="button" class="btn btn-secondary" onclick="loadActiveIntoCalculator()">
-          ⚡ Load into Melt Calculator
-        </button>
       </div>
     </div>
-  </div>
 
-  <!-- Site Footer -->
-  <footer class="site-footer">
-    <p>
-      <strong>GOLD</strong> — An educational, evidence-based buyer's reference guide. Always independently verify gold purity with a qualified jeweler before purchase.
-    </p>
-    <p style="margin-top: 8px;">
-      View project repository and contribute evidence on <a href="https://github.com/buffedlizard55-lab/GOLD" target="_blank" rel="noopener noreferrer">GitHub</a>.
-    </p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p><strong>GOLD</strong> — An educational, evidence-based buyer's reference. Always verify gold purity independently before purchase.</p>
+      <p class="footer-links">
+        <a href="https://github.com/buffedlizard55-lab/GOLD" target="_blank" rel="noopener">GitHub Repository</a>
+        &middot;
+        <a href="https://www.kitco.com/price/precious-metals" target="_blank" rel="noopener">Live Gold Spot Price (Kitco)</a>
+      </p>
+    </div>
   </footer>
 
   <script src="scripts.js"></script>
