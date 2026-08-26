@@ -1,0 +1,59 @@
+{
+  "checked_on": "2026-08-26",
+  "method": "Official seller pages reviewed through Arena's page extraction tools",
+  "scope": "Targeted re-checks of rows with clear data conflicts or representative official product pages",
+  "limitation": "These checks cover only the rows listed here. Extracted page text can omit dynamic content; a check is not a guarantee of future price or availability.",
+  "checks": [
+    {
+      "id": "7879_signet_ring_24k",
+      "source_url": "https://7879.co/products/24k-gold-signet-ring",
+      "result": "mismatch",
+      "observations": [
+        "Official 7879 page identifies the item as a 24ct Gold Signet Ring and displays 24ct (99.9%) purity.",
+        "The page currently displays £5,789.98 list price and £3,473.99 sale price, and shows Sold Out.",
+        "The extracted page text does not show the catalog's stored USD 4,617 price or an exact 14.5g weight; it says product weights can vary by up to 0.5g."
+      ],
+      "action_taken": "Removed the prior USD price, exact weight, and dependent gold-price calculations until a matching regional source is captured."
+    },
+    {
+      "id": "costco_green_quartz_diamond_14k",
+      "source_url": "https://www.costco.com/green-quartz-and-diamond-14kt-yellow-gold-ring.product.4000153237.html",
+      "result": "mismatch",
+      "observations": [
+        "Official Costco product page resolves to item 1734796, Green Quartz and Diamond 14kt Yellow Gold Ring.",
+        "The page states 14kt Yellow Gold, ring size 7, and 0.40 ctw diamonds.",
+        "The extracted current page shows a Loading price area and does not expose the catalog's stored USD 599.99 price."
+      ],
+      "action_taken": "Removed the stored price until the current official page exposes a directly readable price."
+    },
+    {
+      "id": "zoya_radiant_18k_rg",
+      "source_url": "https://www.ritani.com/products/solitaire-diamond-knife-edge-engagement-ring-6-metal-18kt-rose-gold-shape-radiant",
+      "result": "partial_support",
+      "observations": [
+        "Official Ritani page identifies the Zoya Radiant Cut 18kt Rose Gold Solitaire Knife-Edge Engagement Ring.",
+        "The page displays USD 1,565, 18kt Rose Gold, 2.8mm width, SKU 1RAZ7361, and a Ring size 4.5 option.",
+        "The extracted product details do not display an exact gram weight."
+      ],
+      "action_taken": "Removed the prior 3.7g weight and dependent gold-price calculations; price and product identity remain stored with this source check."
+    },
+    {
+      "id": "quince_4mm_dome_band_14k_yellow",
+      "source_url": "https://www.quince.com/unisex/14k-gold-4mm-dome-band",
+      "result": "supported",
+      "observations": [
+        "Official Quince result identifies a 14K Gold 4MM Dome Band, displays USD 398.00, lists 2.57g weight, and includes size 4.5."
+      ],
+      "action_taken": "No catalog change."
+    },
+    {
+      "id": "baby_gold_linear_name_14k",
+      "source_url": "https://www.babygold.com/products/14k-gold-linear-name-ring",
+      "result": "supported",
+      "observations": [
+        "Official Baby Gold result identifies the 14K Gold Linear Name Ring, displays USD 550.00, and states 14K Solid Gold with size 4.5 available."
+      ],
+      "action_taken": "No catalog change."
+    }
+  ]
+}

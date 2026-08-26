@@ -3,12 +3,10 @@
   "seller": "7879",
   "karat": "24K",
   "hallmark": "24K (99.9% pure solid gold)",
-  "weight_g": 14.5,
-  "width_mm": 10.00,
-  "price_usd": 4617.00,
+  "width_mm": 10.0,
   "setting_only": false,
-  "note": "7879 explicitly publishes weight: 14.5g. Substantial 24K gold signet ring. Transparent pricing: Metal Value ($2,770) + Mfg Cost ($1,015) + Fee ($831). Ships to California.",
+  "note": "Official page rechecked 2026-08-26. It currently shows \u00a35,789.98 list / \u00a33,473.99 sale and Sold Out; the prior USD 4,617 and exact 14.5g values are not visible on that page. Price, weight, and dependent calculations are intentionally left blank pending a matching regional source.",
   "source_url": "https://7879.co/products/24k-gold-signet-ring",
   "source_label": "7879 - 24K Gold Signet Ring (14.5g, $4617)",
-  "verified_on": "2026-08-18"
+  "verified_on": "2026-08-26"
 }

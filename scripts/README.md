@@ -1,25 +1,32 @@
 # scripts/
 
-## `audit.sh`
+## `audit.sh` / `audit.py`
 
-A deliberately simple "security check" for hallucinations. It enforces the
-no-hallucination policy in four ways:
-
-1. Every JSON row in `data/evidence/` must have a `source_url`.
-2. `docs/index.html` must not contain a `$NNN.NN` amount that isn't tied to a
-   known placeholder, a link, or a citation.
-3. `docs/scripts.js` must not call out to any external price API (so the
-   calculator can't quietly "make up" a spot price).
-4. Every evidence row must have a `verified_on` date.
-
-Run it after every content change:
+Run:
 
 ```bash
 bash scripts/audit.sh
 ```
 
-If it fails, the merge should be blocked.
+The audit is deterministic and deliberately conservative. It does not invent
+catalog values and it does not call retailer APIs. It checks:
 
-The script is intentionally dumb. It catches the common hallucination
-pattern (orphan numbers), not all possible hallucinations. A human still
-needs to read the source links and check the math.
+- every evidence JSON file parses and has the required identity/source fields;
+- every evidence row is represented in `data/rings.json`;
+- every compiled field copied from evidence matches exactly;
+- `docs/data/` is synchronized with `data/`;
+- IDs, HTTPS source URLs, ISO review dates, and arithmetic are consistent;
+- duplicate URLs, missing prices/weights, collection/category links,
+  third-party/marketplace links, likely reference/non-ring rows, and other
+  review cues are surfaced.
+
+It writes a machine-readable report to `data/review_report.json` and the
+mirrored public copy at `docs/data/review_report.json`. Targeted official-page
+observations are recorded in `data/source_checks.json` and mirrored for the
+site. It also generates `sources.html` and `docs/sources.html`; those pages list every row with a
+direct source URL and a repository evidence link for manual review.
+
+The audit report is **not** a live-page certification. Prices, weights,
+karats, sizes, availability, and product identity can change. A reviewer must
+open the source link for the row before relying on it. Static errors fail the
+command; review flags are printed and retained rather than hidden or guessed.

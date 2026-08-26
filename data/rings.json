@@ -7,28 +7,28 @@
     "karat": "24K",
     "hallmark": "24K (99.9% pure solid gold)",
     "ring_size": "Standard",
-    "weight_g": 14.5,
+    "weight_g": null,
     "weight_g_total": null,
     "weight_g_gold": null,
-    "raw_gold_g": 14.4855,
-    "raw_gold_oz": 0.46572,
-    "price_usd": 4617.0,
+    "raw_gold_g": null,
+    "raw_gold_oz": null,
+    "price_usd": null,
     "price_usd_from": null,
     "price_usd_to": null,
     "original_price_usd": null,
     "discount_pct": null,
-    "price_per_gold_g": 318.73,
-    "price_per_gold_oz": 9913.68,
+    "price_per_gold_g": null,
+    "price_per_gold_oz": null,
     "width_mm": 10.0,
     "setting_only": false,
     "ring_type": "Signet Ring",
     "category": "Investment (24K)",
     "stone_type": null,
     "stone_ctw": null,
-    "note": "7879 explicitly publishes weight: 14.5g. Substantial 24K gold signet ring. Transparent pricing: Metal Value ($2,770) + Mfg Cost ($1,015) + Fee ($831). Ships to California.",
+    "note": "Official page rechecked 2026-08-26. It currently shows \u00a35,789.98 list / \u00a33,473.99 sale and Sold Out; the prior USD 4,617 and exact 14.5g values are not visible on that page. Price, weight, and dependent calculations are intentionally left blank pending a matching regional source.",
     "source_url": "https://7879.co/products/24k-gold-signet-ring",
     "source_label": "7879 - 24K Gold Signet Ring (14.5g, $4617)",
-    "verified_on": "2026-08-18"
+    "verified_on": "2026-08-26"
   },
   {
     "id": "7879_stacker_ring_24k",
@@ -3311,10 +3311,10 @@
     "category": "Standard Retail",
     "stone_type": null,
     "stone_ctw": null,
-    "note": "",
-    "source_url": "https://www.babygold.com/collections/personalized-rings/products/14k-gold-linear-name-ring",
+    "note": "Official Baby Gold page/result rechecked 2026-08-26: USD 550.00, 14K Solid Gold, and size 4.5 are visible in the listing. Ring weight is not published.",
+    "source_url": "https://www.babygold.com/products/14k-gold-linear-name-ring",
     "source_label": "Product listing",
-    "verified_on": "2026-08-25"
+    "verified_on": "2026-08-26"
   },
   {
     "id": "baby_gold_lucky_seven_diamond_14k",
@@ -3376,7 +3376,8 @@
     "note": "Baby Gold (Los Angeles) Open Diamond Ring \u2014 approx 0.03ct natural diamond, G-H color, VS2-SI1 clarity. Size 4.5 CONFIRMED in the ring-size selector (sizes 3-10). Solid 14K gold, made in LA, lifetime guarantee. 14K yellow/white/rose. CAVEAT: Weight NOT published on Baby Gold product page. Standard retail.",
     "source_url": "https://www.babygold.com/products/open-diamond-ring",
     "source_label": "Baby Gold - Open Diamond Ring 14K Solid Gold Size 4.5 ($340, 0.03ct)",
-    "verified_on": "2026-08-19"
+    "verified_on": "2026-08-19",
+    "stone_carats": 0.03
   },
   {
     "id": "baby_gold_ruby_oval_eternity_14k",
@@ -4352,7 +4353,7 @@
     "weight_g_gold": null,
     "raw_gold_g": null,
     "raw_gold_oz": null,
-    "price_usd": 599.99,
+    "price_usd": null,
     "price_usd_from": null,
     "price_usd_to": null,
     "original_price_usd": null,
@@ -4365,10 +4366,10 @@
     "category": "Standard Retail",
     "stone_type": null,
     "stone_ctw": null,
-    "note": "",
+    "note": "Official Costco page rechecked 2026-08-26. It identifies item 1734796 as 14kt yellow gold, size 7, with 0.40 ctw diamonds, but its accessible price area is still Loading; the prior USD 599.99 value is intentionally left blank until directly readable.",
     "source_url": "https://www.costco.com/green-quartz-and-diamond-14kt-yellow-gold-ring.product.4000153237.html",
     "source_label": "Product listing",
-    "verified_on": "2026-08-25"
+    "verified_on": "2026-08-26"
   },
   {
     "id": "costco_round_brilliant_0_75_ctw_14k",
@@ -4523,7 +4524,8 @@
     "note": "Includes natural diamond (0.35-0.40 ct, F-G color, SI clarity). Publishes Gold Weight: 2.8 grams approx. on product page. Band width 3mm. 14-day return policy. David's House of Diamonds is a US-based Shopify seller. Note: gold weight is approximate and ring-size dependent.",
     "source_url": "https://davidshouseofdiamonds.com/products/14k-gold-0-40-carat-natural-oval-diamond-solitaire-engagement-ring",
     "source_label": "David's House of Diamonds - DHOD4POV Oval Diamond Solitaire 14K Gold ($1,199, weight 2.8g)",
-    "verified_on": "2026-08-17"
+    "verified_on": "2026-08-17",
+    "stone_carats": 0.4
   },
   {
     "id": "davids_house_round_halo_14k",
@@ -6693,7 +6695,9 @@
     "note": "Setting price only ($397 sale, $530 list). Stone sold separately. SKU 17927y14 is the setting; SKU 46547 is the emerald. Weight in grams not published by James Allen on the public page.",
     "source_url": "https://www.jamesallen.com/gemstone-rings/emerald-engagement-rings/0.85-carat-solitaire-engagement-ring-1717350",
     "source_label": "James Allen \u2014 0.81ct Oval Emerald Presentation Solitaire 14K Yellow Gold (SKU 17927y14)",
-    "verified_on": "2026-08-17"
+    "verified_on": "2026-08-17",
+    "stone_carats": 0.81,
+    "stone_sku": "46547"
   },
   {
     "id": "jared_flat_wedding_band_14k_white_2mm",
@@ -7406,7 +7410,8 @@
     "note": "Includes diamond. Kay does not publish ring weight in grams.",
     "source_url": "https://www.kay.com/en/kaystore/r6-rings-101488--1/diamond-solitaire-ring-1-2-carat-round-cut--14k-white-gold/101488/101488.101495",
     "source_label": "Kay Jewelers \u2014 1/2 ct Round 14K White Gold Solitaire (stock #150866604)",
-    "verified_on": "2026-08-17"
+    "verified_on": "2026-08-17",
+    "stone_carats": 0.5
   },
   {
     "id": "kay_solitaire_1_4ct_14k_white",
@@ -7437,7 +7442,9 @@
     "note": "Includes diamond. Now & Forever bridal collection. Stone carat weight range 0.23\u20130.28. Kay does not publish ring weight in grams. Kay is a Signet Group brand (parent of Zales, Jared); Signet is a publicly traded US jeweler.",
     "source_url": "https://www.kay.com/en/kaystore/diamond-solitaire-ring-1-4-carat-round-cut--14k-white-gold",
     "source_label": "Kay Jewelers \u2014 1/4 ct Round 14K White Gold Solitaire (stock #150866503)",
-    "verified_on": "2026-08-17"
+    "verified_on": "2026-08-17",
+    "stone_carats": 0.25,
+    "stone_range_ctw": "0.23\u20130.28"
   },
   {
     "id": "kay_wedding_band_14k_rose_2mm",
@@ -9545,7 +9552,8 @@
     "note": "Previously owned and refurbished (Estate Piece). Moriarty's Gem Art publishes the exact weight (1.38g). Diamond: Round Brilliant, I-J color, VS2-SI1 clarity.",
     "source_url": "https://www.moregems.com/products/14k-two-tone-gold-diamond-solitaire-ring-25cts",
     "source_label": "Moriarty's Gem Art - 14K Two Tone Gold Diamond Solitaire Ring (1.38g, $506)",
-    "verified_on": "2026-08-17"
+    "verified_on": "2026-08-17",
+    "stone_carats": 0.25
   },
   {
     "id": "multi_shape_lg_diamond_station_necklace_pt",
@@ -10441,10 +10449,10 @@
     "category": "High Transparency",
     "stone_type": null,
     "stone_ctw": null,
-    "note": "Quince explicitly publishes 'Weight: 2.57g' on the product page alongside size selector that includes size 4.5. 14K solid yellow gold. Width: 4mm. Produced in Vietnam and the US. RJC certified source. The listed weight likely corresponds to a standard size (may vary). CAVEAT: Weight is listed on page but not explicitly per size; Quince shows a single 'Weight: 2.57g' for the product.",
+    "note": "Official Quince page/result rechecked 2026-08-26: USD 398.00, 14K gold, 2.57g, and size 4.5 are visible in the listing.",
     "source_url": "https://www.quince.com/unisex/14k-gold-4mm-dome-band",
     "source_label": "Quince - 14K Gold Lightweight Round Edge Band 4mm Yellow Gold ($398, 2.57g)",
-    "verified_on": "2026-08-19"
+    "verified_on": "2026-08-26"
   },
   {
     "id": "quince_6mm_dome_band_14k_yellow",
@@ -10537,7 +10545,8 @@
     "note": "Quince 'Solo Diamond Bezel Ring'. 14K Solid Gold. Diamond: 0.06ct, G-H, V2-SI, band thickness 1.3mm. Size 4.5 confirmed in dropdown. Price updated to $208.00 from prior $149.90 (verified on live page 2026-08-19). CAVEAT: Weight NOT published on Quince's product page. Standard retail.",
     "source_url": "https://www.quince.com/women/solo-diamond-bezel-ring",
     "source_label": "Quince - 14K Gold Solo Diamond Bezel Ring Size 4.5 ($208)",
-    "verified_on": "2026-08-19"
+    "verified_on": "2026-08-19",
+    "stone_carats": 0.06
   },
   {
     "id": "quince_circle_eternity_band_14k",
@@ -10692,7 +10701,8 @@
     "note": "Quince 14K Gold Diamond Bezel Open Ring \u2014 open-style band with two 0.03ct ethically sourced diamonds. Size 4.5 confirmed in dropdown. 126 reviews. Produced in South Korea and the US. CAVEAT: Weight NOT published on Quince's product page. Note: yellow-gold colorway seen at $129.90 (34% off) on a separate listing URL; $198 recorded from main product page. Standard retail.",
     "source_url": "https://www.quince.com/women/jewelry/diamond-bezel-open-ring",
     "source_label": "Quince - 14K Gold Diamond Bezel Open Ring Size 4.5 ($198, 2x0.03ct)",
-    "verified_on": "2026-08-19"
+    "verified_on": "2026-08-19",
+    "stone_carats": 0.03
   },
   {
     "id": "quince_diamond_dot_ring_14k",
@@ -10816,7 +10826,8 @@
     "note": "Quince 14K Gold Diamond Line Ring \u2014 6 excellent-cut conflict-free diamonds in prongs, 0.048ctw, G-H color, V2-SI1 clarity, band width 1.3mm. Size 4.5 confirmed in dropdown. Best seller, 438 reviews. Produced in South Korea and India. CAVEAT: Weight NOT published on Quince's product page. Standard retail.",
     "source_url": "https://www.quince.com/women/diamond-line-ring",
     "source_label": "Quince - 14K Gold Diamond Line Ring Size 4.5 ($218, 0.048ctw)",
-    "verified_on": "2026-08-19"
+    "verified_on": "2026-08-19",
+    "stone_carats": 0.048
   },
   {
     "id": "quince_diamond_orbit_ring_14k",
@@ -10940,7 +10951,8 @@
     "note": "Quince Lab Grown Diamond Round Petite Pave Engagement Ring \u2014 1ct IGI-certified lab-grown center stone on 14K gold band with platinum head. Band width 1.8mm, height 1.8mm. Size 4.5 confirmed in dropdown. 11 reviews. Produced in India. CAVEAT: Weight NOT published. Includes center stone in price. Standard retail.",
     "source_url": "https://www.quince.com/women/round-lab-grown-diamond-petite-pave-classic-engagement-ring---1ct",
     "source_label": "Quince - Lab Grown Diamond Petite Pave Engagement Ring 1ct Size 4.5 ($1,000)",
-    "verified_on": "2026-08-19"
+    "verified_on": "2026-08-19",
+    "center_stone_ct": 1.0
   },
   {
     "id": "quince_low_dome_band_3mm_14k",
@@ -14474,7 +14486,9 @@
     "note": "UNUSUAL \u2014 this seller DOES publish weight in grams on the public product page. Gross weight 4.414g, gold weight 3.981g. BIS hallmark is the Indian government hallmark, equivalent in strictness to a US manufacturer's mark. The Karat Store is a smaller India-based bespoke jeweler (NOT one of the major US online chains); legitimate but smaller. Verify return policy before purchase.",
     "source_url": "https://www.thekaratstore.com/product-page/14k-solid-gold-yellow-and-white-diamond-solitaire-modulation-ring",
     "source_label": "The Karat Store \u2014 14K Solid Gold Yellow and White Diamond Solitaire Modulation Ring (SKU AS076)",
-    "verified_on": "2026-08-17"
+    "verified_on": "2026-08-17",
+    "stone_carats_white": 1.75,
+    "stone_carats_yellow": 0.41
   },
   {
     "id": "tiffany_knot_18k_yellow",
@@ -14877,7 +14891,8 @@
     "note": "Includes 0.5 ct round center diamond plus accent diamonds totaling ~1.0 ctw. Zales does not publish ring weight in grams on the public product page. Zales is a Signet Group brand.",
     "source_url": "https://www.zales.com/1-ct-tw-diamond-engagement-ring-14k-gold/p/V-20050176",
     "source_label": "Zales \u2014 1 CT. T.W. Diamond Engagement Ring in 14K Gold (V-20050176)",
-    "verified_on": "2026-08-17"
+    "verified_on": "2026-08-17",
+    "center_stone_ct": 0.5
   },
   {
     "id": "zales_3mm_flat_square_wedding_band_14k",
@@ -15073,27 +15088,27 @@
     "karat": "18K",
     "hallmark": "18kt Rose Gold",
     "ring_size": "3\u20139 (incl. 4.5)",
-    "weight_g": 3.7,
+    "weight_g": null,
     "weight_g_total": null,
     "weight_g_gold": null,
-    "raw_gold_g": 2.775,
-    "raw_gold_oz": 0.08922,
+    "raw_gold_g": null,
+    "raw_gold_oz": null,
     "price_usd": 1565.0,
     "price_usd_from": null,
     "price_usd_to": null,
     "original_price_usd": null,
     "discount_pct": null,
-    "price_per_gold_g": 563.96,
-    "price_per_gold_oz": 17540.91,
+    "price_per_gold_g": null,
+    "price_per_gold_oz": null,
     "width_mm": null,
     "setting_only": true,
     "ring_type": "Solitaire / Setting",
     "category": "High Transparency",
     "stone_type": null,
     "stone_ctw": null,
-    "note": "",
+    "note": "Official Ritani page rechecked 2026-08-26. It displays USD 1,565, 18kt rose gold, 2.8mm width, SKU 1RAZ7361, and size 4.5; no exact gram weight is visible in the accessible product details. Weight and dependent calculations are intentionally left blank.",
     "source_url": "https://www.ritani.com/products/solitaire-diamond-knife-edge-engagement-ring-6-metal-18kt-rose-gold-shape-radiant",
     "source_label": "Product listing",
-    "verified_on": "2026-08-25"
+    "verified_on": "2026-08-26"
   }
 ]
