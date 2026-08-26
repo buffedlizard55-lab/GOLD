@@ -62,8 +62,6 @@ The command exits non-zero only for static integrity errors such as malformed JS
 ├── scripts/
 │   ├── audit.py               # Deterministic report generator and validator
 │   └── audit.sh               # Audit entry point
-├── .github/workflows/
-│   └── catalog-audit.yml      # Runs static checks on pushes and pull requests
 ├── add_rings.py               # Retired non-mutating compatibility stub
 └── README.md
 ```
