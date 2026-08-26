@@ -3,9 +3,9 @@
   "seller": "Costco",
   "karat": "14K",
   "hallmark": "14K",
-  "price_usd": 599.99,
   "setting_only": false,
   "source_url": "https://www.costco.com/green-quartz-and-diamond-14kt-yellow-gold-ring.product.4000153237.html",
   "source_label": "Product listing",
-  "verified_on": "2026-08-25"
+  "verified_on": "2026-08-26",
+  "note": "Official Costco page rechecked 2026-08-26. It identifies item 1734796 as 14kt yellow gold, size 7, with 0.40 ctw diamonds, but its accessible price area is still Loading; the prior USD 599.99 value is intentionally left blank until directly readable."
 }

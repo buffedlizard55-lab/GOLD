@@ -89,6 +89,16 @@ body {
 .policy-banner a { color: #ffe082; margin-left: 8px; text-decoration: underline; }
 .policy-banner a:hover { color: #fff; }
 
+.noscript-note {
+  margin: 16px 0;
+  padding: 12px 14px;
+  border: 1px solid #f6d365;
+  border-radius: var(--radius);
+  background: #fffbeb;
+  color: #5f4700;
+}
+.noscript-note a { color: var(--gold-dark); font-weight: 700; }
+
 /* ---- Controls ---- */
 .controls {
   background: var(--card);
@@ -299,6 +309,16 @@ tr[data-cat="Benchmark"] td:first-child { border-left: 3px solid var(--gray-text
   transition: all 0.15s;
 }
 .source-link:hover { background: #e0e7ff; color: #1e1b4b; }
+
+.row-review {
+  display: inline-block;
+  margin-top: 4px;
+  color: #9f1239;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.row-review:hover { text-decoration: underline; }
 
 .not-listed { color: var(--text-3); font-size: 0.78rem; }
 

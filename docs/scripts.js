@@ -5,6 +5,7 @@
   "use strict";
 
   const DATA_URL = "data/rings.json";
+  const REPORT_URL = "data/review_report.json";
   const OZ_TO_G = 31.1034768;
 
   const state = {
@@ -19,43 +20,83 @@
     sortDir: "asc",
     page: 1,
     perPage: 50,
-    active: null
+    active: null,
+    loadError: null,
+    reviewById: {}
   };
 
   // ---- Init ----
   document.addEventListener("DOMContentLoaded", init);
 
   async function init() {
-    await load();
+    const loaded = await load();
+    await loadReview();
     buildFilters();
     bind();
     updateStats();
-    apply();
+    if (loaded) apply();
+    else renderLoadError();
   }
 
   // ---- Data Loading ----
   async function load() {
-    const tbody = el("tbody");
     try {
       const res = await fetch(DATA_URL, { cache: "no-store" });
       if (!res.ok) throw new Error("HTTP " + res.status);
-      state.rings = await res.json();
+      const data = await res.json();
+      if (!Array.isArray(data)) throw new Error("catalog JSON is not an array");
+      state.rings = data;
       state.filtered = state.rings.slice();
+      state.loadError = null;
+      return true;
     } catch (err) {
       console.error("Load error:", err);
-      if (tbody) tbody.innerHTML = '<tr><td colspan="9" class="loading-cell" style="color:#c62828;">Failed to load data: ' + esc(err.message) + "</td></tr>";
+      state.rings = [];
+      state.filtered = [];
+      state.loadError = err;
+      return false;
     }
+  }
+
+  async function loadReview() {
+    try {
+      const res = await fetch(REPORT_URL, { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const report = await res.json();
+      if (!Array.isArray(report.entries)) throw new Error("review report has no entries");
+      state.reviewById = {};
+      report.entries.forEach(function (entry) {
+        if (entry && entry.id) state.reviewById[entry.id] = entry;
+      });
+    } catch (err) {
+      // Review metadata is supplemental. The catalog remains usable if an
+      // older deployment has not received the generated report yet.
+      console.warn("Review report unavailable:", err);
+      state.reviewById = {};
+    }
+  }
+
+  function renderLoadError() {
+    const tbody = el("tbody");
+    if (tbody) {
+      tbody.innerHTML = '<tr><td colspan="9" class="loading-cell" style="color:#c62828;">Catalog unavailable: ' + esc(state.loadError && state.loadError.message) + '. <a href="sources.html">Open the source-review index</a>.</td></tr>';
+    }
+    const pages = el("page-controls");
+    if (pages) pages.innerHTML = "";
+    setText("result-count", "Catalog unavailable — source-review index remains available");
   }
 
   // ---- Stats ----
   function updateStats() {
     const total = state.rings.length;
     const sellers = new Set(state.rings.map(r => r.seller).filter(Boolean)).size;
+    const weighted = state.rings.filter(hasWeight).length;
     const ppoz = state.rings.map(r => r.price_per_gold_oz).filter(v => typeof v === "number" && v > 0);
     const best = ppoz.length ? Math.min(...ppoz) : null;
 
     setText("hdr-total", total);
     setText("hdr-sellers", sellers);
+    setText("hdr-weight", weighted);
     setText("hdr-best", best ? "$" + fmt(Math.round(best)) : "—");
   }
 
@@ -218,6 +259,10 @@
 
   // ---- Filter + Sort + Render ----
   function apply() {
+    if (state.loadError) {
+      renderLoadError();
+      return;
+    }
     const q = state.search.toLowerCase().trim();
 
     state.filtered = state.rings.filter(function (r) {
@@ -233,8 +278,8 @@
       // Type
       if (state.ringType && r.ring_type !== state.ringType) return false;
       // Weight
-      if (state.weightFilter === "yes" && r.weight_g == null) return false;
-      if (state.weightFilter === "no" && r.weight_g != null) return false;
+      if (state.weightFilter === "yes" && !hasWeight(r)) return false;
+      if (state.weightFilter === "no" && hasWeight(r)) return false;
 
       return true;
     });
@@ -253,8 +298,8 @@
     const asc = state.sortDir === "asc";
 
     state.filtered.sort(function (a, b) {
-      let va = a[col];
-      let vb = b[col];
+      let va = col === "weight_g" ? weightValue(a) : a[col];
+      let vb = col === "weight_g" ? weightValue(b) : b[col];
 
       // Price fallback
       if (col === "price_usd") {
@@ -308,7 +353,8 @@
     subDiv.className = "sub";
     var parts = [];
     if (r.setting_only) parts.push("Setting Only");
-    if (r.stone_type) parts.push(r.stone_type + (r.stone_ctw ? " (" + r.stone_ctw + "ctw)" : ""));
+    const stone = stoneSummary(r);
+    if (stone) parts.push(stone);
     if (r.width_mm) parts.push(r.width_mm + "mm");
     subDiv.textContent = parts.join(" · ") || "";
     td.appendChild(subDiv);
@@ -339,10 +385,8 @@
     // Weight
     td = document.createElement("td");
     td.className = "td-num";
-    if (r.weight_g != null) {
-      td.textContent = Number(r.weight_g).toFixed(2) + " g";
-    } else if (r.weight_g_total != null) {
-      td.textContent = Number(r.weight_g_total).toFixed(2) + " g";
+    if (hasWeight(r)) {
+      td.textContent = Number(weightValue(r)).toFixed(2) + " g";
     } else {
       var span = document.createElement("span");
       span.className = "not-listed";
@@ -405,6 +449,18 @@
       a.textContent = "Source ↗";
       a.addEventListener("click", function (e) { e.stopPropagation(); });
       td.appendChild(a);
+
+      var review = state.reviewById[r.id];
+      if (review && review.flags && review.flags.length) {
+        var reviewLink = document.createElement("a");
+        reviewLink.href = "sources.html#" + encodeURIComponent(r.id || "");
+        reviewLink.className = "row-review";
+        reviewLink.textContent = review.flags.length + " review flag" + (review.flags.length === 1 ? "" : "s");
+        reviewLink.title = review.flags.join(", ").replace(/_/g, " ");
+        reviewLink.addEventListener("click", function (e) { e.stopPropagation(); });
+        td.appendChild(document.createElement("br"));
+        td.appendChild(reviewLink);
+      }
     } else {
       td.textContent = "—";
     }
@@ -539,7 +595,7 @@
     setText("m-hallmark", r.hallmark || "—");
     setText("m-size", r.ring_size || "—");
     setText("m-width", r.width_mm ? r.width_mm + " mm" : "—");
-    setText("m-weight", r.weight_g != null ? r.weight_g.toFixed(2) + " g" : "Not published");
+    setText("m-weight", hasWeight(r) ? Number(weightValue(r)).toFixed(2) + " g" : "Not published");
     setText("m-rawgold", r.raw_gold_g != null ? r.raw_gold_g.toFixed(2) + " g (" + r.raw_gold_oz.toFixed(3) + " troy oz)" : "—");
     setText("m-price", r.price_usd != null ? "$" + fmt(r.price_usd) : (r.price_usd_from != null ? "from $" + fmt(r.price_usd_from) : "—"));
     setText("m-ppoz", r.price_per_gold_oz != null ? "$" + fmt(Math.round(r.price_per_gold_oz)) + " /oz" : "—");
@@ -547,7 +603,7 @@
     setText("m-type", r.ring_type || "—");
     setText("m-cat", r.category || "—");
     setText("m-setting", r.setting_only ? "Setting Only (stone sold separately)" : "Complete Ring");
-    setText("m-stones", (r.stone_type || "None") + (r.stone_ctw ? " (" + r.stone_ctw + " ctw)" : ""));
+    setText("m-stones", stoneSummary(r) || "None recorded");
     setText("m-verified", r.verified_on || "—");
 
     var noteBox = el("m-note");
@@ -571,7 +627,7 @@
   // ---- Export ----
   function exportCSV() {
     if (!state.filtered.length) return alert("No records to export.");
-    var headers = ["Ring", "Seller", "Karat", "Hallmark", "Ring Size", "Weight (g)", "Raw Gold (g)", "Raw Gold (oz)", "Price (USD)", "Price/Gold Oz", "Price/Gold Gram", "Width (mm)", "Setting Only", "Stone Type", "Stone CTW", "Ring Type", "Category", "Source URL", "Verified On", "Note"];
+    var headers = ["Ring", "Seller", "Karat", "Hallmark", "Ring Size", "Weight (g)", "Raw Gold (g)", "Raw Gold (oz)", "Price (USD)", "Price/Gold Oz", "Price/Gold Gram", "Width (mm)", "Setting Only", "Stone Type", "Stone CTW", "Stone Carats", "Center Stone Ct", "Stone Range CTW", "White Stone Ct", "Yellow Stone Ct", "Stone SKU", "Ring Type", "Category", "Source URL", "Verified On", "Note"];
     var rows = state.filtered.map(function (r) {
       return [
         r.ring || "", r.seller || "", r.karat || "", r.hallmark || "", r.ring_size || "",
@@ -579,7 +635,10 @@
         r.price_usd != null ? r.price_usd : (r.price_usd_from || ""),
         r.price_per_gold_oz != null ? r.price_per_gold_oz : "", r.price_per_gold_g != null ? r.price_per_gold_g : "",
         r.width_mm != null ? r.width_mm : "", r.setting_only ? "Yes" : "No",
-        r.stone_type || "", r.stone_ctw || "", r.ring_type || "", r.category || "",
+        r.stone_type || "", r.stone_ctw != null ? r.stone_ctw : "", r.stone_carats != null ? r.stone_carats : "",
+        r.center_stone_ct != null ? r.center_stone_ct : "", r.stone_range_ctw || "",
+        r.stone_carats_white != null ? r.stone_carats_white : "", r.stone_carats_yellow != null ? r.stone_carats_yellow : "",
+        r.stone_sku || "", r.ring_type || "", r.category || "",
         r.source_url || "", r.verified_on || "", (r.note || "").replace(/"/g, '""')
       ];
     });
@@ -607,6 +666,28 @@
 
   // ---- Helpers ----
   function el(id) { return document.getElementById(id); }
+  function weightValue(r) {
+    return r.weight_g != null ? r.weight_g : r.weight_g_total;
+  }
+  function stoneSummary(r) {
+    var type = r.stone_type || "";
+    var amount = "";
+    if (r.stone_ctw != null) amount = r.stone_ctw + " ctw";
+    else if (r.stone_carats != null) amount = r.stone_carats + " ct";
+    else if (r.center_stone_ct != null) amount = r.center_stone_ct + " ct center";
+    else if (r.stone_range_ctw) amount = r.stone_range_ctw + " ctw";
+    else if (r.stone_carats_white != null || r.stone_carats_yellow != null) {
+      var white = r.stone_carats_white != null ? r.stone_carats_white + " ct white" : "";
+      var yellow = r.stone_carats_yellow != null ? r.stone_carats_yellow + " ct yellow" : "";
+      amount = [white, yellow].filter(Boolean).join(" + ");
+    }
+    var sku = r.stone_sku ? "SKU " + r.stone_sku : "";
+    return [type, amount, sku].filter(Boolean).join(" · ");
+  }
+  function hasWeight(r) {
+    var value = weightValue(r);
+    return typeof value === "number" && isFinite(value) && value > 0;
+  }
   function setText(id, val) { var e = el(id); if (e) e.textContent = String(val); }
   function fmt(n) {
     if (n == null || isNaN(n)) return "—";
