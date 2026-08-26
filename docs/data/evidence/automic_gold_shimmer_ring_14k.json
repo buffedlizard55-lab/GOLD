@@ -3,12 +3,12 @@
   "seller": "Automic Gold",
   "karat": "14K",
   "hallmark": "14K (solid gold, made in-house NYC)",
-  "weight_g": 0.6,
+  "weight_g": null,
   "width_mm": 1.0,
-  "price_usd": 247.00,
+  "price_usd": 247.0,
   "setting_only": false,
-  "note": "Shimmer Ring — textured take on the Line Ring. 1mm width, ~1mm height, item weight approx 0.6g. Sizes 2-16 with quarter sizes — size 4.5 confirmed in dropdown. 5.0 stars (7 reviews). Available in yellow, white, rose, champagne 14k. CAVEAT: Weight is approximate and not size-specific.",
+  "note": "FLAGGED 2026-08-26: prior weight 0.6g withheld \u2014 physically implausible for a solid 14K ring (implies >$20,000/oz at the listed price) and the official Automic Gold product API publishes no weight. Likely a decimal-shift error; re-verify on the product page. Shimmer Ring \u2014 textured take on the Line Ring. 1mm width, ~1mm height, item weight approx 0.6g. Sizes 2-16 with quarter sizes \u2014 size 4.5 confirmed in dropdown. 5.0 stars (7 reviews). Available in yellow, white, rose, champagne 14k. CAVEAT: Weight is approximate and not size-specific.",
   "source_url": "https://www.automicgold.com/products/shimmer-ring",
   "source_label": "Automic Gold - Shimmer Ring Solid 14k ($247, ~0.6g, size 4.5 available)",
-  "verified_on": "2026-08-19"
+  "verified_on": "2026-08-26"
 }

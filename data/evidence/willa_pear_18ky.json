@@ -3,10 +3,11 @@
   "seller": "Ritani",
   "karat": "18K",
   "hallmark": "18kt Yellow Gold",
-  "price_usd": 3079.0,
+  "price_usd": null,
   "setting_only": true,
   "source_url": "https://www.ritani.com/products/solitaire-diamond-tulip-cathedral-engagement-ring-6-metal-18kt-yellow-gold-shape-pear",
   "source_label": "Product listing",
-  "verified_on": "2026-08-25",
-  "weight_g": 4.9
+  "verified_on": "2026-08-26",
+  "weight_g": 4.9,
+  "note": "FLAGGED 2026-08-26: two duplicate rows at this URL disagreed ($3,079 vs $2,426) and the live page snapshot did not capture a rendered price, so the price is withheld pending manual re-check. Source:  FLAGGED 2026-08-26: two duplicate rows at this URL disagreed ($3,079 vs $2,426) and the live page snapshot did not capture a rendered price, so the price is withheld pending manual re-check. Source:"
 }

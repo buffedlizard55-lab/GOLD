@@ -5,12 +5,12 @@
   "hallmark": "14K (stamped; made to order)",
   "weight_g": null,
   "stone_type": "Ruby + natural diamond (clover setting)",
-  "price_usd": 631.20,
-  "original_price_usd": 789.00,
+  "price_usd": null,
+  "original_price_usd": 789.0,
   "discount_pct": 20,
   "setting_only": false,
-  "note": "Ferko's Fine Jewelry (US) Full Eternity Clover Ruby and Diamond Ring. Size 4.5 CONFIRMED in the collection size selector (sizes 3-9). Price $631.20 (20% off $789) per collection listing. Made to order. CAVEAT: Weight NOT published; full stone counts not read from collection listing — confirm on product page. Standard retail.",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://ferkosfinejewelry.com/collections/ruby-jewelry FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $631.2 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $631.2. Cited page: https://ferkosfinejewelry.com/collections/ruby-jewelry Ferko's Fine Jewelry (US) Full Eternity Clover Ruby and Diamond Ring. Size 4.5 CONFIRMED in the collection size selector (sizes 3-9). Price $631.20 (20% off $789) per collection listing. Made to order. CAVEAT: Weight NOT published; full stone counts not read from collection listing \u2014 confirm on product page. Standard retail.",
   "source_url": "https://ferkosfinejewelry.com/collections/ruby-jewelry",
   "source_label": "Ferko's - Full Eternity Clover Ruby & Diamond Ring 14K Size 4.5 ($631.20)",
-  "verified_on": "2026-08-19"
+  "verified_on": "2026-08-26"
 }

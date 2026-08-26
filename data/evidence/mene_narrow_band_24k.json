@@ -1,14 +1,14 @@
 {
   "ring": "Narrow Classic Band (24K Gold)",
-  "seller": "Menē",
+  "seller": "Men\u0113",
   "karat": "24K",
   "hallmark": "24K (certified 99.9% pure)",
-  "weight_g": 10.15,
-  "width_mm": 4.00,
-  "price_usd": 1872.00,
+  "weight_g": null,
+  "width_mm": 4.0,
+  "price_usd": 1554.0,
   "setting_only": false,
-  "note": "Menē is an 'investment jewelry' company that sells by weight. Narrow Classic Band (4mm wide, 2mm thick) weight approx 10.15g for size 10. Price fluctuates with daily spot price.",
+  "note": "VERIFIED 2026-08-26 live: $1,554 USD (24K, sizes 4-13 incl 4.5). Men\u0113 prices float daily with the gold price; page states 'Products are sold by weight, not size' and shows per-size weight only in the interactive size selector, so no gram weight is recorded here (prior 10.15g belonged to size 10 per the repo's own note). Duplicate rows at the same URL ($1,401, $1,352-with-engraving which was cheaper than non-engraved \u2014 logically impossible) were removed. VERIFIED 2026-08-26 live: $1,554 USD (24K, sizes 4-13 incl 4.5). Men\u0113 prices float daily with the gold price; page states 'Products are sold by weight, not size' and shows per-size weight only in the interactive size selector, so no gram weight is recorded here (prior 10.15g belonged to size 10 per the repo's own note). Duplicate rows at the same URL ($1,401, $1,352-with-engraving which was cheaper than non-engraved \u2014 logically impossible) were removed. Men\u0113 is an 'investment jewelry' company that sells by weight. Narrow Classic Band (4mm wide, 2mm thick) weight approx 10.15g for size 10. Price fluctuates with daily spot price.",
   "source_url": "https://mene.com/products/mene-narrow-band-gold",
-  "source_label": "Menē - Narrow Classic Band 24K Gold (approx 10.15g, $1872)",
-  "verified_on": "2026-08-17"
+  "source_label": "Men\u0113 - Narrow Classic Band 24K Gold (approx 10.15g, $1872)",
+  "verified_on": "2026-08-26"
 }

@@ -3,9 +3,10 @@
   "seller": "Quince",
   "karat": "14K",
   "hallmark": "14K",
-  "price_usd": 449.9,
+  "price_usd": null,
   "setting_only": false,
   "source_url": "https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
   "source_label": "Collection listing",
-  "verified_on": "2026-08-25"
+  "verified_on": "2026-08-26",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $449.9 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $449.9. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL"
 }

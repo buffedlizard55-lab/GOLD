@@ -3,12 +3,12 @@
   "seller": "Automic Gold",
   "karat": "14K",
   "hallmark": "14K (solid gold, made in-house NYC)",
-  "weight_g": 0.7,
+  "weight_g": null,
   "width_mm": 3.0,
-  "price_usd": 293.00,
+  "price_usd": 293.0,
   "setting_only": false,
-  "note": "Wave Ring — asymmetrical hand-made wave design. ~3mm width at widest points, ~1mm height, item weight approx 0.7g. Sizes 2-16 with quarter sizes — size 4.5 confirmed in dropdown. 5.0 stars (14 reviews). CAVEAT: Weight is approximate and not size-specific. Each ring is unique (handmade).",
+  "note": "FLAGGED 2026-08-26: prior weight 0.7g withheld \u2014 physically implausible for a solid 14K ring (implies >$20,000/oz at the listed price) and the official Automic Gold product API publishes no weight. Likely a decimal-shift error; re-verify on the product page. Wave Ring \u2014 asymmetrical hand-made wave design. ~3mm width at widest points, ~1mm height, item weight approx 0.7g. Sizes 2-16 with quarter sizes \u2014 size 4.5 confirmed in dropdown. 5.0 stars (14 reviews). CAVEAT: Weight is approximate and not size-specific. Each ring is unique (handmade).",
   "source_url": "https://www.automicgold.com/products/wave-ring",
   "source_label": "Automic Gold - Wave Ring Solid 14k ($293, ~0.7g, size 4.5 available)",
-  "verified_on": "2026-08-19"
+  "verified_on": "2026-08-26"
 }
