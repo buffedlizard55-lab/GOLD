@@ -84,3 +84,42 @@ offline request to customer service.
 
 ## Removed 2026-08-26 (dedupe / wrong-product — 2026-08-26 review)
 
+
+## Rejected 2026-08-26 (below-$4,861/oz men's search — session 3)
+
+Every candidate below was checked against its official product page on 2026-08-26 for the "men's ring below $4,861 per pure-gold-oz" requirement. Full math and links: `docs/REVIEW_2026-08-26-below-threshold-search.md`.
+
+| Seller | Candidate | Why rejected | Link |
+|---|---|---|---|
+| Pompeii3 | 6mm 10K brushed black-inlay men's band (WB1669) | $476.64 / 3.5 g / 10K = $10,166 per gold oz (2.1x threshold) | https://www.pompeii3.com/6mm-10k-yellow-gold-mens-brushed-black-inlay-wedding-band/ |
+| Pompeii3 | 8mm 10K brushed men's band (WB4491) | $828.00 / 6 g = $10,298/oz | https://www.pompeii3.com/mens-brushed-wedding-band-solid-10k-yellow-gold-ring-8mm-sz-7-12/ |
+| Pompeii3 | 6mm 10K carved comfort-fit men's band (WB0652) | $810.70 / 5 g = $12,103/oz | https://www.pompeii3.com/mens-10k-yellow-gold-6mm-brushed-carved-wedding-band-comfort-fit-ring/ |
+| JTV | 10K men's diamond ring 0.34ctw (1213WB) | $2,101.14 / 7.46 g = $17,684/oz | https://www.jtv.com/product/10k-yellow-gold-men-s-diamond-ring-0-34ctw/1213WB |
+| JTV | 10K two-tone men's band 1.00ctw (DGB159) | $908.64 / 6.1 g = $11,118/oz | https://www.jtv.com/product/white-diamond-10k-two-tone-gold-mens-band-ring-1-00ctw/DGB159 |
+| JTV | 10K WG men's band 0.20ctw (DOE530, clearance) | $449.99 / 4.7 g = $7,148/oz | https://www.jtv.com/product/white-diamond-10k-white-gold-mens-band-ring-0-20ctw/DOE530 |
+| Shop LC | 10K WG diamond men's ring 6.70 g | $1,099.99 / 6.7 g = $12,253/oz; out of stock | https://www.shoplc.com/10k-white-gold-g-h-i1-diamond-0.50-ctw-mens-ring-size-9.0-6.70-grams/p/7707599.html |
+| Shop LC | Luxoro 10K men's nugget ring 4.00 g | price at checkout ~2-3x melt | https://www.shoplc.com/luxoro-10k-yellow-gold-nugett-pattern-mens-ring-size-9.0-4.00-grams/p/7537924.html |
+| ShopHQ | 14K band rings (catalog) | women's/stoned items, >= $24,000/oz equivalents | https://www.shophq.com/products/gilded-lane-14k-gold-4x3mm-multi-sapphire-diamond-band-ring |
+| QVC | 14K bands | prices above melt; no qualifying men's items found | https://www.qvc.com/14K-Gold-Solid-Average-18%22-Oval-Hinged-Bangle-Bracelet,-156g.product.J334850.html |
+| TraxNYC | 10K Pharaoh men's ring 66580 | $1,800 / 12.70 g = $10,581/oz | https://www.traxnyc.com/Mens-Rings-10K-Gold-Pharaoh-Ring-item66580.html |
+| TraxNYC | 10K circular-cross men's ring 70999 | $4,800 / 17.30 g = $21,621/oz | https://traxnyc.com/products/circular-cross-mens-ring-set-with-lab-diamonds |
+| Avianne & Co | 10K men's diamond band 0.38ctw | $985 / 4 g = $18,515/oz | https://www.avianneandco.com/products/10k-yellow-solid-gold-mens-diamond-wedding-ring-band-0-38-ctw |
+| Sabrina Silver | 10K men's Masonic rings | $1,498+ and no gram weights published | https://sabrinasilver.com/sabrinasilver/ShopCart/impl/home.php?cat=2863 |
+| Sam's Club | Comfort Fit Band 14K 2mm | $269 but NO gram weight published — price/oz unverifiable | https://www.samsclub.com/ip/Comfort-Fit-Band-in-14K-Gold-2mm/13585869873 |
+| GoldenMine | 10K/14K men's comfort-fit dome bands | NO gram weights published on product pages | https://goldenmine.com/p/Plain-Bands/8mm-Classic-Light-Comfort-Fit-Dome-Mens-Wedding-Band---10K,-14K,-18K-Yellow-Gold/512819.html |
+| Costco | 2.5mm band men's sizes 9-10; 5/6/7.5mm men's sizes | weights published, but price is size-dependent/dynamic ("Loading") — unverifiable; same URL already tracked | https://www.costco.com/2.5mm-comfort-fit-diamond-cut-wedding-band.product.4000322768.html |
+| Midwest Jewellery | Men's solid signets 10-20 mm | NO weights published on product pages | https://midwestjewellery.com/gents-solid-signet-ring-w-brush-finished-top-14k-yellow-gold-14-00-mm-9689 |
+| Midwest Jewellery | 10K men's band "3.1gm" 9mm | $599 / 3.1 g = $14,426/oz | https://midwestjewellery.com/diamond-wedding-band-mens-10k-yellow-gold-0-13ct-3-1gm-9mm-wide-ring-be-the-first-to-review-this-item |
+| Midwest Jewellery | 10K men's wedding band w/ diamonds 7 g | $799 / 7 g = $8,522/oz | https://midwestjewellery.com/mens-diamond-wedding-band-wide-10mm-0-58ct-10k-white-gold-or-yellow-gold-comfort-fit |
+| A&V Pawn | 10K men's comfort-fit band (Frederick Goldman) | $469.99 / 5.80 g = $6,049/oz; second-hand | https://avpawn.com/shop/10k-gold-mens-comfort-fit-wedding-ring/ |
+| A&V Pawn | Vintage 14KYG men's statement ring | $1,874.99 / 7.14 g = $14,035/oz | https://avpawn.com/shop/vintage-mens-14kyg-diamond-statement-ring-by-star-diamond-group/ |
+| RM Jewelry NC | 10K two-tone men's statement band | weight 5.1 g published but price not retrievable | https://rmjewelrync.com/products/10k-gold-ring-18217 |
+| Mene | 24K Classic Band (sizes to 14) | "sold by weight" but NO weight published; data feed bot-blocked | https://mene.com/products/mene-classic-band-gold |
+| 7879 | 24K men's signet | GBP sale pricing, sold out; above threshold in USD | https://7879.co/products/24k-gold-signet-ring |
+| Provident Metals | Nebu 1/4 oz 24K Twist Ring | $1,340.34 / 7.776 g = $5,367/oz (above threshold) — existing row re-confirmed 2026-08-26 | https://www.providentmetals.com/nebu-1-4-oz-24k-bullion-twist-ring.html |
+| Money Metals | Nebu 1/4 oz 24K Classic Ring | out of stock; $1,761.32 = $7,040/oz | https://www.moneymetals.com/gold-bullion-ring-classic-design-14-troy-oz-24k-pure/1029 |
+| BGASC | further Nebu SKUs | site blocks automated fetch (reCAPTCHA) — unverifiable; existing $773.84 row flagged as anomaly | https://www.bgasc.com/product/nebu-1-4-oz-24k-bullion-classic-ring |
+| H.Samuel / T.H. Baker / Warren James | 9K men's signets | GBP pricing — USD conversion would be an estimate (forbidden) | https://www.hsamuel.co.uk/ |
+| eBay / Amazon resellers / Property Room / shopgoodwill / Etsy | various | third-party marketplaces or auctions — not first-party official sources | — |
+
+**Accepted instead (2):** Midwest Jewellery men's 14K mountings — 6.35 g @ $499 ($4,190/oz) and 7.99 g @ $579 ($3,864/oz). See `data/evidence/midwest_jewellery_mens_mounting_*.json`.
