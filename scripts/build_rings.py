@@ -41,8 +41,12 @@ def ring_type_of(name, old=None):
     n = (name or "").lower()
     for t in RING_TYPES:
         if t.lower() in n:
-            return ("Signet Ring" if t == "Signet" else t + (" Band" if t == "Band" else " Ring"))
-    return None
+            if t == "Signet":
+                return "Signet Ring"
+            if t == "Ring":
+                return "Fashion / Specialty"
+            return t + (" Band" if t == "Band" else " Ring")
+    return "Fashion / Specialty"
 
 
 def category_of(d, purity):
@@ -82,6 +86,12 @@ def main():
         w = d.get("weight_g")
         price = d.get("price_usd") or d.get("price_usd_from")
         meta = old_meta.get(fid, {})
+        # stale legacy values must never survive a rebuild
+        if meta.get("ring_type"):
+            bad = ("ref" in meta["ring_type"].lower()) or meta["ring_type"] == "Ring Ring"
+            if bad or "necklace" in meta["ring_type"].lower() or "bracelet" in meta["ring_type"].lower() \
+                    or "earring" in meta["ring_type"].lower():
+                meta["ring_type"] = None
         r = {
             "id": fid,
             "file": f"data/evidence/{fn}",
