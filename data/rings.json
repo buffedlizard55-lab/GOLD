@@ -12,7 +12,7 @@
   "weight_g_gold": null,
   "raw_gold_g": null,
   "raw_gold_oz": null,
-  "price_usd": null,
+  "price_usd": 4466.0,
   "price_usd_from": null,
   "price_usd_to": null,
   "original_price_usd": null,
@@ -25,7 +25,7 @@
   "category": "Investment (24K)",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "VERIFIED 2026-08-26 from live 7879 page: price shown in GBP - GBP 3,485.99 (was GBP 5,809.98), 24ct/99.9%, UK hallmarked, sizes F-Z all SOLD OUT, 10.0mm high / 10x10mm top / 2.0mm band. Note says weights can vary up to 0.5g but NO weight and NO US$ breakdown is published on the page, so the prior $4,617 / 14.5g / $2,770+$1,015+$831 claims were removed (unverifiable).",
+  "note": "VERIFIED 2026-08-26 from live 7879 US page: $4,466.00 (sale; $7,443.33 list), 24K (99.9%), UK-hallmarked, ALL SIZES SOLD OUT, 10.0mm high / 10x10mm top / 2.0mm band. No gram weight and no metal-value breakdown is published (prior $4,617 / 14.5g / $2,770+$1,015+$831 claims removed as unverifiable). UK site shows the same ring in GBP (\u00a33,485.99). VERIFIED 2026-08-26 from live 7879 page: price shown in GBP - GBP 3,485.99 (was GBP 5,809.98), 24ct/99.9%, UK hallmarked, sizes F-Z all SOLD OUT, 10.0mm high / 10x10mm top / 2.0mm band. Note says weights can vary up to 0.5g but NO weight and NO US$ breakdown is published on the page, so the prior $4,617 / 14.5g / $2,770+$1,015+$831 claims were removed (unverifiable).",
   "source_label": "7879 - 24K Gold Signet Ring (14.5g, $4617)",
   "source_url": "https://7879.co/products/24k-gold-signet-ring",
   "verified_on": "2026-08-26"
@@ -521,7 +521,7 @@
   "category": "High Transparency",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: two duplicate rows at this URL disagreed ($2,033 vs $1,716) and the live page snapshot did not capture a rendered price, so the price is withheld pending manual re-check. Source:  FLAGGED 2026-08-26: two duplicate rows at this URL disagreed ($2,033 vs $1,716) and the live page snapshot did not capture a rendered price, so the price is withheld pending manual re-check. Source:",
+  "note": "FLAGGED 2026-08-26: two duplicate rows at this URL disagreed ($2,033 vs $1,716) and the live page snapshot did not capture a rendered price, so the price is withheld pending manual re-check. Source:  FLAGGED 2026-08-26: two duplicate rows at this URL disagreed ($2,033 vs $1,716) and the live page snapshot did not capture a rendered price, so the price is withheld pending manual re-check. Source:  FLAGGED 2026-08-26: two duplicate rows at this URL disagreed ($2,033 vs $1,716) and the live page snapshot did not capture a rendered price, so the price is withheld pending manual re-check. Source:",
   "source_label": "Product listing",
   "source_url": "https://www.ritani.com/products/solitaire-diamond-cathedral-engagement-ring-6-metal-18kt-yellow-gold-shape-pear",
   "verified_on": "2026-08-26"
@@ -583,7 +583,7 @@
   "category": "High Transparency",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "RE-VERIFIED 2026-08-26 via official Shopify product API (.js): price_min 52600 ($526 14k YG/WG/RG), nickel-free WG 55900 ($559), price_max 62500 ($625); no gram weight published. RE-VERIFIED 2026-08-26 via official Shopify product API (.js): price_min 52600 ($526 14k YG/WG/RG), nickel-free WG 55900 ($559), price_max 62500 ($625); no gram weight published. VERIFIED 2026-08-26 from official Shopify product JSON (products/alexandrite-ring.js): price range $526.00-$625.00 (14k YG $526, nickel-free WG $559, up to $625); NO gram weight published for this ring (previous 0.49g was not on the page and is physically implausible).",
+  "note": "RE-VERIFIED 2026-08-26 via official Shopify product API (.js): price_min 52600 ($526 14k YG/WG/RG), nickel-free WG 55900 ($559), price_max 62500 ($625); no gram weight published. RE-VERIFIED 2026-08-26 via official Shopify product API (.js): price_min 52600 ($526 14k YG/WG/RG), nickel-free WG 55900 ($559), price_max 62500 ($625); no gram weight published. RE-VERIFIED 2026-08-26 via official Shopify product API (.js): price_min 52600 ($526 14k YG/WG/RG), nickel-free WG 55900 ($559), price_max 62500 ($625); no gram weight published. VERIFIED 2026-08-26 from official Shopify product JSON (products/alexandrite-ring.js): price range $526.00-$625.00 (14k YG $526, nickel-free WG $559, up to $625); NO gram weight published for this ring (previous 0.49g was not on the page and is physically implausible).",
   "source_label": "Automic Gold - Alexandrite Ring 14K (from $526, weight not published)",
   "source_url": "https://www.automicgold.com/products/alexandrite-ring",
   "verified_on": "2026-08-26"
@@ -645,7 +645,7 @@
   "category": "High Transparency",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "RE-VERIFIED 2026-08-26 via official Shopify product API (.js): price 40200 cents = $402.00 14k yellow/white/rose gold; weight field empty \u2014 the ~1.2g in the note remains an approximation, not size-specific. RE-VERIFIED 2026-08-26 via official Shopify product API (.js): price 40200 cents = $402.00 14k yellow/white/rose gold; weight field empty \u2014 the ~1.2g in the note remains an approximation, not size-specific. Bar Ring \u2014 plain 12mm x 2mm bar, ring 1.1mm wide, ~1.1mm height, item weight approx 1.2g (gold). Size 4.5 available (quarter sizes 2-16). 5.0 stars (10 reviews). CAVEAT: Weight is approximate and not size-specific.",
+  "note": "RE-VERIFIED 2026-08-26 via official Shopify product API (.js): price 40200 cents = $402.00 14k yellow/white/rose gold; weight field empty \u2014 the ~1.2g in the note remains an approximation, not size-specific. RE-VERIFIED 2026-08-26 via official Shopify product API (.js): price 40200 cents = $402.00 14k yellow/white/rose gold; weight field empty \u2014 the ~1.2g in the note remains an approximation, not size-specific. RE-VERIFIED 2026-08-26 via official Shopify product API (.js): price 40200 cents = $402.00 14k yellow/white/rose gold; weight field empty \u2014 the ~1.2g in the note remains an approximation, not size-specific. Bar Ring \u2014 plain 12mm x 2mm bar, ring 1.1mm wide, ~1.1mm height, item weight approx 1.2g (gold). Size 4.5 available (quarter sizes 2-16). 5.0 stars (10 reviews). CAVEAT: Weight is approximate and not size-specific.",
   "source_label": "Automic Gold - Bar Ring Solid 14k ($402, ~1.2g, size 4.5 available)",
   "source_url": "https://www.automicgold.com/products/bar-ring",
   "verified_on": "2026-08-26"
@@ -672,7 +672,7 @@
   "price_per_gold_oz": null,
   "width_mm": 1.0,
   "setting_only": false,
-  "ring_type": "Necklace (Ref)",
+  "ring_type": "Fashion / Specialty",
   "category": "High Transparency",
   "stone_type": null,
   "stone_ctw": null,
@@ -3218,7 +3218,7 @@
   "category": "Standard Retail",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "RE-VERIFIED 2026-08-26 via official Shopify product API (.js): price 72000 cents = $720.00, 10mm width, sizes 3-10 incl 4.5, 14K solid gold. RE-VERIFIED 2026-08-26 via official Shopify product API (.js): price 72000 cents = $720.00, 10mm width, sizes 3-10 incl 4.5, 14K solid gold. VERIFIED 2026-08-26 from live Baby Gold page: $720.00 USD, 14K, sizes 3-10 incl 4.5, made to order 2-3 weeks. (Previous $450.00 was wrong/outdated.)",
+  "note": "RE-VERIFIED 2026-08-26 via official Shopify product API (.js): price 72000 cents = $720.00, 10mm width, sizes 3-10 incl 4.5, 14K solid gold. RE-VERIFIED 2026-08-26 via official Shopify product API (.js): price 72000 cents = $720.00, 10mm width, sizes 3-10 incl 4.5, 14K solid gold. RE-VERIFIED 2026-08-26 via official Shopify product API (.js): price 72000 cents = $720.00, 10mm width, sizes 3-10 incl 4.5, 14K solid gold. VERIFIED 2026-08-26 from live Baby Gold page: $720.00 USD, 14K, sizes 3-10 incl 4.5, made to order 2-3 weeks. (Previous $450.00 was wrong/outdated.)",
   "source_label": "Product listing",
   "source_url": "https://www.babygold.com/products/14k-gold-linear-double-name-ring",
   "verified_on": "2026-08-26"
@@ -3466,7 +3466,7 @@
   "category": "Standard Retail",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: source URL is a collection/category page (third-party article), not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://wwd.com/shop/shop-fashion/blue-nile-engagement-ring-guide-1236295799/ FLAGGED 2026-08-26: source URL is a collection/category page (third-party article), not this product's own page; the prior $495.0 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $495.0. Cited page: https://wwd.com/shop/shop-fashion/blue-nile-engagement-ring-guide-1236295799/ Setting price only ($495) \u2014 diamond sold separately. Source article (WWD) lists material as 18K yellow gold, 2.00mm width. Blue Nile's own product page should be checked for current price, exact weight, and hallmark photo.",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page (third-party article), not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://wwd.com/shop/shop-fashion/blue-nile-engagement-ring-guide-1236295799/ FLAGGED 2026-08-26: source URL is a collection/category page (third-party article), not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://wwd.com/shop/shop-fashion/blue-nile-engagement-ring-guide-1236295799/ FLAGGED 2026-08-26: source URL is a collection/category page (third-party article), not this product's own page; the prior $495.0 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $495.0. Cited page: https://wwd.com/shop/shop-fashion/blue-nile-engagement-ring-guide-1236295799/ Setting price only ($495) \u2014 diamond sold separately. Source article (WWD) lists material as 18K yellow gold, 2.00mm width. Blue Nile's own product page should be checked for current price, exact weight, and hallmark photo.",
   "source_label": "WWD 'Blue Nile's Top Engagement Rings' guide (2024)",
   "source_url": "https://wwd.com/shop/shop-fashion/blue-nile-engagement-ring-guide-1236295799/",
   "verified_on": "2026-08-26"
@@ -4055,7 +4055,7 @@
   "category": "High Transparency",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "RE-VERIFIED 2026-08-26 live: $2,970.00 tulip cathedral solitaire. A duplicate row at the same URL ($900) contradicted the page and was removed. RE-VERIFIED 2026-08-26 live: $2,970.00 tulip cathedral solitaire. A duplicate row at the same URL ($900) contradicted the page and was removed.",
+  "note": "RE-VERIFIED 2026-08-26 live: $2,970.00 tulip cathedral solitaire. A duplicate row at the same URL ($900) contradicted the page and was removed. RE-VERIFIED 2026-08-26 live: $2,970.00 tulip cathedral solitaire. A duplicate row at the same URL ($900) contradicted the page and was removed. RE-VERIFIED 2026-08-26 live: $2,970.00 tulip cathedral solitaire. A duplicate row at the same URL ($900) contradicted the page and was removed.",
   "source_label": "Product listing",
   "source_url": "https://www.ritani.com/products/solitaire-diamond-tulip-cathedral-engagement-ring-1-metal-18kt-white-gold-shape-round",
   "verified_on": "2026-08-26"
@@ -4799,7 +4799,7 @@
   "category": "Standard Retail",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "VERIFIED 2026-08-26 live: $1,873.00 (SKU 1RZ4775, 18kt rose gold, 1.8mm). Prior stored $1,387 was stale. VERIFIED 2026-08-26 live: $1,873.00 (SKU 1RZ4775, 18kt rose gold, 1.8mm). Prior stored $1,387 was stale.",
+  "note": "VERIFIED 2026-08-26 live: $1,873.00 (SKU 1RZ4775, 18kt rose gold, 1.8mm). Prior stored $1,387 was stale. VERIFIED 2026-08-26 live: $1,873.00 (SKU 1RZ4775, 18kt rose gold, 1.8mm). Prior stored $1,387 was stale. VERIFIED 2026-08-26 live: $1,873.00 (SKU 1RZ4775, 18kt rose gold, 1.8mm). Prior stored $1,387 was stale.",
   "source_label": "Product listing",
   "source_url": "https://www.ritani.com/products/four-prong-solitaire-diamond-engagement-ring-metal-18kt-rose-gold-shape-round",
   "verified_on": "2026-08-26"
@@ -5140,7 +5140,7 @@
   "category": "High Transparency",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: two duplicate rows at this URL disagreed ($2,018 vs $1,322) and the live page snapshot did not capture a rendered price, so the price is withheld pending manual re-check. Source:  FLAGGED 2026-08-26: two duplicate rows at this URL disagreed ($2,018 vs $1,322) and the live page snapshot did not capture a rendered price, so the price is withheld pending manual re-check. Source:",
+  "note": "FLAGGED 2026-08-26: two duplicate rows at this URL disagreed ($2,018 vs $1,322) and the live page snapshot did not capture a rendered price, so the price is withheld pending manual re-check. Source:  FLAGGED 2026-08-26: two duplicate rows at this URL disagreed ($2,018 vs $1,322) and the live page snapshot did not capture a rendered price, so the price is withheld pending manual re-check. Source:  FLAGGED 2026-08-26: two duplicate rows at this URL disagreed ($2,018 vs $1,322) and the live page snapshot did not capture a rendered price, so the price is withheld pending manual re-check. Source:",
   "source_label": "Product listing",
   "source_url": "https://www.ritani.com/products/solitaire-kite-set-swirl-diamond-engagement-ring-metal-18kt-rose-gold-shape-oval",
   "verified_on": "2026-08-26"
@@ -5233,7 +5233,7 @@
   "category": "Standard Retail",
   "stone_type": "Ruby + natural diamond (clover setting)",
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://ferkosfinejewelry.com/collections/ruby-jewelry FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $631.2 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $631.2. Cited page: https://ferkosfinejewelry.com/collections/ruby-jewelry Ferko's Fine Jewelry (US) Full Eternity Clover Ruby and Diamond Ring. Size 4.5 CONFIRMED in the collection size selector (sizes 3-9). Price $631.20 (20% off $789) per collection listing. Made to order. CAVEAT: Weight NOT published; full stone counts not read from collection listing \u2014 confirm on product page. Standard retail.",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://ferkosfinejewelry.com/collections/ruby-jewelry FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://ferkosfinejewelry.com/collections/ruby-jewelry FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $631.2 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $631.2. Cited page: https://ferkosfinejewelry.com/collections/ruby-jewelry Ferko's Fine Jewelry (US) Full Eternity Clover Ruby and Diamond Ring. Size 4.5 CONFIRMED in the collection size selector (sizes 3-9). Price $631.20 (20% off $789) per collection listing. Made to order. CAVEAT: Weight NOT published; full stone counts not read from collection listing \u2014 confirm on product page. Standard retail.",
   "source_label": "Ferko's - Full Eternity Clover Ruby & Diamond Ring 14K Size 4.5 ($631.20)",
   "source_url": "https://ferkosfinejewelry.com/collections/ruby-jewelry",
   "verified_on": "2026-08-26"
@@ -5419,7 +5419,7 @@
   "category": "Standard Retail",
   "stone_type": "Emerald + natural diamond (marquise)",
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://ferkosfinejewelry.com/collections/marquise-cut-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $725.6 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $725.6. Cited page: https://ferkosfinejewelry.com/collections/marquise-cut-rings Ferko's Fine Jewelry (US) 14k Marquise Emerald and Diamond Wedding Band. Size 4.5 CONFIRMED in the collection size selector (sizes 4.5-9). Price $725.60 (20% off $907) per collection listing. Made to order. CAVEAT: Weight NOT published; full stone details not read from collection listing \u2014 confirm on product page. Standard retail.",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://ferkosfinejewelry.com/collections/marquise-cut-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://ferkosfinejewelry.com/collections/marquise-cut-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $725.6 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $725.6. Cited page: https://ferkosfinejewelry.com/collections/marquise-cut-rings Ferko's Fine Jewelry (US) 14k Marquise Emerald and Diamond Wedding Band. Size 4.5 CONFIRMED in the collection size selector (sizes 4.5-9). Price $725.60 (20% off $907) per collection listing. Made to order. CAVEAT: Weight NOT published; full stone details not read from collection listing \u2014 confirm on product page. Standard retail.",
   "source_label": "Ferko's - Marquise Emerald & Diamond Wedding Band 14k Size 4.5 ($725.60)",
   "source_url": "https://ferkosfinejewelry.com/collections/marquise-cut-rings",
   "verified_on": "2026-08-26"
@@ -5636,7 +5636,7 @@
   "category": "Standard Retail",
   "stone_type": "Natural diamond (baguette)",
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://ferkosfinejewelry.com/collections/baguette-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $551.2 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $551.2. Cited page: https://ferkosfinejewelry.com/collections/baguette-rings Ferko's Fine Jewelry (US) 14K Gold Stackable Vertical Baguette Diamond Ring. Size 4.5 CONFIRMED in the collection size selector (sizes 4.5-9). Price $551.20 (15% off $689) per collection listing. Made to order. CAVEAT: Weight NOT published; full stone count/carat not read from collection listing \u2014 confirm on product page. Standard retail.",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://ferkosfinejewelry.com/collections/baguette-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://ferkosfinejewelry.com/collections/baguette-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $551.2 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $551.2. Cited page: https://ferkosfinejewelry.com/collections/baguette-rings Ferko's Fine Jewelry (US) 14K Gold Stackable Vertical Baguette Diamond Ring. Size 4.5 CONFIRMED in the collection size selector (sizes 4.5-9). Price $551.20 (15% off $689) per collection listing. Made to order. CAVEAT: Weight NOT published; full stone count/carat not read from collection listing \u2014 confirm on product page. Standard retail.",
   "source_label": "Ferko's - Stackable Vertical Baguette Diamond Ring 14K Size 4.5 ($551.20)",
   "source_url": "https://ferkosfinejewelry.com/collections/baguette-rings",
   "verified_on": "2026-08-26"
@@ -6690,7 +6690,7 @@
   "category": "High Transparency",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "RE-VERIFIED 2026-08-26 live: $2,180.00 (SKU 1ECZ7241). A duplicate row at the same URL ($1,423) contradicted the page and was removed. RE-VERIFIED 2026-08-26 live: $2,180.00 (SKU 1ECZ7241). A duplicate row at the same URL ($1,423) contradicted the page and was removed.",
+  "note": "RE-VERIFIED 2026-08-26 live: $2,180.00 (SKU 1ECZ7241). A duplicate row at the same URL ($1,423) contradicted the page and was removed. RE-VERIFIED 2026-08-26 live: $2,180.00 (SKU 1ECZ7241). A duplicate row at the same URL ($1,423) contradicted the page and was removed. RE-VERIFIED 2026-08-26 live: $2,180.00 (SKU 1ECZ7241). A duplicate row at the same URL ($1,423) contradicted the page and was removed.",
   "source_label": "Product listing",
   "source_url": "https://www.ritani.com/products/solitaire-diamond-cathedral-tapered-engagement-ring-metal-platinum-shape-emerald",
   "verified_on": "2026-08-26"
@@ -8395,7 +8395,7 @@
   "category": "Investment (24K)",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "VERIFIED 2026-08-26 live: $1,554 USD (24K, sizes 4-13 incl 4.5). Men\u0113 prices float daily with the gold price; page states 'Products are sold by weight, not size' and shows per-size weight only in the interactive size selector, so no gram weight is recorded here (prior 10.15g belonged to size 10 per the repo's own note). Duplicate rows at the same URL ($1,401, $1,352-with-engraving which was cheaper than non-engraved \u2014 logically impossible) were removed. VERIFIED 2026-08-26 live: $1,554 USD (24K, sizes 4-13 incl 4.5). Men\u0113 prices float daily with the gold price; page states 'Products are sold by weight, not size' and shows per-size weight only in the interactive size selector, so no gram weight is recorded here (prior 10.15g belonged to size 10 per the repo's own note). Duplicate rows at the same URL ($1,401, $1,352-with-engraving which was cheaper than non-engraved \u2014 logically impossible) were removed. Men\u0113 is an 'investment jewelry' company that sells by weight. Narrow Classic Band (4mm wide, 2mm thick) weight approx 10.15g for size 10. Price fluctuates with daily spot price.",
+  "note": "VERIFIED 2026-08-26 live: $1,554 USD (24K, sizes 4-13 incl 4.5). Men\u0113 prices float daily with the gold price; page states 'Products are sold by weight, not size' and shows per-size weight only in the interactive size selector, so no gram weight is recorded here (prior 10.15g belonged to size 10 per the repo's own note). Duplicate rows at the same URL ($1,401, $1,352-with-engraving which was cheaper than non-engraved \u2014 logically impossible) were removed. VERIFIED 2026-08-26 live: $1,554 USD (24K, sizes 4-13 incl 4.5). Men\u0113 prices float daily with the gold price; page states 'Products are sold by weight, not size' and shows per-size weight only in the interactive size selector, so no gram weight is recorded here (prior 10.15g belonged to size 10 per the repo's own note). Duplicate rows at the same URL ($1,401, $1,352-with-engraving which was cheaper than non-engraved \u2014 logically impossible) were removed. VERIFIED 2026-08-26 live: $1,554 USD (24K, sizes 4-13 incl 4.5). Men\u0113 prices float daily with the gold price; page states 'Products are sold by weight, not size' and shows per-size weight only in the interactive size selector, so no gram weight is recorded here (prior 10.15g belonged to size 10 per the repo's own note). Duplicate rows at the same URL ($1,401, $1,352-with-engraving which was cheaper than non-engraved \u2014 logically impossible) were removed. Men\u0113 is an 'investment jewelry' company that sells by weight. Narrow Classic Band (4mm wide, 2mm thick) weight approx 10.15g for size 10. Price fluctuates with daily spot price.",
   "source_label": "Men\u0113 - Narrow Classic Band 24K Gold (approx 10.15g, $1872)",
   "source_url": "https://mene.com/products/mene-narrow-band-gold",
   "verified_on": "2026-08-26"
@@ -8705,7 +8705,7 @@
   "category": "Standard Retail",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "VERIFIED 2026-08-26 live: $1,907.00 platinum knife-edge solitaire. BOTH prior duplicate rows ($832 and $1,450) contradicted the live page; the $832 row was removed. VERIFIED 2026-08-26 live: $1,907.00 platinum knife-edge solitaire. BOTH prior duplicate rows ($832 and $1,450) contradicted the live page; the $832 row was removed.",
+  "note": "VERIFIED 2026-08-26 live: $1,907.00 platinum knife-edge solitaire. BOTH prior duplicate rows ($832 and $1,450) contradicted the live page; the $832 row was removed. VERIFIED 2026-08-26 live: $1,907.00 platinum knife-edge solitaire. BOTH prior duplicate rows ($832 and $1,450) contradicted the live page; the $832 row was removed. VERIFIED 2026-08-26 live: $1,907.00 platinum knife-edge solitaire. BOTH prior duplicate rows ($832 and $1,450) contradicted the live page; the $832 row was removed.",
   "source_label": "Product listing",
   "source_url": "https://www.ritani.com/products/high-set-solitaire-knife-edge-engagement-ring-metal-platinum-shape-oval",
   "verified_on": "2026-08-26"
@@ -8891,7 +8891,7 @@
   "category": "High Transparency",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "RE-VERIFIED 2026-08-26 live: $759.75 discounted from $1,013.00 (25% off, SKU 1CUZ1050). A duplicate row at the same URL ($1,393) contradicted the page and was removed. RE-VERIFIED 2026-08-26 live: $759.75 discounted from $1,013.00 (25% off, SKU 1CUZ1050). A duplicate row at the same URL ($1,393) contradicted the page and was removed.",
+  "note": "RE-VERIFIED 2026-08-26 live: $759.75 discounted from $1,013.00 (25% off, SKU 1CUZ1050). A duplicate row at the same URL ($1,393) contradicted the page and was removed. RE-VERIFIED 2026-08-26 live: $759.75 discounted from $1,013.00 (25% off, SKU 1CUZ1050). A duplicate row at the same URL ($1,393) contradicted the page and was removed. RE-VERIFIED 2026-08-26 live: $759.75 discounted from $1,013.00 (25% off, SKU 1CUZ1050). A duplicate row at the same URL ($1,393) contradicted the page and was removed.",
   "source_label": "Product listing",
   "source_url": "https://www.ritani.com/products/four-prong-petal-inspired-solitaire-diamond-engagement-ring-metal-14kt-white-gold-shape-cushion",
   "verified_on": "2026-08-26"
@@ -9542,7 +9542,7 @@
   "category": "Standard Retail",
   "stone_type": "Diamond (3 x 0.02ct)",
   "stone_ctw": 0.06,
-  "note": "RE-VERIFIED 2026-08-26 live: $468.00, 'You save 6% / $498 traditional retail', 0.06ctw GH/SI2+, 2.9mm, sizes 4-9 incl 4.5. RE-VERIFIED 2026-08-26 live: $468.00, 'You save 6% / $498 traditional retail', 0.06ctw GH/SI2+, 2.9mm, sizes 4-9 incl 4.5. VERIFIED 2026-08-26 from Quince official page: $468.00 (was $428.00 in dataset).",
+  "note": "RE-VERIFIED 2026-08-26 live: $468.00, 'You save 6% / $498 traditional retail', 0.06ctw GH/SI2+, 2.9mm, sizes 4-9 incl 4.5. RE-VERIFIED 2026-08-26 live: $468.00, 'You save 6% / $498 traditional retail', 0.06ctw GH/SI2+, 2.9mm, sizes 4-9 incl 4.5. RE-VERIFIED 2026-08-26 live: $468.00, 'You save 6% / $498 traditional retail', 0.06ctw GH/SI2+, 2.9mm, sizes 4-9 incl 4.5. VERIFIED 2026-08-26 from Quince official page: $468.00 (was $428.00 in dataset).",
   "source_label": "Quince - 14K Gold Diamond 3 Stone Inlay Band ($468)",
   "source_url": "https://www.quince.com/women/14k-gold-diamond-3-stone-viviane-band",
   "verified_on": "2026-08-26"
@@ -9759,7 +9759,7 @@
   "category": "Standard Retail",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "VERIFIED 2026-08-26 live: $228.00, 'You save 23% / $298 traditional retail', 2.5mm, sizes 4-9 incl 4.5, 129 reviews. VERIFIED 2026-08-26 live: $228.00, 'You save 23% / $298 traditional retail', 2.5mm, sizes 4-9 incl 4.5, 129 reviews. VERIFIED 2026-08-26 from live Quince page: $228.00 (was $148.00 in dataset), width 2.5mm, 14K, sizes 4-9 incl 4.5.",
+  "note": "VERIFIED 2026-08-26 live: $228.00, 'You save 23% / $298 traditional retail', 2.5mm, sizes 4-9 incl 4.5, 129 reviews. VERIFIED 2026-08-26 live: $228.00, 'You save 23% / $298 traditional retail', 2.5mm, sizes 4-9 incl 4.5, 129 reviews. VERIFIED 2026-08-26 live: $228.00, 'You save 23% / $298 traditional retail', 2.5mm, sizes 4-9 incl 4.5, 129 reviews. VERIFIED 2026-08-26 from live Quince page: $228.00 (was $148.00 in dataset), width 2.5mm, 14K, sizes 4-9 incl 4.5.",
   "source_label": "Quince - 14K Gold Circle Eternity Band Size 4.5 ($148)",
   "source_url": "https://www.quince.com/women/14k-gold-circle-coterie-band",
   "verified_on": "2026-08-26"
@@ -9945,7 +9945,7 @@
   "category": "Standard Retail",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $999.9 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $999.9. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $999.9 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $999.9. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
   "source_label": "Collection listing",
   "source_url": "https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
   "verified_on": "2026-08-26"
@@ -9976,7 +9976,7 @@
   "category": "Standard Retail",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $749.9 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $749.9. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $749.9 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $749.9. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
   "source_label": "Collection listing",
   "source_url": "https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
   "verified_on": "2026-08-26"
@@ -10038,7 +10038,7 @@
   "category": "Standard Retail",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $698.0 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $698.0. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $698.0 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $698.0. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
   "source_label": "Collection listing",
   "source_url": "https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
   "verified_on": "2026-08-26"
@@ -10069,7 +10069,7 @@
   "category": "Standard Retail",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $449.9 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $449.9. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $449.9 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $449.9. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
   "source_label": "Collection listing",
   "source_url": "https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
   "verified_on": "2026-08-26"
@@ -10286,7 +10286,7 @@
   "category": "Standard Retail",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $399.9 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $399.9. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $399.9 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $399.9. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
   "source_label": "Collection listing",
   "source_url": "https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
   "verified_on": "2026-08-26"
@@ -10348,7 +10348,7 @@
   "category": "Standard Retail",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $238.0 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $238.0. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $238.0 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $238.0. Cited page: https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
   "source_label": "Collection listing",
   "source_url": "https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
   "verified_on": "2026-08-26"
@@ -10844,7 +10844,7 @@
   "category": "Standard Retail",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "VERIFIED 2026-08-26 live: $972.75 discounted from $1,297.00 (25% off, SKU 1RZ4782). A duplicate row at the same URL ($907.90) contradicted the page and was removed. SKU 1RZ4782. Size 4.5 CONFIRMED in the ring-size dropdown (sizes 3-9 at 0.25 increments) on the live product page. Price $972.75 (25% off $1,297). Full bezel solitaire, 2mm band, high-polish shoulders. Center stone sold separately. IRREGULARITY: Ritani's 'metal weight' line was not displayed in the fetched product content for this setting \u2014 weight not recorded (do not assume 14kt WG weight equals other settings).",
+  "note": "VERIFIED 2026-08-26 live: $972.75 discounted from $1,297.00 (25% off, SKU 1RZ4782). A duplicate row at the same URL ($907.90) contradicted the page and was removed. VERIFIED 2026-08-26 live: $972.75 discounted from $1,297.00 (25% off, SKU 1RZ4782). A duplicate row at the same URL ($907.90) contradicted the page and was removed. SKU 1RZ4782. Size 4.5 CONFIRMED in the ring-size dropdown (sizes 3-9 at 0.25 increments) on the live product page. Price $972.75 (25% off $1,297). Full bezel solitaire, 2mm band, high-polish shoulders. Center stone sold separately. IRREGULARITY: Ritani's 'metal weight' line was not displayed in the fetched product content for this setting \u2014 weight not recorded (do not assume 14kt WG weight equals other settings).",
   "source_label": "Ritani - The Dara 14kt White Gold Bezel Solitaire ($972.75, size 4.5 confirmed, weight n/a)",
   "source_url": "https://www.ritani.com/products/the-dara-bezel-metal-14kt-white-gold-shape-round",
   "verified_on": "2026-08-26"
@@ -10937,7 +10937,7 @@
   "category": "Standard Retail",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/round-cut-engagement-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $880.0 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $880.0. Cited page: https://www.ritani.com/collections/round-cut-engagement-rings The Geneva 14kt White Gold four-prong solitaire (emerald-cut variant $616, 30% off $880; round-cut $880). Price confirmed on Ritani collection pages. Center stone sold separately. IRREGULARITY: metal weight line not read from fetched content \u2014 weight not recorded. CAVEAT: Ritani standard sizing 3-9 in 0.25 increments \u2014 confirm size 4.5 in dropdown at checkout.",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/round-cut-engagement-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/round-cut-engagement-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $880.0 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $880.0. Cited page: https://www.ritani.com/collections/round-cut-engagement-rings The Geneva 14kt White Gold four-prong solitaire (emerald-cut variant $616, 30% off $880; round-cut $880). Price confirmed on Ritani collection pages. Center stone sold separately. IRREGULARITY: metal weight line not read from fetched content \u2014 weight not recorded. CAVEAT: Ritani standard sizing 3-9 in 0.25 increments \u2014 confirm size 4.5 in dropdown at checkout.",
   "source_label": "Ritani - The Geneva 14kt White Gold Four-Prong Solitaire ($880, weight n/a)",
   "source_url": "https://www.ritani.com/collections/round-cut-engagement-rings",
   "verified_on": "2026-08-26"
@@ -10968,7 +10968,7 @@
   "category": "Standard Retail",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/yellow-gold-engagement-ring FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $880.0 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $880.0. Cited page: https://www.ritani.com/collections/yellow-gold-engagement-ring Setting price only - diamond sold separately. Ritani publishes metal weight on each product detail page (e.g. The Delia at 4.04g, The Maddie at 3.84g). Ritani is a US-based online jeweler with NYC headquarters, 30-day returns.",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/yellow-gold-engagement-ring FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/yellow-gold-engagement-ring FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $880.0 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $880.0. Cited page: https://www.ritani.com/collections/yellow-gold-engagement-ring Setting price only - diamond sold separately. Ritani publishes metal weight on each product detail page (e.g. The Delia at 4.04g, The Maddie at 3.84g). Ritani is a US-based online jeweler with NYC headquarters, 30-day returns.",
   "source_label": "Ritani - Yellow Gold Engagement Rings (The Geneva Round Cut 14K Yellow Gold Four-Prong Solitaire, $880)",
   "source_url": "https://www.ritani.com/collections/yellow-gold-engagement-ring",
   "verified_on": "2026-08-26"
@@ -10999,7 +10999,7 @@
   "category": "Standard Retail",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/white-gold-solitaire-engagement-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $1159.2 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $1159.2. Cited page: https://www.ritani.com/collections/white-gold-solitaire-engagement-rings The Hera 14kt White Gold six-prong petal head solitaire. Price $1,159.20 (30% off $1,656) confirmed on Ritani collection pages. Center stone sold separately. IRREGULARITY: metal weight line not read from fetched content \u2014 weight not recorded. CAVEAT: Ritani standard sizing 3-9 in 0.25 increments \u2014 confirm size 4.5 in dropdown at checkout.",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/white-gold-solitaire-engagement-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/white-gold-solitaire-engagement-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $1159.2 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $1159.2. Cited page: https://www.ritani.com/collections/white-gold-solitaire-engagement-rings The Hera 14kt White Gold six-prong petal head solitaire. Price $1,159.20 (30% off $1,656) confirmed on Ritani collection pages. Center stone sold separately. IRREGULARITY: metal weight line not read from fetched content \u2014 weight not recorded. CAVEAT: Ritani standard sizing 3-9 in 0.25 increments \u2014 confirm size 4.5 in dropdown at checkout.",
   "source_label": "Ritani - The Hera 14kt White Gold Six-Prong Petal Head ($1,159.20, weight n/a)",
   "source_url": "https://www.ritani.com/collections/white-gold-solitaire-engagement-rings",
   "verified_on": "2026-08-26"
@@ -11092,7 +11092,7 @@
   "category": "Standard Retail",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/round-cut-solitaire-engagement-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $1314.0 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $1314.0. Cited page: https://www.ritani.com/collections/round-cut-solitaire-engagement-rings The Lia 14kt White Gold six-prong petal solitaire. Price $1,314 confirmed on Ritani collection pages (also $1,663 in 18kt rose gold per schema). Center stone sold separately. IRREGULARITY: metal weight line not read from fetched content \u2014 weight not recorded. CAVEAT: Ritani standard sizing 3-9 in 0.25 increments \u2014 confirm size 4.5 in dropdown at checkout.",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/round-cut-solitaire-engagement-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/round-cut-solitaire-engagement-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $1314.0 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $1314.0. Cited page: https://www.ritani.com/collections/round-cut-solitaire-engagement-rings The Lia 14kt White Gold six-prong petal solitaire. Price $1,314 confirmed on Ritani collection pages (also $1,663 in 18kt rose gold per schema). Center stone sold separately. IRREGULARITY: metal weight line not read from fetched content \u2014 weight not recorded. CAVEAT: Ritani standard sizing 3-9 in 0.25 increments \u2014 confirm size 4.5 in dropdown at checkout.",
   "source_label": "Ritani - The Lia 14kt White Gold Six-Prong Petal Solitaire ($1,314, weight n/a)",
   "source_url": "https://www.ritani.com/collections/round-cut-solitaire-engagement-rings",
   "verified_on": "2026-08-26"
@@ -11495,7 +11495,7 @@
   "category": "Standard Retail",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/engagement-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $935.0 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $935.0. Cited page: https://www.ritani.com/collections/engagement-rings The Teya 14kt White Gold four-prong solitaire. Price $935 confirmed on Ritani collection pages (round, emerald, and pear shapes all listed at $935). Center stone sold separately. IRREGULARITY: metal weight line not read from fetched content \u2014 weight not recorded. CAVEAT: Ritani standard sizing 3-9 in 0.25 increments \u2014 confirm size 4.5 in dropdown at checkout.",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/engagement-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/engagement-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $935.0 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $935.0. Cited page: https://www.ritani.com/collections/engagement-rings The Teya 14kt White Gold four-prong solitaire. Price $935 confirmed on Ritani collection pages (round, emerald, and pear shapes all listed at $935). Center stone sold separately. IRREGULARITY: metal weight line not read from fetched content \u2014 weight not recorded. CAVEAT: Ritani standard sizing 3-9 in 0.25 increments \u2014 confirm size 4.5 in dropdown at checkout.",
   "source_label": "Ritani - The Teya 14kt White Gold Four-Prong Solitaire ($935, weight n/a)",
   "source_url": "https://www.ritani.com/collections/engagement-rings",
   "verified_on": "2026-08-26"
@@ -11526,7 +11526,7 @@
   "category": "Standard Retail",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/white-gold-engagement-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $1534.0 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $1534.0. Cited page: https://www.ritani.com/collections/white-gold-engagement-rings The Vera 14kt White Gold solitaire. Price $1,534 confirmed on Ritani collection pages (platinum variant $930.40 with 3g platinum weight \u2014 NOT applicable to gold). Center stone sold separately. IRREGULARITY: gold-variant metal weight not read from fetched content \u2014 weight not recorded. CAVEAT: Ritani standard sizing 3-9 in 0.25 increments \u2014 confirm size 4.5 in dropdown at checkout.",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/white-gold-engagement-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/white-gold-engagement-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $1534.0 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $1534.0. Cited page: https://www.ritani.com/collections/white-gold-engagement-rings The Vera 14kt White Gold solitaire. Price $1,534 confirmed on Ritani collection pages (platinum variant $930.40 with 3g platinum weight \u2014 NOT applicable to gold). Center stone sold separately. IRREGULARITY: gold-variant metal weight not read from fetched content \u2014 weight not recorded. CAVEAT: Ritani standard sizing 3-9 in 0.25 increments \u2014 confirm size 4.5 in dropdown at checkout.",
   "source_label": "Ritani - The Vera 14kt White Gold Solitaire ($1,534, weight n/a)",
   "source_url": "https://www.ritani.com/collections/white-gold-engagement-rings",
   "verified_on": "2026-08-26"
@@ -12642,7 +12642,7 @@
   "category": "High Transparency",
   "stone_type": null,
   "stone_ctw": null,
-  "note": "FLAGGED 2026-08-26: two duplicate rows at this URL disagreed ($3,079 vs $2,426) and the live page snapshot did not capture a rendered price, so the price is withheld pending manual re-check. Source:  FLAGGED 2026-08-26: two duplicate rows at this URL disagreed ($3,079 vs $2,426) and the live page snapshot did not capture a rendered price, so the price is withheld pending manual re-check. Source:",
+  "note": "FLAGGED 2026-08-26: two duplicate rows at this URL disagreed ($3,079 vs $2,426) and the live page snapshot did not capture a rendered price, so the price is withheld pending manual re-check. Source:  FLAGGED 2026-08-26: two duplicate rows at this URL disagreed ($3,079 vs $2,426) and the live page snapshot did not capture a rendered price, so the price is withheld pending manual re-check. Source:  FLAGGED 2026-08-26: two duplicate rows at this URL disagreed ($3,079 vs $2,426) and the live page snapshot did not capture a rendered price, so the price is withheld pending manual re-check. Source:",
   "source_label": "Product listing",
   "source_url": "https://www.ritani.com/products/solitaire-diamond-tulip-cathedral-engagement-ring-6-metal-18kt-yellow-gold-shape-pear",
   "verified_on": "2026-08-26"

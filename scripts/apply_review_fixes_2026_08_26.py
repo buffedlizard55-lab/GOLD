@@ -43,6 +43,12 @@ def note_merge(d, add):
 
 # ---------------------------------------------------------------- 1+2. price fixes
 PRICE_FIXES = {
+    # Live official US page, 2026-08-26 (this session): $7,443.33 struck through,
+    # $4,466.00 sale price, all sizes SOLD OUT, 24K 99.9%, UK hallmark, no weight.
+    "7879_signet_ring_24k": {
+        "price_usd": 4466.0,
+        "note": "VERIFIED 2026-08-26 from live 7879 US page: $4,466.00 (sale; $7,443.33 list), 24K (99.9%), UK-hallmarked, ALL SIZES SOLD OUT, 10.0mm high / 10x10mm top / 2.0mm band. No gram weight and no metal-value breakdown is published (prior $4,617 / 14.5g / $2,770+$1,015+$831 claims removed as unverifiable). UK site shows the same ring in GBP (£3,485.99).",
+    },
     # Live official Shopify API / page, 2026-08-26 (this session, re-verified independently):
     "mene_narrow_band_24k": {
         "price_usd": 1554.0, "weight_g": None,

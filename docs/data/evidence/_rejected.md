@@ -81,3 +81,6 @@ offline request to customer service.
 - `evelyn_oval_18k_rg` — Evelyn 18kt Rose Gold Oval Cut Engagement Ring | Ritani | was $1322.0 | https://www.ritani.com/products/solitaire-kite-set-swirl-diamond-engagement-ring-metal-18kt-rose-gold-shape-oval
 - `willa_pear_18k_yg` — Willa Solitaire 18kt Yellow Gold Pear Cut Engagement Ring | Ritani | was $2426.0 | https://www.ritani.com/products/solitaire-diamond-tulip-cathedral-engagement-ring-6-metal-18kt-yellow-gold-shape-pear
 - `dara_round_14k_wg` — The Dara Round Cut 14kt White Gold Bezel-Set Solitaire Engagement Ring | Ritani | was $907.9 | https://www.ritani.com/products/the-dara-bezel-metal-14kt-white-gold-shape-round
+
+## Removed 2026-08-26 (dedupe / wrong-product — 2026-08-26 review)
+
