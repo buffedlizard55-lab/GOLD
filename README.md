@@ -4,16 +4,16 @@ A buyer-first, evidence-based reference directory for buying **solid gold** enga
 
 🔗 **Live Site:** https://buffedlizard55-lab.github.io/GOLD/
 
+> ⚠️ **Status — 2026-08-26.** A full repo + site review found that **the live URL was serving the README, not the ring directory**, because GitHub Pages is configured to publish the repository **root** instead of `docs/` (root cause and manual-verification links are in [`docs/REVIEW_2026-08-26.md`](docs/REVIEW_2026-08-26.md)). The review also found **confirmable data errors in the dataset** (wrong prices/sizes/weights vs. official pages) and that the "every row provides weight / price per gold oz" and "calculator / checklist / CI audit" claims in this README were **not true** of the shipped files. A root `index.html` redirect was added so the app is reachable at `/GOLD/` after merge; the permanent fix is the Pages source setting → `main` + `/docs` (needs repo admin).
+
 ---
 
 ## What This Project Is
 
-- **487 Verified Entries:** A comprehensive, searchable database of solid gold and platinum rings across 35 trusted retailers and bullion makers.
-- **Strict Evidence Table:** Every single row provides the official source link, metal karat, total gram weight, calculated raw gold content, retail price, and **Price per Pure Gold Troy Ounce / Gram**.
-- **Interactive Melt-Value Calculator:** Real-time arithmetic tool to calculate the exact raw gold content, spot metal melt value, and retail markup percentage for any ring.
-- **Size 4.5 Focus & Investigation:** Deep analysis of small-size ring availability (~48mm circumference) and weight disclosure across top brands.
-- **Buyer's Anti-Fraud Checklist & Post-Delivery Guide:** Practical 5-step checklist and testing procedures (XRF spectrometry, specific gravity, digital scale, hallmark inspection) to prevent fraud.
-- **Zero-Hallucination Policy:** Every product price, metal weight, hallmark, and spot-price reference is verified line by line against official live retailer pages.
+- **487 tracked entries** (NOT all verified — see review): a searchable database of solid gold and platinum jewelry across 35 seller labels.
+- **Evidence table with source links:** rows that have a seller-published weight show the metal karat, gram weight, calculated raw gold content, retail price, and **Price per Pure Gold Troy Ounce / Gram**; rows without a published weight show "—" (262 of 487 currently have no weight).
+- **Planned but NOT yet implemented in this build:** the Interactive Melt-Value Calculator, the Size 4.5 investigation page, and the Buyer's Anti-Fraud Checklist / Post-Delivery Guide described in earlier iterations. Do not assume they ship.
+- **Zero-Hallucination Policy (aspirational):** the policy states every number must be read from an official page with a citation URL. The bundled `scripts/audit.sh` only checks field **presence** (URL string, date string, no external API call) and **cannot** detect wrong values — the 2026-08-26 review proves it exits 0 while real errors are present.
 
 ---
 
@@ -43,11 +43,12 @@ The audit automatically verifies:
 
 | Metric | Value | Details |
 |---|---|---|
-| **Total Tracked Listings** | 487 | 100% verified with official source links |
-| **High-Transparency Listings** | 219+ | Explicit metal weight published by seller |
-| **Investment-Grade (24K) Bands** | 11 | Pure 24K solid gold (99.9% purity) |
-| **Tracked Retailers & Brands** | 35 | Ritani, Automic Gold, Quince, Menē, Costco, 7879, Baby Gold, Ferko's, etc. |
-| **Lowest Price / Gold Oz** | ~$3,794 / oz | Solid gold mountings and bullion-linked bands |
+| **Total Tracked Listings** | 487 | Entries with source URLs; **NOT all line-by-line verified** (2026-08-26 spot check: 11 of 27 confirmed wrong) |
+| **Rows with seller-published weight** | 226 | Explicit metal weight published by seller |
+| **Rows with any weight** | 226 of 487 | The other 261 rows show "—" for weight/raw gold/price-per-oz |
+| **Investment-Grade (24K) Bands** | 12 rows | Pure 24K; 3 of them are duplicate rows for the same Menē product |
+| **Tracked Seller Labels** | 35 | Includes 2 non-ring reference rows (Kitco price feed, weight chart) and 31 non-ring jewelry rows |
+| **Lowest Price / Gold Oz** | ~$3,794 / oz | Computed from current rows; **inputs not re-verified** — do not quote as a fact |
 
 ---
 
