@@ -1,6 +1,6 @@
 {
   "checked_on": "2026-08-26",
-  "method": "Official seller pages reviewed through Arena's page extraction tools",
+  "method": "Official seller URLs reviewed using Arena web page extraction/search tools",
   "scope": "Targeted re-checks of rows with clear data conflicts or representative official product pages",
   "limitation": "These checks cover only the rows listed here. Extracted page text can omit dynamic content; a check is not a guarantee of future price or availability.",
   "checks": [
