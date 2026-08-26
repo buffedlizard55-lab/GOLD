@@ -5,12 +5,12 @@
   "hallmark": "14K (stamped; made to order)",
   "weight_g": null,
   "stone_type": "Emerald + natural diamond (marquise)",
-  "price_usd": 725.60,
-  "original_price_usd": 907.00,
+  "price_usd": null,
+  "original_price_usd": 907.0,
   "discount_pct": 20,
   "setting_only": false,
-  "note": "Ferko's Fine Jewelry (US) 14k Marquise Emerald and Diamond Wedding Band. Size 4.5 CONFIRMED in the collection size selector (sizes 4.5-9). Price $725.60 (20% off $907) per collection listing. Made to order. CAVEAT: Weight NOT published; full stone details not read from collection listing — confirm on product page. Standard retail.",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://ferkosfinejewelry.com/collections/marquise-cut-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $725.6 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $725.6. Cited page: https://ferkosfinejewelry.com/collections/marquise-cut-rings Ferko's Fine Jewelry (US) 14k Marquise Emerald and Diamond Wedding Band. Size 4.5 CONFIRMED in the collection size selector (sizes 4.5-9). Price $725.60 (20% off $907) per collection listing. Made to order. CAVEAT: Weight NOT published; full stone details not read from collection listing \u2014 confirm on product page. Standard retail.",
   "source_url": "https://ferkosfinejewelry.com/collections/marquise-cut-rings",
   "source_label": "Ferko's - Marquise Emerald & Diamond Wedding Band 14k Size 4.5 ($725.60)",
-  "verified_on": "2026-08-19"
+  "verified_on": "2026-08-26"
 }

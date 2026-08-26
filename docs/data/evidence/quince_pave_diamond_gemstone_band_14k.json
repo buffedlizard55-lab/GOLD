@@ -3,9 +3,10 @@
   "seller": "Quince",
   "karat": "14K",
   "hallmark": "14K",
-  "price_usd": 299.9,
+  "price_usd": 398.0,
   "setting_only": false,
-  "source_url": "https://www.quince.com/women/jewelry/rings-all?device=desktop&filter=subcollections%3DStackable&pageType=ALL",
-  "source_label": "Collection listing",
-  "verified_on": "2026-08-25"
+  "source_url": "https://www.quince.com/women/pave-blue-sapphire-and-diamond-ring",
+  "source_label": "Quince - 14K Gold Pave Diamond and Gemstone Band (from $398)",
+  "verified_on": "2026-08-26",
+  "note": "VERIFIED 2026-08-26 from Quince official collection/product page: $398.00 (was $299.90 in dataset)."
 }

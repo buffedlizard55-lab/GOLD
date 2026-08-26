@@ -3,12 +3,12 @@
   "seller": "Automic Gold",
   "karat": "14K",
   "hallmark": "14K (solid gold, made in-house NYC)",
-  "weight_g": 0.1,
+  "weight_g": null,
   "width_mm": 0.85,
-  "price_usd": 80.00,
+  "price_usd": 80.0,
   "setting_only": false,
-  "note": "Cable Ring — fine cable chain ring, 0.85mm wide, item weight approx 0.1g. Size 4.5 available (quarter sizes 2-16). 5.0 stars (7 reviews). Cheapest verified Automic Gold ring. CAVEAT: Weight is approximate and not size-specific.",
+  "note": "FLAGGED 2026-08-26: prior weight 0.1g withheld \u2014 physically implausible for a solid 14K ring (implies >$20,000/oz at the listed price) and the official Automic Gold product API publishes no weight. Likely a decimal-shift error; re-verify on the product page. Cable Ring \u2014 fine cable chain ring, 0.85mm wide, item weight approx 0.1g. Size 4.5 available (quarter sizes 2-16). 5.0 stars (7 reviews). Cheapest verified Automic Gold ring. CAVEAT: Weight is approximate and not size-specific.",
   "source_url": "https://www.automicgold.com/products/cable-ring",
   "source_label": "Automic Gold - Cable Ring Solid 14k ($80, ~0.1g, size 4.5 available)",
-  "verified_on": "2026-08-19"
+  "verified_on": "2026-08-26"
 }

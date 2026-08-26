@@ -4,9 +4,9 @@
   "karat": "18K",
   "hallmark": "18K (per listing; specific maker's mark not listed on article)",
   "weight_g": null,
-  "price_usd": 495.00,
-  "note": "Setting price only ($495) — diamond sold separately. Source article (WWD) lists material as 18K yellow gold, 2.00mm width. Blue Nile's own product page should be checked for current price, exact weight, and hallmark photo.",
+  "price_usd": null,
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page (third-party article), not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://wwd.com/shop/shop-fashion/blue-nile-engagement-ring-guide-1236295799/ FLAGGED 2026-08-26: source URL is a collection/category page (third-party article), not this product's own page; the prior $495.0 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $495.0. Cited page: https://wwd.com/shop/shop-fashion/blue-nile-engagement-ring-guide-1236295799/ Setting price only ($495) \u2014 diamond sold separately. Source article (WWD) lists material as 18K yellow gold, 2.00mm width. Blue Nile's own product page should be checked for current price, exact weight, and hallmark photo.",
   "source_url": "https://wwd.com/shop/shop-fashion/blue-nile-engagement-ring-guide-1236295799/",
   "source_label": "WWD 'Blue Nile's Top Engagement Rings' guide (2024)",
-  "verified_on": "2026-08-17"
+  "verified_on": "2026-08-26"
 }

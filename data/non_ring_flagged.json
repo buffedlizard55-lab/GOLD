@@ -1,0 +1,338 @@
+{
+  "_comment": "Non-ring items and reference rows excluded from the ring directory by the 2026-08-26 review. Evidence JSONs remain in data/evidence/ for manual review; they are NOT compiled into rings.json and do not appear on the site. Re-add to the directory only if the item genuinely belongs in a ring guide.",
+  "excluded_rows": [
+    {
+      "id": "half_and_half_paper_clip_14ky",
+      "reason": "Bracelet, not a ring (Ritani)",
+      "ring": "14kt Gold Half & Half Paper Clip & Rolo Chain Bracelet",
+      "seller": "Ritani",
+      "price_usd_was": 400.0,
+      "source_url": "https://www.ritani.com/products/half-half-paper-clip-rolo-chain-bracelet-metal-14kt-yellow-gold",
+      "evidence_file": "data/evidence/half_and_half_paper_clip_14ky.json"
+    },
+    {
+      "id": "inlay_diamond_bangle_14kr",
+      "reason": "Bangle bracelet, not a ring (Ritani)",
+      "ring": "Inlay Diamond Bangle Bracelet 14kt Rose Gold",
+      "seller": "Ritani",
+      "price_usd_was": 4380.0,
+      "source_url": "https://www.ritani.com/products/0-75-ctw-diamond-bangle-carat-0-25-metal-14kt-rose-gold",
+      "evidence_file": "data/evidence/inlay_diamond_bangle_14kr.json"
+    },
+    {
+      "id": "lg_half_bezel_tennis_bracelet_14kr",
+      "reason": "Tennis bracelet, not a ring (Ritani)",
+      "ring": "Round Lab Grown Diamond Half Bezel Tennis Bracelet 14kt Rose Gold",
+      "seller": "Ritani",
+      "price_usd_was": 3135.0,
+      "source_url": "https://www.ritani.com/products/lab-diamond-half-bezel-tennis-bracelet-new-carat-2-00-metal-14kt-rose-gold",
+      "evidence_file": "data/evidence/lg_half_bezel_tennis_bracelet_14kr.json"
+    },
+    {
+      "id": "mastoloni_18ky_akoya_pearl_bracelet_8mm",
+      "reason": "Pearl bracelet, not a ring (Ritani)",
+      "ring": "18kt Gold Akoya Cultured Pearl Bracelet (8mm) Yellow Gold",
+      "seller": "Ritani",
+      "price_usd_was": 1976.0,
+      "source_url": "https://www.ritani.com/products/akoya-cultured-pearl-bracelet-8mm-metal-18kt-yellow-gold",
+      "evidence_file": "data/evidence/mastoloni_18ky_akoya_pearl_bracelet_8mm.json"
+    },
+    {
+      "id": "midas_14ky_polished_ball_studs_4mm",
+      "reason": "Stud earrings, not a ring (Ritani)",
+      "ring": "14kt Gold Polished Ball Stud Earrings (3-5mm) Yellow Gold",
+      "seller": "Ritani",
+      "price_usd_was": 75.0,
+      "source_url": "https://www.ritani.com/products/14kt-gold-polished-ball-stud-earrings-3-5mm-diameter-4mm-metal-14kt-yellow-gold",
+      "evidence_file": "data/evidence/midas_14ky_polished_ball_studs_4mm.json"
+    },
+    {
+      "id": "midas_14ky_polished_hoop_earrings_25mm",
+      "reason": "Hoop earrings, not a ring (Ritani)",
+      "ring": "14kt Gold 15-35mm Polished Hoop Earrings Yellow Gold",
+      "seller": "Ritani",
+      "price_usd_was": 333.0,
+      "source_url": "https://www.ritani.com/products/15mm-polished-hoop-earrings-hoop-size-25mm-metal-14kt-yellow-gold",
+      "evidence_file": "data/evidence/midas_14ky_polished_hoop_earrings_25mm.json"
+    },
+    {
+      "id": "midas_14ky_tube_hoop_earrings",
+      "reason": "Hoop earrings, not a ring (Ritani)",
+      "ring": "14kt Gold 4mm x 25mm Tube Hoop Earrings Yellow Gold",
+      "seller": "Ritani",
+      "price_usd_was": 435.0,
+      "source_url": "https://www.ritani.com/products/14kt-gold-4mm-x-25mm-tube-hoop-earrings-metal-14kt-yellow-gold",
+      "evidence_file": "data/evidence/midas_14ky_tube_hoop_earrings.json"
+    },
+    {
+      "id": "multi_shape_lg_diamond_station_necklace_pt",
+      "reason": "Necklace, not a ring (Ritani)",
+      "ring": "Multi-Shape Lab Grown Diamond Station Necklace - 18 Inches Platinum",
+      "seller": "Ritani",
+      "price_usd_was": 4183.0,
+      "source_url": "https://www.ritani.com/products/multi-shape-lab-grown-diamond-station-necklace-18-inches-carat-4-00-metal-platinum-type-lab-grown",
+      "evidence_file": "data/evidence/multi_shape_lg_diamond_station_necklace_pt.json"
+    },
+    {
+      "id": "ritani_14kw_asscher_tennis",
+      "reason": "Tennis bracelet, not a ring (Ritani)",
+      "ring": "Asscher Diamond Tennis Bracelet 14kt White Gold",
+      "seller": "Ritani",
+      "price_usd_was": 12100.0,
+      "source_url": "https://www.ritani.com/products/asscher-cut-prong-set-tennis-bracelet-carat-4-68-metal-14kt-white-gold-type-earth-grown",
+      "evidence_file": "data/evidence/ritani_14kw_asscher_tennis.json"
+    },
+    {
+      "id": "ritani_14kw_classic_diamond_tennis",
+      "reason": "Tennis bracelet, not a ring (Ritani)",
+      "ring": "Classic Diamond Tennis Bracelet 14kt White Gold",
+      "seller": "Ritani",
+      "price_usd_was": 13310.0,
+      "source_url": "https://www.ritani.com/products/classic-diamond-tennis-bracelet-carat-7-00-diamond-quality-i-j-color-si2-clarity-metal-14kt-white-gold-type-earth-grown",
+      "evidence_file": "data/evidence/ritani_14kw_classic_diamond_tennis.json"
+    },
+    {
+      "id": "ritani_14kw_classic_halfway_bangle",
+      "reason": "Bangle bracelet, not a ring (Ritani)",
+      "ring": "14kt White Gold 3.00 CTW Classic Half-Way Diamond Bangle Bracelet White Gold",
+      "seller": "Ritani",
+      "price_usd_was": 4967.0,
+      "source_url": "https://www.ritani.com/products/classic-half-way-diamond-bangle-bracelet-diamond-type-lab-grown-metal-14kt-white-gold",
+      "evidence_file": "data/evidence/ritani_14kw_classic_halfway_bangle.json"
+    },
+    {
+      "id": "ritani_14kw_classic_lg_diamond_tennis_bracelet",
+      "reason": "Tennis bracelet, not a ring (Ritani)",
+      "ring": "Classic Lab Grown Diamond Tennis Bracelet 14kt White Gold",
+      "seller": "Ritani",
+      "price_usd_was": 4200.0,
+      "source_url": "https://www.ritani.com/products/classic-diamond-tennis-bracelet-carat-15-00-diamond-quality-g-h-color-vs-clarity-metal-14kt-white-gold-type-lab-grown",
+      "evidence_file": "data/evidence/ritani_14kw_classic_lg_diamond_tennis_bracelet.json"
+    },
+    {
+      "id": "ritani_14kw_half_emerald_diamond_tennis",
+      "reason": "Tennis bracelet, not a ring (Ritani)",
+      "ring": "Half & Half Emerald & Diamond Tennis Bracelet 14kt White Gold",
+      "seller": "Ritani",
+      "price_usd_was": 7133.0,
+      "source_url": "https://www.ritani.com/products/half-half-emerald-diamond-tennis-bracelet-carat-3-00-metal-14kt-white-gold-type-earth-grown",
+      "evidence_file": "data/evidence/ritani_14kw_half_emerald_diamond_tennis.json"
+    },
+    {
+      "id": "ritani_14kw_lg_four_prong_tennis",
+      "reason": "Tennis bracelet, not a ring (Ritani)",
+      "ring": "Four-Prong Lab Grown Diamond Tennis Bracelet 14kt White Gold",
+      "seller": "Ritani",
+      "price_usd_was": 4370.0,
+      "source_url": "https://www.ritani.com/products/four-prong-lab-grown-diamond-tennis-bracelet-3-carat-4-00-metal-14kt-white-gold-type-lab-grown",
+      "evidence_file": "data/evidence/ritani_14kw_lg_four_prong_tennis.json"
+    },
+    {
+      "id": "ritani_14ky_diamond_initial_c",
+      "reason": "Link bracelet, not a ring (Ritani)",
+      "ring": "14kt Gold 0.4 CTW Diamond Initial A-Z Link Bracelet Yellow Gold",
+      "seller": "Ritani",
+      "price_usd_was": 908.0,
+      "source_url": "https://www.ritani.com/products/diamond-initial-a-z-link-bracelet-initial-c-metal-14kt-yellow-gold",
+      "evidence_file": "data/evidence/ritani_14ky_diamond_initial_c.json"
+    },
+    {
+      "id": "ritani_14ky_freshwater_pearl_chain",
+      "reason": "Chain bracelet, not a ring (Ritani)",
+      "ring": "14kt Gold Freshwater Cultured Pearl Chain Bracelet (5mm) Yellow Gold",
+      "seller": "Ritani",
+      "price_usd_was": 202.0,
+      "source_url": "https://www.ritani.com/products/freshwater-cultured-pearl-chain-bracelet-5mm-metal-14kt-yellow-gold",
+      "evidence_file": "data/evidence/ritani_14ky_freshwater_pearl_chain.json"
+    },
+    {
+      "id": "ritani_14ky_lg_three_prong_tennis_bracelet",
+      "reason": "Tennis bracelet, not a ring (Ritani)",
+      "ring": "Lab Grown Three Prong Diamond Tennis Bracelet 14kt Yellow Gold",
+      "seller": "Ritani",
+      "price_usd_was": 3564.0,
+      "source_url": "https://www.ritani.com/products/three-prong-diamond-tennis-bracelet-carat-2-00-metal-14kt-yellow-gold-type-lab-grown",
+      "evidence_file": "data/evidence/ritani_14ky_lg_three_prong_tennis_bracelet.json"
+    },
+    {
+      "id": "ritani_14ky_malachite_station",
+      "reason": "Station bracelet, not a ring (Ritani)",
+      "ring": "14kt Gold Malachite Station Bar Bracelet Yellow Gold",
+      "seller": "Ritani",
+      "price_usd_was": 594.0,
+      "source_url": "https://www.ritani.com/products/malachite-station-bar-bracelet-metal-14kt-yellow-gold",
+      "evidence_file": "data/evidence/ritani_14ky_malachite_station.json"
+    },
+    {
+      "id": "ritani_14ky_puff_mariner_heart",
+      "reason": "Bracelet, not a ring (Ritani)",
+      "ring": "14kt Gold Puff Mariner Heart Bracelet Yellow Gold",
+      "seller": "Ritani",
+      "price_usd_was": 1176.0,
+      "source_url": "https://www.ritani.com/products/14kt-gold-puff-mariner-heart-bracelet-metal-14kt-yellow-gold",
+      "evidence_file": "data/evidence/ritani_14ky_puff_mariner_heart.json"
+    },
+    {
+      "id": "ritani_18k_wg_princess_studs",
+      "reason": "Stud earrings, not a ring (Ritani)",
+      "ring": "Princess Cut Lab-Grown Diamond Bezel Set Solitaire Stud Earrings 18kt White Gold",
+      "seller": "Ritani",
+      "price_usd_was": 623.7,
+      "source_url": "https://www.ritani.com/products/princess-cut-lab-grown-diamond-bezel-set-solitaire-stud-earrings-backing-type-push-back-carat-1-00-metal-18kt-white-gold-type-lab-grown",
+      "evidence_file": "data/evidence/ritani_18k_wg_princess_studs.json"
+    },
+    {
+      "id": "ritani_18kr_floral_halo_lg_studs",
+      "reason": "Stud earrings, not a ring (Ritani)",
+      "ring": "Floral Halo Lab Grown Diamond Stud Earrings 18kt Rose Gold",
+      "seller": "Ritani",
+      "price_usd_was": 3212.0,
+      "source_url": "https://www.ritani.com/products/floral-halo-lab-diamond-stud-earrings-carat-weight-2-50-ctw-metal-18kt-rose-gold",
+      "evidence_file": "data/evidence/ritani_18kr_floral_halo_lg_studs.json"
+    },
+    {
+      "id": "ritani_18kr_floral_halo_studs",
+      "reason": "Stud earrings, not a ring (Ritani)",
+      "ring": "Floral Halo Diamond Stud Earrings 18kt Rose Gold",
+      "seller": "Ritani",
+      "price_usd_was": 2920.0,
+      "source_url": "https://www.ritani.com/products/floral-halo-diamond-stud-earrings-carat-weight-2-50-ctw-diamond-type-lab-grown-metal-18kt-rose-gold",
+      "evidence_file": "data/evidence/ritani_18kr_floral_halo_studs.json"
+    },
+    {
+      "id": "ritani_18kw_alternating_bezel_sapphire_lg_diamond_tennis_necklace",
+      "reason": "Necklace, not a ring (Ritani)",
+      "ring": "Alternating Bezel Set Sapphire & Lab Grown Diamond Tennis Necklace 18kt White Gold",
+      "seller": "Ritani",
+      "price_usd_was": 16704.0,
+      "source_url": "https://www.ritani.com/products/alternating-bezel-set-sapphire-lab-diamond-tennis-necklace-carat-7-00-metal-18kt-white-gold-type-lab-grown",
+      "evidence_file": "data/evidence/ritani_18kw_alternating_bezel_sapphire_lg_diamond_tennis_necklace.json"
+    },
+    {
+      "id": "ritani_18kw_alternating_sapphire_lg_diamond_tennis_necklace",
+      "reason": "Necklace, not a ring (Ritani)",
+      "ring": "Alternating Sapphire & Lab Grown Diamond Tennis Necklace 18kt White Gold",
+      "seller": "Ritani",
+      "price_usd_was": 14643.0,
+      "source_url": "https://www.ritani.com/products/alternating-sapphire-lab-diamond-tennis-necklace-1-carat-13-50-metal-18kt-white-gold-type-lab-grown",
+      "evidence_file": "data/evidence/ritani_18kw_alternating_sapphire_lg_diamond_tennis_necklace.json"
+    },
+    {
+      "id": "ritani_18kw_diamond_sapphire_eternity_hoop",
+      "reason": "Hoop earrings, not a ring (Ritani)",
+      "ring": "Diamond and Sapphire Eternity Hoop Earrings, 1.00 Inch 18kt White Gold",
+      "seller": "Ritani",
+      "price_usd_was": 5145.0,
+      "source_url": "https://www.ritani.com/products/diamond-and-sapphire-eternity-hoop-earrings-1-00-inch-carat-2-80-metal-18kt-white-gold",
+      "evidence_file": "data/evidence/ritani_18kw_diamond_sapphire_eternity_hoop.json"
+    },
+    {
+      "id": "ritani_18kw_half_ruby_lg_diamond_tennis_necklace",
+      "reason": "Necklace, not a ring (Ritani)",
+      "ring": "Half & Half Ruby & Lab Grown Diamond Tennis Necklace 18kt White Gold",
+      "seller": "Ritani",
+      "price_usd_was": 8968.0,
+      "source_url": "https://www.ritani.com/products/half-half-ruby-lab-diamond-tennis-necklace-carat-3-00-metal-18kt-white-gold-type-lab-grown",
+      "evidence_file": "data/evidence/ritani_18kw_half_ruby_lg_diamond_tennis_necklace.json"
+    },
+    {
+      "id": "ritani_18kw_infinity_diamond_hoop",
+      "reason": "Hoop earrings, not a ring (Ritani)",
+      "ring": "Infinity Diamond Hoop Earrings 18kt White Gold",
+      "seller": "Ritani",
+      "price_usd_was": 3339.0,
+      "source_url": "https://www.ritani.com/products/diamond-twist-hoop-earrings-metal-18kt-white-gold",
+      "evidence_file": "data/evidence/ritani_18kw_infinity_diamond_hoop.json"
+    },
+    {
+      "id": "ritani_18kw_lg_round_studs_0_50",
+      "reason": "Stud earrings, not a ring (Ritani)",
+      "ring": "18kt Gold 0.50 CTW Lab Grown Round Diamond Stud Earrings White Gold",
+      "seller": "Ritani",
+      "price_usd_was": 897.0,
+      "source_url": "https://www.ritani.com/products/18kt-gold-0-50-ctw-lab-grown-round-diamond-stud-earrings-metal-18kt-white-gold",
+      "evidence_file": "data/evidence/ritani_18kw_lg_round_studs_0_50.json"
+    },
+    {
+      "id": "ritani_18kw_princess_diamond_studs",
+      "reason": "Stud earrings, not a ring (Ritani)",
+      "ring": "Princess Cut Diamond Stud Earrings 18kt White Gold",
+      "seller": "Ritani",
+      "price_usd_was": 1650.0,
+      "source_url": "https://www.ritani.com/products/princess-four-prong-studs-backing-type-jumbo-back-carat-0-75-metal-18kt-white-gold-type-earth-grown",
+      "evidence_file": "data/evidence/ritani_18kw_princess_diamond_studs.json"
+    },
+    {
+      "id": "ritani_18kw_round_three_prong_tennis_necklace",
+      "reason": "Necklace, not a ring (Ritani)",
+      "ring": "Round Three Prong Diamond Tennis Necklace 18kt White Gold",
+      "seller": "Ritani",
+      "price_usd_was": 34966.0,
+      "source_url": "https://www.ritani.com/products/graduated-diamond-tennis-necklace-carat-10-00-diamond-quality-g-h-color-vs-clarity-metal-18kt-white-gold",
+      "evidence_file": "data/evidence/ritani_18kw_round_three_prong_tennis_necklace.json"
+    },
+    {
+      "id": "ritani_18kw_toi_et_moi_lg_hoop",
+      "reason": "Hoop earrings, not a ring (Ritani)",
+      "ring": "Toi et Moi Lab Grown Diamond Hoop Earrings 18kt White Gold",
+      "seller": "Ritani",
+      "price_usd_was": 1480.0,
+      "source_url": "https://www.ritani.com/products/toi-et-moi-lab-diamond-hoop-earrings-carat-1-50-metal-18kt-white-gold",
+      "evidence_file": "data/evidence/ritani_18kw_toi_et_moi_lg_hoop.json"
+    },
+    {
+      "id": "ritani_18ky_true_north_lg_pendant",
+      "reason": "Pendant, not a ring (Ritani)",
+      "ring": "18kt Gold 0.02 CTW True North Collection Lab Grown Diamond Pendant Yellow Gold",
+      "seller": "Ritani",
+      "price_usd_was": 725.0,
+      "source_url": "https://www.ritani.com/products/0-02-ctw-true-north-lab-diamond-pendant-metal-18kt-yellow-gold",
+      "evidence_file": "data/evidence/ritani_18ky_true_north_lg_pendant.json"
+    },
+    {
+      "id": "sabrina_14k_yg_pearl_bead",
+      "reason": "Bead bracelet, not a ring (Ritani)",
+      "ring": "14kt Gold Pearl & Bead Bracelet Yellow Gold",
+      "seller": "Ritani",
+      "price_usd_was": 575.0,
+      "source_url": "https://www.ritani.com/products/14kt-gold-pearl-bead-bracelet-metal-14kt-yellow-gold",
+      "evidence_file": "data/evidence/sabrina_14k_yg_pearl_bead.json"
+    },
+    {
+      "id": "sabrina_14ky_diamond_link_hoop",
+      "reason": "Hoop earrings, not a ring (Ritani)",
+      "ring": "14kt Gold 0.45 CTW Diamond Link Hoop Earrings Yellow Gold",
+      "seller": "Ritani",
+      "price_usd_was": 3660.0,
+      "source_url": "https://www.ritani.com/products/14k-gold-0-45-ctw-diamond-link-hoop-earrings-metal-14kt-yellow-gold",
+      "evidence_file": "data/evidence/sabrina_14ky_diamond_link_hoop.json"
+    },
+    {
+      "id": "stuller_14ky_birthstone_studs_garnet",
+      "reason": "Children's stud earrings, not a ring (Ritani)",
+      "ring": "14kt Gold Children's Birthstone Stud Earrings - Garnet Yellow Gold",
+      "seller": "Ritani",
+      "price_usd_was": 345.0,
+      "source_url": "https://www.ritani.com/products/14kt-gold-birthstone-stud-earrings-garnet-gemstone-january-garnet-metal-14kt-yellow-gold",
+      "evidence_file": "data/evidence/stuller_14ky_birthstone_studs_garnet.json"
+    },
+    {
+      "id": "kitco_spot_price",
+      "reason": "Reference row (live gold spot price feed), not a product",
+      "ring": "LIVE \u2014 gold spot price reference",
+      "seller": "Kitco (price feed)",
+      "price_usd_was": null,
+      "source_url": "https://www.kitco.com/price/precious-metals",
+      "evidence_file": "data/evidence/kitco_spot_price.json"
+    },
+    {
+      "id": "debebians_ring_weight_chart_14k",
+      "reason": "Reference row (ring weight chart), not a product",
+      "ring": "Reference: 14K Gold Ring Weight Chart by Size & Width (Comfort Fit)",
+      "seller": "deBebians (reference data)",
+      "price_usd_was": null,
+      "source_url": "https://debebians.com/pages/ring-weight",
+      "evidence_file": "data/evidence/debebians_ring_weight_chart_14k.json"
+    }
+  ]
+}

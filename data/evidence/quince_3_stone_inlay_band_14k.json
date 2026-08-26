@@ -7,12 +7,12 @@
   "stone_ctw": 0.06,
   "stone_type": "Diamond (3 x 0.02ct)",
   "width_mm": 2.9,
-  "price_usd": 428.00,
-  "original_price_usd": 498.00,
-  "discount_pct": 14,
+  "price_usd": 468.0,
+  "original_price_usd": 498.0,
+  "discount_pct": 6,
   "setting_only": false,
-  "note": "Quince 14K Gold Diamond 3 Stone Inlay Band — 3 round natural diamonds (0.06ctw), GH color, SI2+, band width 2.9mm. Size 4.5 confirmed in dropdown. 36 reviews. Produced in India. CAVEAT: Weight NOT published on Quince's product page. Standard retail.",
+  "note": "RE-VERIFIED 2026-08-26 live: $468.00, 'You save 6% / $498 traditional retail', 0.06ctw GH/SI2+, 2.9mm, sizes 4-9 incl 4.5. RE-VERIFIED 2026-08-26 live: $468.00, 'You save 6% / $498 traditional retail', 0.06ctw GH/SI2+, 2.9mm, sizes 4-9 incl 4.5. VERIFIED 2026-08-26 from Quince official page: $468.00 (was $428.00 in dataset).",
   "source_url": "https://www.quince.com/women/14k-gold-diamond-3-stone-viviane-band",
-  "source_label": "Quince - 14K Gold Diamond 3 Stone Inlay Band Size 4.5 ($428, 0.06ctw)",
-  "verified_on": "2026-08-19"
+  "source_label": "Quince - 14K Gold Diamond 3 Stone Inlay Band ($468)",
+  "verified_on": "2026-08-26"
 }

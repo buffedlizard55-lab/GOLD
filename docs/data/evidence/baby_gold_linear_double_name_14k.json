@@ -3,10 +3,11 @@
   "seller": "Baby Gold",
   "karat": "14K",
   "hallmark": "14K",
-  "price_usd": 450.0,
+  "price_usd": 720.0,
   "width_mm": 10.0,
   "setting_only": false,
   "source_url": "https://www.babygold.com/products/14k-gold-linear-double-name-ring",
   "source_label": "Product listing",
-  "verified_on": "2026-08-25"
+  "verified_on": "2026-08-26",
+  "note": "RE-VERIFIED 2026-08-26 via official Shopify product API (.js): price 72000 cents = $720.00, 10mm width, sizes 3-10 incl 4.5, 14K solid gold. RE-VERIFIED 2026-08-26 via official Shopify product API (.js): price 72000 cents = $720.00, 10mm width, sizes 3-10 incl 4.5, 14K solid gold. VERIFIED 2026-08-26 from live Baby Gold page: $720.00 USD, 14K, sizes 3-10 incl 4.5, made to order 2-3 weeks. (Previous $450.00 was wrong/outdated.)"
 }

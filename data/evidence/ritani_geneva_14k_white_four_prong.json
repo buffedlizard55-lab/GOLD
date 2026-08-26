@@ -5,10 +5,10 @@
   "hallmark": "14K (per Ritani spec)",
   "weight_g": null,
   "width_mm": null,
-  "price_usd": 880.00,
+  "price_usd": null,
   "setting_only": true,
-  "note": "The Geneva 14kt White Gold four-prong solitaire (emerald-cut variant $616, 30% off $880; round-cut $880). Price confirmed on Ritani collection pages. Center stone sold separately. IRREGULARITY: metal weight line not read from fetched content — weight not recorded. CAVEAT: Ritani standard sizing 3-9 in 0.25 increments — confirm size 4.5 in dropdown at checkout.",
+  "note": "FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $None could not be verified at product level and is withheld pending a product-URL citation. Prior value: $None. Cited page: https://www.ritani.com/collections/round-cut-engagement-rings FLAGGED 2026-08-26: source URL is a collection/category page, not this product's own page; the prior $880.0 could not be verified at product level and is withheld pending a product-URL citation. Prior value: $880.0. Cited page: https://www.ritani.com/collections/round-cut-engagement-rings The Geneva 14kt White Gold four-prong solitaire (emerald-cut variant $616, 30% off $880; round-cut $880). Price confirmed on Ritani collection pages. Center stone sold separately. IRREGULARITY: metal weight line not read from fetched content \u2014 weight not recorded. CAVEAT: Ritani standard sizing 3-9 in 0.25 increments \u2014 confirm size 4.5 in dropdown at checkout.",
   "source_url": "https://www.ritani.com/collections/round-cut-engagement-rings",
   "source_label": "Ritani - The Geneva 14kt White Gold Four-Prong Solitaire ($880, weight n/a)",
-  "verified_on": "2026-08-19"
+  "verified_on": "2026-08-26"
 }
