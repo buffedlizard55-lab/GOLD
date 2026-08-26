@@ -46,7 +46,7 @@ The audit automatically verifies:
 | **Total Tracked Listings** | 487 | Entries with source URLs; **NOT all line-by-line verified** (2026-08-26 spot check: 11 of 27 confirmed wrong) |
 | **Rows with seller-published weight** | 226 | Explicit metal weight published by seller |
 | **Rows with any weight** | 226 of 487 | The other 261 rows show "—" for weight/raw gold/price-per-oz |
-| **Investment-Grade (24K) Bands** | 12 rows | Pure 24K; 3 of them are duplicate rows for the same Menē product |
+| **Investment-Grade (24K) Bands** | 11 rows | Pure 24K; 3 of them are duplicate rows for the same Menē product (`mene-narrow-band-gold`) |
 | **Tracked Seller Labels** | 35 | Includes 2 non-ring reference rows (Kitco price feed, weight chart) and 31 non-ring jewelry rows |
 | **Lowest Price / Gold Oz** | ~$3,794 / oz | Computed from current rows; **inputs not re-verified** — do not quote as a fact |
 
