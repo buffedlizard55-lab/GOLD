@@ -4,16 +4,16 @@ A buyer-first, evidence-based reference directory for buying **solid gold** enga
 
 🔗 **Live Site:** https://buffedlizard55-lab.github.io/GOLD/
 
-> ⚠️ **Status — 2026-08-26 (review session 2, all fixes applied).** The live URL was serving the README, not the ring directory (GitHub Pages publishes the repo **root**, not `docs/`). A root `index.html` redirect now fixes the site once this branch is merged; the permanent fix is the Pages source setting → `main` + `/docs` (needs repo admin). The dataset was also **re-verified line by line against official seller pages** — wrong prices corrected, duplicate rows removed, implausible weights withheld, non-ring items excluded — full evidence and manual-review links in [`docs/REVIEW_2026-08-26.md`](docs/REVIEW_2026-08-26.md).
+> ⚠️ **Status — 2026-08-26 (review session 3: below-threshold men's-ring search + metrics correction).** The live URL was serving the README, not the ring directory (GitHub Pages publishes the repo **root**, not `docs/`). A root `index.html` redirect now fixes the site once this branch is merged; the permanent fix is the Pages source setting → `main` + `/docs` (needs repo admin). Session 2's line-by-line re-verification is in [`docs/REVIEW_2026-08-26.md`](docs/REVIEW_2026-08-26.md). Session 3 searched official seller sites for **men's rings priced below $4,861 per pure-gold-oz** (≈ melt with spot at ~$4,600/oz): only **2 new rows could be fully verified** below that threshold (both Midwest Jewellery closeout men's mountings) — a market-wide sweep of 27 sellers found nothing else verifiable below melt; all ~30 rejected candidates are documented with links in [`docs/REVIEW_2026-08-26-below-threshold-search.md`](docs/REVIEW_2026-08-26-below-threshold-search.md) and `data/evidence/_rejected.md`. The README's row counts were also corrected to match the actual compiled dataset (the previous "417" was stale).
 
 ---
 
 ## What This Project Is
 
-- **417 ring rows** after the 2026-08-26 re-verification (was 487: 35 non-ring items such as bracelets/earrings/necklaces and 2 reference rows are now excluded, 32 duplicate or contradicting rows removed, 16 unverifiable prices withheld with flags): a searchable directory of solid gold and platinum rings across 33 seller labels.
-- **Evidence table with source links:** rows with a seller-published weight show the metal karat, gram weight, calculated raw gold content, retail price, and **Price per Pure Gold Troy Ounce / Gram**; rows without a published weight show "—" (223 of 417 currently have no published weight — the site does not invent one).
+- **473 ring rows** (471 after session 2's re-verification, +2 verified men's below-threshold adds from session 3; 37 non-ring/reference rows excluded): a searchable directory of solid gold and platinum rings across 40 seller labels.
+- **Evidence table with source links:** rows with a seller-published weight show the metal karat, gram weight, calculated raw gold content, retail price, and **Price per Pure Gold Troy Ounce / Gram**; rows without a published weight show "—" (223 of 473 currently have no published weight — the site does not invent one).
 - **Planned but NOT yet implemented in this build:** the Interactive Melt-Value Calculator, the Size 4.5 investigation page, and the Buyer's Anti-Fraud Checklist / Post-Delivery Guide described in earlier iterations. Do not assume they ship.
-- **Zero-Hallucination Policy (enforced where verification is possible):** every price/weight now either (a) was re-checked against the official page on 2026-08-26, or (b) is shown as "—"/flagged in a note when it could not be confirmed. Values that contradict the official page are corrected, not averaged. See `docs/REVIEW_2026-08-26.md` for the per-row verification table with links.
+- **Zero-Hallucination Policy (enforced where verification is possible):** every price/weight now either (a) was re-checked against the official page on 2026-08-26, or (b) is shown as "—"/flagged in a note when it could not be confirmed. Values that contradict the official page are corrected, not averaged. See `docs/REVIEW_2026-08-26.md` and `docs/REVIEW_2026-08-26-below-threshold-search.md` for the per-row verification tables with links.
 
 ---
 
@@ -46,12 +46,13 @@ The audit automatically verifies:
 
 | Metric | Value | Details |
 |---|---|---|
-| **Ring rows in the directory** | 417 | Each with an official `source_url`; 16 unverifiable prices withheld and flagged, not published |
-| **Rows with seller-published weight** | 194 | Explicit metal weight; the other 223 show "—" (no weight is invented) |
-| **Rows with price + weight → price per gold oz** | 166 | All derived arithmetic is recomputed by `scripts/build_rings.py` (0 inconsistencies in the 2026-08-26 audit) |
-| **Investment-Grade (24K) rows** | 9 | Pure 24K; the triple-listed Menē narrow band now appears once |
-| **Tracked Seller Labels** | 33 | Reference rows (Kitco feed, weight chart) and 35 non-ring items excluded from the directory |
-| **Excluded / flagged for review** | 37 excluded + 32 removed dupes | Full lists with links: `data/_excluded.json`, `data/evidence/_rejected.md`, `docs/REVIEW_2026-08-26.md` |
+| **Ring rows in the directory** | 473 | Each with an official `source_url`; 21 unverifiable prices withheld and flagged, not published |
+| **Rows with seller-published weight** | 250 | Explicit metal weight; the other 223 show "—" (no weight is invented) |
+| **Rows with price + weight → price per gold oz** | 222 | All derived arithmetic is recomputed by `scripts/build_rings.py` (0 inconsistencies in the 2026-08-26 audit) |
+| **Rows below $4,861 / pure-gold-oz (≈ melt)** | 5 | 2 added 2026-08-26 (men's, Midwest Jewellery mountings), 3 pre-existing (BGASC Nebü 1/4 oz — price flagged as anomaly, Midwest benchmark, Costco 2.5mm size 4.5) |
+| **Investment-Grade (24K) rows** | 63 | Pure 24K bullion-jewelry rings (Nebü, Kuvera, Menē, 7879, Goldzenn) |
+| **Tracked Seller Labels** | 40 | Reference rows and non-ring items excluded from the directory |
+| **Excluded / flagged for review** | 37 excluded + dupes removed | Full lists with links: `data/_excluded.json`, `data/evidence/_rejected.md`, `docs/REVIEW_2026-08-26.md` |
 
 ---
 
