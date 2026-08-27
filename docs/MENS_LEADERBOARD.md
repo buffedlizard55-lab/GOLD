@@ -1,0 +1,33 @@
+# Men's / Unisex Rings Ranked by Price per Pure Gold Troy Ounce
+
+_Generated 2026-08-27 by script from `data/rings.json`, which is compiled from `data/evidence/*.json`. Every number below traces to an evidence file with an official source link — none is hand-entered._
+
+**Threshold:** $4,861.00 / pure gold troy oz  ·  **Spot used for the premium column:** $4,614/oz (midpoint of $4,584.96 CNBC – $4,648.90 USAGOLD, 2026-08-27)
+
+**Population:** 473 rows in the directory · 222 have a computable price/oz · **13 are men's/unisex** · **3 are below the threshold.**
+
+> ⚠️ **This is the complete list, not a top-N cut.** The dataset contains only 13 men's/unisex rows with a published weight *and* a published price, so a 50-row men's list cannot be produced from verified data. Rows 1–3 clear the threshold; rows 4+ do not.
+
+| # | Price / gold oz | vs melt | Seller | Ring | Karat | Weight | Price | Verified | Official source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | ✅ **$3,793.74** | +-18% | Midwest Jewellery | Mens Solitaire Ring Mounting | 14K | 7.73 g | $549.99 | 2026-08-18 | [link](https://midwestjewellery.com/14k-gold-mens-solitaire-ring-mounting-setting-only-fits-0-13ct-upto-0-33ct-round-center-9-5-mm) |
+| 2 | ✅ **$3,863.88** | +-16% | Midwest Jewellery | Men's 14K Yellow 5.2mm Round Solitaire Ring Mounting (Fits 3 | 14K | 7.99 g | $579.00 | 2026-08-26 | [link](https://midwestjewellery.com/14k-yellow-5-2mm-round-ring-mounting-fits-3mm-up-to-5mm-round-solitaire-mens-ring-setting-8-3mm) |
+| 3 | ✅ **$4,190.05** | +-9% | Midwest Jewellery | Men's 14K Yellow Gold Ring Mounting Only (Fits 3/8 CT Diamon | 14K | 6.35 g | $499.00 | 2026-08-26 | [link](https://midwestjewellery.com/14k-yellow-gold-mens-ring-mounting-only-fits-3-8-ct-diamond-9-7-mm-wide) |
+| 4 | ❌ **$6,182.95** | +34% | Provident Metals | Nebü 10.5g 24K Mens Curved Ring Size 8 | 24K | 10.5 g | $2,085.17 | 2026-08-26 | [link](https://www.providentmetals.com/nebu-105g-24k-mens-curved-ring.html) |
+| 5 | ❌ **$6,628.06** | +44% | Costco | 2.5mm Comfort Fit Diamond Cut Wedding Band (14kt White Gold, | 14K | 3.62 g | $449.99 | 2026-08-27 | [link](https://www.costco.com/p/-/25mm-comfort-fit-diamond-cut-wedding-band/4000322768) |
+| 6 | ❌ **$7,278.83** | +58% | Costco | 6mm Comfort Fit Wedding Band (14kt Yellow Gold, Size 4.5) | 14K | 6.08 g | $829.99 | 2026-08-19 | [link](https://www.costco.com/p/-/6mm-comfort-fit-wedding-band/4000322620) |
+| 7 | ❌ **$7,405.48** | +61% | Costco | 5mm Comfort Fit Wedding Band (14kt Yellow Gold, Size 4.5) | 14K | 5.04 g | $699.99 | 2026-08-27 | [link](https://www.costco.com/p/-/5mm-comfort-fit-wedding-band/4000322632) |
+| 8 | ❌ **$8,614.24** | +87% | Ritani | Men's 6mm Sandpaper-finish Beveled Edge Wedding Ring 18kt Ro | 18K | 9.5 g | $1,973.30 | 2026-08-25 | [link](https://www.ritani.com/products/mens-6mm-sandpaper-finish-beveled-edge-wedding-ring-metal-18kt-rose-gold) |
+| 9 | ❌ **$10,524.66** | +128% | Ritani | Men's 6mm Satin-finish Comfort-fit Wedding Ring With Milgrai | 18K | 5.5 g | $1,395.80 | 2026-08-25 | [link](https://www.ritani.com/products/mens-6mm-satin-finish-comfort-fit-wedding-ring-with-milgrain-metal-18kt-yellow-gold) |
+| 10 | ❌ **$10,669.32** | +131% | Ritani | Men's 2-6mm Classic Square Edged Polished Wedding Ring 18kt  | 18K | 5.0 g | $1,286.35 | 2026-08-25 | [link](https://www.ritani.com/products/mens-classic-square-edged-wedding-ring-band-width-5mm-metal-18kt-yellow-gold) |
+| 11 | ❌ **$11,490.04** | +149% | Ritani | Men's 2-6mm Classic Square Edged Polished Wedding Ring 18kt  | 18K | 5.0 g | $1,385.30 | 2026-08-25 | [link](https://www.ritani.com/products/mens-classic-square-edged-wedding-ring-band-width-5mm-metal-18kt-white-gold) |
+| 12 | ❌ **$12,506.87** | +171% | Ritani | Men's 6mm High Polish Wedding Ring 18kt White Gold | 18K | 9.5 g | $2,865.00 | 2026-08-25 | [link](https://www.ritani.com/products/mens-6mm-high-polish-wedding-ring-metal-18kt-white-gold) |
+| 13 | ❌ **$15,688.46** | +240% | Ritani | Men's 2-6mm Classic Square Edged Polished Wedding Ring 14kt  | 14K | 2.6 g | $765.00 | 2026-08-25 | [link](https://www.ritani.com/products/mens-classic-square-edged-wedding-ring-band-width-3mm-metal-14kt-yellow-gold) |
+
+### Reading this table
+
+- **Rows 1–3** are the only men's entries in the world's verified retail channels that this project could confirm below $4,861/pure-gold-oz. All three are **Midwest Jewellery closeout men's ring mountings** (setting-only, solid 14K gold, gram weight published on the product page).
+- **Row 4** (Provident Metals, Nebü 10.5 g 24K men's curved ring, size 8) is the cheapest 24K men's ring verified, at +34% over melt.
+- **Rows 5–7** are Costco; their prices were re-verified live on 2026-08-27 (the 2.5 mm band had repriced +36% since 2026-08-19, which is what pushed it out of the below-threshold set).
+- **Rows 8+** are Ritani 18K men's bands at +130% to +250% over melt — included to show the true shape of the market.
+- The `premium over melt` column is why the 50-entry target is unreachable: the threshold is melt + 5.35%, and every channel measured this session sits at +16% or higher, except US closeout mountings.

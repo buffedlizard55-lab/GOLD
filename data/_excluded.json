@@ -37,6 +37,8 @@
     "sabrina_14ky_diamond_link_hoop": "Hoop earrings, not a ring (Ritani)",
     "stuller_14ky_birthstone_studs_garnet": "Children's stud earrings, not a ring (Ritani)",
     "kitco_spot_price": "Reference row (live gold spot price feed), not a product",
-    "debebians_ring_weight_chart_14k": "Reference row (ring weight chart), not a product"
+    "debebians_ring_weight_chart_14k": "Reference row (ring weight chart), not a product",
+    "sdbullion_nebu_1_4_oz_24k_bullion_twist_ring": "REMOVED 2026-08-27 (session 5 self-correction). Row was added in session 4 on the basis of a $1,198.84 price taken from a CACHED web-search snippet of SD Bullion's category page, and was mislabelled 'VERIFIED from SD Bullion's own site'. A direct fetch of https://sdbullion.com/jewelry/gold-jewelry on 2026-08-27 shows the live price is $1,363.39, i.e. $5,453.56 per pure gold oz - ABOVE the $4,861 threshold. Product page also reads 'Currently Out of stock' and renders no price. Does not meet the inclusion criterion; excluded rather than deleted so the error stays auditable.",
+    "sdbullion_nebu_1_4_oz_24k_classic_bullion_ring": "REMOVED 2026-08-27 (session 5 self-correction). Same defect as sdbullion_nebu_1_4_oz_24k_bullion_twist_ring: added on a cached $1,198.84 snippet price; live category price is $1,363.39 = $5,453.56/pure-gold-oz, above the $4,861 threshold. Product page out of stock, no price rendered."
   }
 }
