@@ -1,7 +1,9 @@
 {
- "generated_from": "data/rings.json (compiled from data/evidence/*.json - no hand-entered values)",
- "generated_on": "2026-08-27",
+ "generated_from": "data/rings.json (compiled from data/evidence/*.json; no hand-entered values)",
+ "regenerate_with": "python3 scripts/build_mens_leaderboard.py",
  "threshold_usd_per_pure_gold_oz": 4861.0,
+ "spot_usd_per_oz_used_for_premium": 4616.93,
+ "spot_basis": "midpoint of $4584.96 (cnbc.com/select) and $4648.9 (usagold.com), 2026-08-27",
  "men_filter": "regex \\b(men|mens|men's|gents|gentleman|unisex|male)\\b applied to ring name + note; women-only rows excluded",
  "total_rows_in_dataset": 473,
  "rows_with_price_per_gold_oz": 222,
@@ -60,7 +62,7 @@
    "price_usd": 2085.17,
    "price_per_gold_oz": 6182.95,
    "below_threshold": false,
-   "premium_over_melt_pct": 34.0,
+   "premium_over_melt_pct": 33.9,
    "source_url": "https://www.providentmetals.com/nebu-105g-24k-mens-curved-ring.html",
    "verified_on": "2026-08-26"
   },
@@ -74,7 +76,7 @@
    "price_usd": 449.99,
    "price_per_gold_oz": 6628.06,
    "below_threshold": false,
-   "premium_over_melt_pct": 43.7,
+   "premium_over_melt_pct": 43.6,
    "source_url": "https://www.costco.com/p/-/25mm-comfort-fit-diamond-cut-wedding-band/4000322768",
    "verified_on": "2026-08-27"
   },
@@ -88,7 +90,7 @@
    "price_usd": 829.99,
    "price_per_gold_oz": 7278.83,
    "below_threshold": false,
-   "premium_over_melt_pct": 57.8,
+   "premium_over_melt_pct": 57.7,
    "source_url": "https://www.costco.com/p/-/6mm-comfort-fit-wedding-band/4000322620",
    "verified_on": "2026-08-19"
   },
@@ -102,7 +104,7 @@
    "price_usd": 699.99,
    "price_per_gold_oz": 7405.48,
    "below_threshold": false,
-   "premium_over_melt_pct": 60.5,
+   "premium_over_melt_pct": 60.4,
    "source_url": "https://www.costco.com/p/-/5mm-comfort-fit-wedding-band/4000322632",
    "verified_on": "2026-08-27"
   },
@@ -116,7 +118,7 @@
    "price_usd": 1973.3,
    "price_per_gold_oz": 8614.24,
    "below_threshold": false,
-   "premium_over_melt_pct": 86.7,
+   "premium_over_melt_pct": 86.6,
    "source_url": "https://www.ritani.com/products/mens-6mm-sandpaper-finish-beveled-edge-wedding-ring-metal-18kt-rose-gold",
    "verified_on": "2026-08-25"
   },
@@ -130,7 +132,7 @@
    "price_usd": 1395.8,
    "price_per_gold_oz": 10524.66,
    "below_threshold": false,
-   "premium_over_melt_pct": 128.1,
+   "premium_over_melt_pct": 128.0,
    "source_url": "https://www.ritani.com/products/mens-6mm-satin-finish-comfort-fit-wedding-ring-with-milgrain-metal-18kt-yellow-gold",
    "verified_on": "2026-08-25"
   },
@@ -144,7 +146,7 @@
    "price_usd": 1286.35,
    "price_per_gold_oz": 10669.32,
    "below_threshold": false,
-   "premium_over_melt_pct": 131.2,
+   "premium_over_melt_pct": 131.1,
    "source_url": "https://www.ritani.com/products/mens-classic-square-edged-wedding-ring-band-width-5mm-metal-18kt-yellow-gold",
    "verified_on": "2026-08-25"
   },
@@ -158,7 +160,7 @@
    "price_usd": 1385.3,
    "price_per_gold_oz": 11490.04,
    "below_threshold": false,
-   "premium_over_melt_pct": 149.0,
+   "premium_over_melt_pct": 148.9,
    "source_url": "https://www.ritani.com/products/mens-classic-square-edged-wedding-ring-band-width-5mm-metal-18kt-white-gold",
    "verified_on": "2026-08-25"
   },
@@ -172,7 +174,7 @@
    "price_usd": 2865.0,
    "price_per_gold_oz": 12506.87,
    "below_threshold": false,
-   "premium_over_melt_pct": 171.1,
+   "premium_over_melt_pct": 170.9,
    "source_url": "https://www.ritani.com/products/mens-6mm-high-polish-wedding-ring-metal-18kt-white-gold",
    "verified_on": "2026-08-25"
   },
@@ -186,7 +188,7 @@
    "price_usd": 765.0,
    "price_per_gold_oz": 15688.46,
    "below_threshold": false,
-   "premium_over_melt_pct": 240.0,
+   "premium_over_melt_pct": 239.8,
    "source_url": "https://www.ritani.com/products/mens-classic-square-edged-wedding-ring-band-width-3mm-metal-14kt-yellow-gold",
    "verified_on": "2026-08-25"
   }
