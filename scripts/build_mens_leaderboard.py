@@ -16,15 +16,15 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-THRESHOLD = 4861.0
+THRESHOLD = 6000.0  # user-directed threshold 2026-08-28 (session 9): "lower prices than Price / Gold Oz $6000 /oz Mens" (supersedes session-7's $5,500)
 
-# Spot quotes read on 2026-08-27 (see docs/REVIEW_2026-08-27.md section 1):
-#   cnbc.com/select    $4,584.96
-#   usagold.com        $4,648.90
+# Spot quotes read on 2026-08-28 (session 7; see docs/REVIEW_2026-08-28.md section 1):
+#   cnbc.com/select    $4,598.89 (9:00 a.m. ET 2026-08-28)
+#   usatoday.com       $4,522.93 (12:05 p.m. ET 2026-08-28)
 # The premium column uses their midpoint, stated explicitly so it is auditable.
-SPOT_LOW = 4584.96
-SPOT_HIGH = 4648.90
-SPOT = round((SPOT_LOW + SPOT_HIGH) / 2, 2)  # 4616.93
+SPOT_LOW = 4522.93
+SPOT_HIGH = 4598.89
+SPOT = round((SPOT_LOW + SPOT_HIGH) / 2, 2)  # 4560.91
 
 MEN_RE = re.compile(r"\b(men|mens|men's|gents|gentleman|gentlemen's|unisex|male)\b", re.I)
 WOMEN_RE = re.compile(r"\bwomen'?s?\b", re.I)
@@ -61,7 +61,7 @@ def main():
         "regenerate_with": "python3 scripts/build_mens_leaderboard.py",
         "threshold_usd_per_pure_gold_oz": THRESHOLD,
         "spot_usd_per_oz_used_for_premium": SPOT,
-        "spot_basis": f"midpoint of ${SPOT_LOW} (cnbc.com/select) and ${SPOT_HIGH} (usagold.com), 2026-08-27",
+        "spot_basis": f"midpoint of ${SPOT_LOW} (usatoday.com 12:05 ET) and ${SPOT_HIGH} (cnbc.com/select 9:00 ET), 2026-08-28",
         "men_filter": (
             r"regex \b(men|mens|men's|gents|gentleman|unisex|male)\b applied to ring name + note; "
             "women-only rows excluded"
@@ -100,7 +100,7 @@ def main():
     )
     L.append(
         f"**Threshold:** ${THRESHOLD:,.2f} / pure gold troy oz  ·  **Spot used for the premium column:** "
-        f"${SPOT:,.2f}/oz (midpoint of ${SPOT_LOW:,.2f} CNBC – ${SPOT_HIGH:,.2f} USAGOLD, 2026-08-27)\n"
+        f"${SPOT:,.2f}/oz (midpoint of ${SPOT_LOW:,.2f} USA Today 12:05 ET – ${SPOT_HIGH:,.2f} CNBC 9:00 ET, 2026-08-28)\n"
     )
     L.append(
         f"**Population:** {len(rows)} rows in the directory · {payload['rows_with_price_per_gold_oz']} have a "
@@ -125,27 +125,30 @@ def main():
         )
     L.append("")
     L.append("### Reading this table\n")
+    from collections import Counter
+    passing = [r for r in payload["rows"] if r["below_threshold"]]
+    per_seller = Counter(r["seller"] for r in passing)
     L.append(
-        f"- **Rows 1–{below}** are the only men's entries in the verified retail channels this project could "
-        "confirm below $4,861/pure-gold-oz. All three are **Midwest Jewellery closeout men's ring mountings** "
-        "(setting-only, solid 14K gold, gram weight published on the product page). They sit **9–18% below "
-        "melt**, which is closeout pricing, not normal retail."
+        f"- **Rows 1–{below}** clear the current threshold of **${THRESHOLD:,.0f}/pure-gold-oz** (user-directed "
+        f"2026-08-28; = melt +{(THRESHOLD / SPOT - 1) * 100:.0f}% at the spot basis above). Composition: "
+        + ", ".join(f"**{n}× {seller}**" for seller, n in per_seller.most_common())
+        + ". The Midwest rows are closeout 14K men's mountings **9–18% below melt** (setting-only, not normal "
+        "retail). The 2026-08-28 rows are the 1/4 oz .9999 Nebü bullion-ring family (+8% to +21% over melt), each "
+        "with price and weight read live on official pages; SD Bullion's pair is **out of stock**, and JM Bullion's "
+        "price is the ACH/Check tier (their card tier $1,395.99 = $5,589.80/oz would FAIL) — both stated in the "
+        "evidence notes."
     )
     L.append(
-        "- **Row 4** (Provident Metals, Nebü 10.5 g 24K men's curved ring, size 8) is the cheapest 24K men's "
-        "ring verified anywhere in this project, at +34% over melt."
+        f"- **Rows {below + 1}+** fail the threshold: Provident Metals' 10.5 g 24K men's curved ring (cheapest "
+        "verified 24K men's ring, +36%), Costco (per-size weights published, but prices do not render in a plain "
+        "fetch — see docs/REVIEW_2026-08-28.md §6.1), and Ritani 14K/18K men's bands at +89% to +244% over melt. "
+        "They stay listed to show the true shape of the market."
     )
     L.append(
-        "- **Rows 5–7** are Costco; prices re-verified live on 2026-08-27. The 2.5 mm band had repriced "
-        "+36% since 2026-08-19, which is what pushed it out of the below-threshold set."
-    )
-    L.append(
-        "- **Rows 8+** are Ritani 18K men's bands at +87% to +240% over melt — included to show the true "
-        "shape of the market."
-    )
-    L.append(
-        "- The `vs melt` column is why a 50-entry target is unreachable: the threshold is melt + 5.35%, and "
-        "every channel measured sits at +16% or higher, except US closeout mountings which sell below melt."
+        f"- The `vs melt` column is why a 50-entry target is unreachable: only {n} men's/unisex rows in the 479-row "
+        "directory publish BOTH a price and a gram weight, and every channel family measured across seven review "
+        "sessions (≈50 channels) sits at melt +16% or higher except US closeout mountings and the 1/4 oz "
+        "bullion-ring family. Full channel-by-channel links and math: `docs/REVIEW_2026-08-28.md`."
     )
 
     md_path = os.path.join(ROOT, "docs", "MENS_LEADERBOARD.md")

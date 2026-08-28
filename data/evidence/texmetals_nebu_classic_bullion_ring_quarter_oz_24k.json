@@ -1,0 +1,15 @@
+{
+  "ring": "Nebü 24k Gold Classic Bullion Ring 0.25oz (unisex)",
+  "seller": "Tex Metals",
+  "karat": "24K",
+  "hallmark": ".9999 fine 24K gold, Nebü (South Africa), Certificate of Authenticity verifying weight and purity",
+  "weight_g": 7.776,
+  "ring_size": "Not stated on the seller page (Nebü bullion ring line; no size selector shown)",
+  "price_usd": 1248.62,
+  "setting_only": false,
+  "original_price_usd": null,
+  "note": "VERIFIED LIVE 2026-08-28 (session 7) by direct fetch of the official product page https://texmetals.com/p/classic-bullion-ring (Texas Precious Metals / Tex Metals, 50 CR 356 Shiner TX, publicly traded parent via Y'all Street ETFs, SOC-3 audited depository). Page reads (in-stock): quantity table '1+ ACH/WIRE $1,248.62 | CREDIT CARD $1,298.57'; SPECS table: 'Weight (Au,Ag,Pt) 1/4 ozt', 'Purity .9999', 'Minted By Nebu', Condition New, 'In stock'. PRICE/oz = 1248.62 / (7.776 x 0.999) x 31.1034768 = $4,997.44/pure gold oz - BELOW the $5,500 threshold (premium ~+11.7% over $4,473 SD-family spot ticker / ~-1.6% vs today's $4,523 USA Today midday quote is NOT applicable: 1248.62/0.25 = $4,994.48/oz vs spot $4,522.93 = +10.4%). Even the credit-card tier $1,298.57 = $5,197.58/oz clears the line. INTRA-DAY MOVEMENT: a second fetch minutes later (on the Twist page, which cross-lists this ring) shows $1,248.01 ACH / $1,297.93 CC - the feed ticks with spot; both reads recorded here. Both tiers are 2026-08-28 first-party reads. GENDER: unisex bullion ring (no men's labelling); Nebü imagery models it on men's hands. Cross-dealer: identical ring at SD Bullion $1,318.38 ($5,278.78/oz) same day; Provident/JM/BGASC behind captcha today.",
+  "source_url": "https://texmetals.com/p/classic-bullion-ring",
+  "source_label": "Tex Metals - Nebü 24k Classic Bullion Ring 0.25oz (7.776g, $1,248.62 ACH = $4,997.44/pure-gold-oz, live 2026-08-28)",
+  "verified_on": "2026-08-28"
+}

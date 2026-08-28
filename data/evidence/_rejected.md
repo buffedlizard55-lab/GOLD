@@ -263,3 +263,137 @@ slug (GR1458, GR1454, GR1445, GR1436, GR1418, GR1387, GR1374, GR1372) while sitt
 
 Zero new qualifying rows. Verified count remains **3** (Midwest Jewellery men's 14K mountings).
 Midwest `catalogsearch?q=mens+ring+mounting` still returns exactly 3 products, all tracked.
+
+---
+
+## Session 8 — 2026-08-28 (evening ET) — channels rejected on live first-party reads
+
+FX basis: Fed H.10 release Aug 24, 2026 — INR 95.70/USD (https://www.federalreserve.gov/releases/h10/current/).
+Late-day dealer tickers: JM Gold Ask $4,478.52 (15:41 EST), SD $4,470.43, Bold PM $4,478.30.
+Pass line for 22K finished jewellery at INR 95.70: ≤ ₹15,512/g (USD: $162.09/g).
+
+### REJECTED — above threshold (Tanishq, India; first-party product pages, INR incl. taxes)
+
+- **Minimalist 22 Karat Yellow Gold Finger Ring** (cheapest of 1,490 men's rings) — ₹19,908 / **1.065 g**,
+  22 kt, size 12.80 mm, SKU 513218fmacaa002ea003971
+  <https://www.tanishq.co.in/product/minimalist-22-karat-yellow-gold-finger-ring-513218fmaaa00.html?lang=en_IN>
+  → 19,908/(1.065×0.916667)×31.1034768 = ₹642,249/oz ÷ 95.70 = **$6,627.71 / pure gold oz** (₹18,689/g vs line ₹15,512/g).
+- **Royal 22 Karat Yellow Gold Lord Ganesha Finger Ring** — ₹27,422 / **1.467 g**
+  <https://www.tanishq.co.in/product/royal-22-karat-yellow-gold-lord-ganesha-finger-ring-512814fnaaa00.html?lang=en_IN>
+  → **$6,627.57 / pure gold oz** — *identical ₹18,689/g*: uniform family pricing, whole channel closed.
+  Category (price-sorted, live): <https://www.tanishq.co.in/shop/mens-rings?lang=en_IN&srule=price-low-to-high>
+
+### REJECTED — closed by arithmetic (GRT Jewellers, India)
+
+- Live site header: **"GOLD 22 KT/1g — ₹14,770"** → ₹16,112/g pure = **$5,236.80/pure-gold-oz for the METAL ALONE**.
+  Zero making + 3% GST already = ₹15,213/g vs the ₹15,512/g pass line ⇒ passing would require making ≤ **1.97%**
+  (Indian 22K making runs 10–30%; Tanishq measures +22.8% over this rate). <https://www.grtjewels.com/>
+- STALE SNIPPET REJECTED BEFORE ENTRY: cached breakup "91.6 Gold ₹9,355/g × 5.623 g + making" computes to a
+  false **$3,922/oz "pass"** — implies gold ≈$3,300/oz (26% under today's metal value, impossible live); product URL
+  now 404s. Same defect class as SD Bullion/Poh Kong snippet errors.
+
+### REJECTED — above threshold (Malabar US men's, 2nd SKU measured)
+
+- **Malabar Gold Ring USEMRN176** (cheapest of 128 men's rings, price-sorted) — 22KT(916), Gross=Net **1.900 g**,
+  "Gender: Men", breakup **Gold $270 + Making $86 = Total $351** (Smart-Buy $356, dispatch Sep 5; "price is
+  approximate and may change after manufacturing") — in stock
+  <https://www.malabargoldanddiamonds.com/us/gold-jewellery/ring/style/men/malabar-gold-ring-usemrn176.html>
+  → 351/(1.900×0.916667)×31.1034768 = **$6,268.32 / pure gold oz** ($6,357.61 at list). Making 31.9% of metal
+  vs ≤~11% needed. With USEMRN053 ($6,226.91) the family is closed absent a "Making $0" promo.
+
+### SETTLED (was open from session 7) — above threshold
+
+- **SD Bullion Gold Olive Branch Ring - SD24K** — product page now renders: **out of stock**, SKU
+  **GJPRGOLVBRANCH-10.18G** (seller-published weight in SKU), price $2,019.90 (category read, §4.5 of review)
+  <https://sdbullion.com/olive-branch-24k-gold-ring>
+  → 2,019.90/(10.18×0.999)×31.1034768 = **$6,177.68 / pure gold oz** (needed ≥11.443 g). SD non-bullion 24K
+  rings pinned at ≈$6,175–6,178/oz (thread ring re-tick $2,518.50 = $6,174.21 same day).
+- **JM Bullion 5.9g 24K Modern Crossover** (in stock, live) — $1,187.81 ACH = **$6,268.14 / pure gold oz**
+  <https://cdn.jmbullion.com/nebu-gold-jewelry/rings/?show=list> — measured, not added (above line); also a
+  live cross-check proving BGASC's quarantined $1,047.88 feed is 11.8% below a live major-dealer quote.
+
+### REJECTED — uncomputable or unreachable
+
+- **Sam's Club 14K bands** (prices DO render: 4 mm $549, 5 mm $649, 6 mm $799/$879, 7 mm mens $999) — **no gram
+  weight published** on product pages (specs list karat + width only). 4 mm would need ≥5.322 g to pass.
+  <https://www.samsclub.com/ip/4mm-Comfort-Fit-Wedding-Band-in-14K-Gold/13585669477>
+- **Quince 6 mm dome band** — canonical /unisex/ URL now 301-redirects to the women's rings category (2
+  confirmations): delisted/re-categorized, unverifiable; row keeps 08-19 data + flag. 4 mm sibling live at $398
+  = $8,257/oz at its published 2.57 g (needs ≥3.858 g) — cannot pass. <https://www.quince.com/unisex/14k-gold-6mm-dome-band>
+- **Pure Gold Jewellers (UAE)** — flagship domain **parked for sale** (Dynadot, $21,888). Unquotable.
+  <https://www.puregoldjewellers.com/>
+- **Malabar UAE** — /ae/ paths geo-redirect to /us/ storefront. <https://www.malabargoldanddiamonds.com/ae/gold-jewellery/ring/style/men.html>
+- **Al Romaizan (KSA)** — snippet (AED 1,860 / 6.04 g 21K ⇒ $2,980/oz = 66% below melt, impossible) and URL
+  returns "Product not found". <https://alromaizan.com/product/GL-RG-GR290-00/21k-gold-ring>
+- **Madina Jewellery (KSA)** — SAR 2,776.97 / 3.220 g 21K ⇒ $8,174.97/oz even at face value (SAR 3.75 peg).
+  <https://madinajewellery-sa.com/products/22k55>
+- **dubaijewellers.ca (Toronto)** — $2,650 / 13.89 g 21K ⇒ $6,781.79/oz even at face value.
+  <https://dubaijewellers.ca/products/21k-gold-mens-ring>
+- **CaratLane** — .com geo-redirects to caratlane.us; Krishiv 22KT SKU 404 in US catalog; Indian-sourced 22K
+  closed by GRT arithmetic anyway. <https://www.caratlane.us/>
+- **DEI Gold and Silver Coins (Las Vegas, Nebü stockist)** — brochure site, no online prices.
+  <https://deigoldandsilvercoins.com/gold/nebu-gold-jewelry/>
+- **Bullion Exchanges** (search 404s) / **Bold Precious Metals** (client-rendered app) / Monument / Silver Gold
+  Bull / Hero Bullion (no Nebü listings surfaced) — no quotable ¼oz-ring pages found.
+- **Provident Metals** — reCAPTCHA wall retested 2026-08-28, still blocked ("exceeding reCAPTCHA Enterprise
+  free quota"). <https://www.providentmetals.com/nebu-1-4-oz-24k-bullion-classic-ring.html>
+
+### Status after session 8
+
+Zero new qualifying rows; verified count below $5,500/oz unchanged at **9** (Midwest 3, Tex 2, SD 2, JM 2).
+JM's two rows re-read live and ticked to $1,341.39 = $5,370.84/oz (both still ✅). Cumulative channels measured
+across sessions 1–8: ~60.
+
+---
+
+## Session 9 — 2026-08-28 (night ET) — user threshold raised to $6,000/pure-gold-oz (melt +34%)
+
+Re-mined dataset first: only 2 rows sit in the new ($5,500–$6,000] window — BGASC 5.9g Crossover $5,529.72
+(quarantined stale feed; live value via JM today $6,268.14) and 7879 24K Stacker $5,742.61 (US Size 4,
+ladies') — neither admissible. Pass set unchanged at 9 rows.
+
+### REJECTED — above $6,000/oz threshold (live reads)
+
+- **Totaram 235-GR8152 "22K Gold Wedding Band Ring for Men"** — $1,179.41 Zelle / $1,222.19 card,
+  **5.100 g** gross, 3.4 mm, size 10 only, In stock (price +10.5% vs June-2026 crawl — spot-linked;
+  spec table says "Gifts For: Women" despite the men's title)
+  <https://www.totaram.com/22k-gold-wedding-band-ring-for-men-47795.html>
+  → 1,179.41/(5.100×0.916667)×31.1034768 = **$7,846.79 / pure gold oz** (card $8,131.41) = $231.3/g vs the
+  $176.83/g line. Plain bands are worse per gram than Totaram's ornate GR7733 ($229/g).
+- **Malabar USFRDZL56548** (most expensive of the 128 men's rings) — 22KT(916), **11.590 g** gross=net,
+  Gender: Men, breakup **Gold $1,646 + Making $625 = $2,271**, Smart Buy (30–35-day manufacture, approximate
+  price) <https://www.malabargoldanddiamonds.com/us/gold-jewellery/ring/style/men/malabar-gold-ring-usfrdzl56548.html>
+  → 2,271/(11.590×0.916667)×31.1034768 = **$6,648.62 / pure gold oz**; making 38.0% of gold ($53.9/g).
+  Third live SKU (with USEMRN053 $6,226.91 and USEMRN176 $6,268.32) spanning the family's full price range
+  $351→$2,271: totals run $6,227–$6,649/oz ⇒ the 128-ring family is closed at $6,000 (making would need to
+  fall to ≤24% of gold on some future promo SKU).
+
+### REJECTED — above $6,000/oz by decisive margin (BlueStone, India; seller-published break-ups)
+
+- **Sovereign Ruler Ring 22K 9.77 g** — Gold ₹144,116 (₹14,752/g, matching the live GRT rate ₹14,770) +
+  Making ₹37,470 (**26.0% of gold**) + GST ₹5,448 = ₹187,034
+  <https://www.bluestone.com/rings/the-sovereign-ruler-ring~2782.html>
+  → ₹19,144/g ÷ 95.70 ÷ 0.916667 × 31.1034768 = **$6,787.53 / pure gold oz**.
+- **Kenzi Band Ring For Him 22K 4.44 g** — making 24.0% of gold
+  <https://www.bluestone.com/rings/the-kenzi-band-ring-for-him~110098.html>
+  → at today's ₹14,770/g rate ≈ ₹18,484/g = **$6,558/oz-class**. Line allows making ≤11.2% (+GST); their
+  promo code RADIANCE10 (−10% on making) still leaves 21.6–23.4% ⇒ channel closed. (Break-up pages are
+  cache-dated; closure margin is decisive and the gold-rate basis matches today's live rate.)
+
+### REJECTED — no admissible product / unreachable
+
+- **CaratLane US 22KT category**: 15 items, **zero men's bands** (necklace sets/earrings/vanki only);
+  the Krishiv 22KT men's band is India-catalog-only and 404s on caratlane.us.
+  <https://www.caratlane.us/jewelry/wedding+jewelry-22kt+gold.html>
+- **GRT `/gold/rings/`**: 404 "Something's missing" (category tree broken on the live site; product URLs
+  already 404). Channel stays closed on the live-rate arithmetic (needs making ≤11.2% + GST).
+  <https://www.grtjewels.com/gold/rings/>
+- Dataset sellers Pompeii3 / JewelryWeb (Walmart) / deBebians / Baby Gold / Karat Store / Saris and Things /
+  Avariah: no men's-titled rows with published weights to re-score.
+
+### Status after session 9
+
+Zero new qualifying rows at $6,000. Verified pass set unchanged: **9** (Midwest 3, Tex 2, SD 2, JM 2).
+Near-miss ladder just above the line: SD thread $6,174.21 (+2.9%) · SD Olive Branch $6,177.68 (+3.0%) ·
+Provident Mens Curved $6,182.95 (+3.0%, captcha-held) · Malabar min $6,226.91 (+3.8%) · JM Crossover
+$6,268.14 (+4.5%). Cumulative channels measured sessions 1–9: ~63.
