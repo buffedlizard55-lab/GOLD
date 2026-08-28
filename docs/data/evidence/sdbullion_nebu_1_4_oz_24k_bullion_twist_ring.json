@@ -1,0 +1,14 @@
+{
+  "ring": "1/4 oz Nebü 24K Gold Bullion Twist Ring (unisex; Medium 6-7.5)",
+  "seller": "SD Bullion",
+  "karat": "24K",
+  "hallmark": ".9999 fine 24K gold, Nebü Gold (South Africa), Certificate of Authenticity included",
+  "weight_g": 7.776,
+  "ring_size": "Nebü bullion ring sizing (Medium 6-7.5 per the Nebü line; SD Bullion page does not restate size)",
+  "price_usd": 1198.84,
+  "setting_only": false,
+  "note": "VERIFIED 2026-08-27 from SD Bullion's own site. WEIGHT/METAL: product page states 'Contains 1/4 oz of .9999 pure gold' and 'Metal Content: 0.25 Troy Oz' = 7.776 g; SKU GJBRGTWIST-025; 'Produced by the South African Nebü Gold; Wearable gold bullion jewelry'. PRICE: 'As low as $1,198.84' is rendered for this item on SD Bullion's official 24K Gold Jewelry listing page (https://sdbullion.com/jewelry/gold-jewelry) fetched 2026-08-27, when SD Bullion's own on-page gold ticker read a: $4,614.34 / $4,615.88. Price per pure gold oz = 1198.84 / (7.776 x 0.999) x 31.1034768 = $4,800 - BELOW the $4,861 threshold (premium only ~4.0% over the dealer's own spot quote). FLAGGED (citation quality + availability, per repo audit rule 7): the canonical product URL itself renders NO price today because the item is 'Currently Out of stock', so the price is cited from the seller's official category listing rather than the product page; verify in a browser before purchase. GENDER CAVEAT: this is a unisex bullion ring, not a men's-specific listing - SD Bullion's product imagery includes a man wearing it ('nebu-twist-bullion-gold-.25oz-ringwornman.jpg') and Provident Metals describes the same Nebü 1/4 oz line as 'Available in Size Medium or 6-7.5'. Corroborating official prices for the identical Nebü 1/4 oz ring family on 2026-08-26/27 (all ABOVE threshold): texmetals.com $1,334.68, Provident Metals $1,340.34, JM Bullion $1,373.53 (in stock, Product ID 5649774), BGASC $773.84 (rejected as a stale feed - see bgasc_nebu_1_4_oz_24k_bullion_classic_ring).",
+  "source_url": "https://sdbullion.com/1-4-oz-nebu-24k-gold-bullion-twist-ring",
+  "source_label": "SD Bullion - 1/4 oz Nebü 24K Gold Bullion Twist Ring (7.776g, $1,198.84 = $4,800/pure-gold-oz)",
+  "verified_on": "2026-08-27"
+}

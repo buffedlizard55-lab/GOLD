@@ -5,10 +5,10 @@
   "hallmark": "14kt (Costco carries stamped 14kt solid gold; independent verification recommended)",
   "weight_g": 3.62,
   "width_mm": 2.5,
-  "price_usd": 329.99,
+  "price_usd": 449.99,
   "setting_only": false,
-  "note": "Costco 2.5mm Comfort Fit Diamond Cut Wedding Band — EXACT weight published per size: 14kt White Gold size 4.5 = 3.62g (size 4 = 3.55g, size 5 = 3.70g). Price $329.99. CAVEAT: Weight is 'approximate' per Costco. 14kt Yellow Gold weight for this style not separately read.",
-  "source_url": "https://www.costco.com/2.5mm-comfort-fit-diamond-cut-wedding-band.product.4000322768.html",
-  "source_label": "Costco - 2.5mm Comfort Fit Diamond Cut Band 14kt WG Size 4.5 ($329.99, 3.62g)",
-  "verified_on": "2026-08-19"
+  "note": "Costco 2.5mm Comfort Fit Diamond Cut Wedding Band. RE-VERIFIED LIVE 2026-08-27: page (Item 2222401 | Model 2100000917-Size 4) shows $449.99 with default variant 'Metal Color: Yellow Gold / Ring Size: Size 4'. This REPLACES the $329.99 recorded on 2026-08-19 - a 36.4% price increase with gold flat (~$4,600/oz on both dates), i.e. a Costco repricing. Published weight table (unchanged, re-read 2026-08-27): 14kt WHITE Gold size 4 = 3.55g, 4.5 = 3.62g, 9 = 4.40g, 10 = 4.65g; 14kt YELLOW Gold size 4 = 3.45g, 4.5 = 3.55g, 9 = 4.25g, 10 = 4.40g. Thickness/width 2.5mm, diamond-cut finish. AT $449.99 THIS ROW IS NOW ABOVE THE $4,861/oz THRESHOLD under every published weight variant: WG 4.5 (3.62g) = $6,628/oz; YG 4 (3.45g) = $6,955/oz; MEN'S YG size 10 (4.40g) = $5,453/oz; MEN'S WG size 10 (4.65g) = $5,160/oz. It is therefore no longer a below-threshold row. CAVEATS: per-size/per-metal price is JS-selected and only the default variant price renders in a static fetch; Costco weights are stated as 'approximate'. Old URL (.../2.5mm-comfort-fit-diamond-cut-wedding-band.product.4000322768.html) now redirects to the /p/-/ path.",
+  "source_url": "https://www.costco.com/p/-/25mm-comfort-fit-diamond-cut-wedding-band/4000322768",
+  "source_label": "Costco - 2.5mm Comfort Fit Diamond Cut Band 14kt WG Size 4.5 ($449.99, 3.62g)",
+  "verified_on": "2026-08-27"
 }

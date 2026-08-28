@@ -123,3 +123,143 @@ Every candidate below was checked against its official product page on 2026-08-2
 | eBay / Amazon resellers / Property Room / shopgoodwill / Etsy | various | third-party marketplaces or auctions — not first-party official sources | — |
 
 **Accepted instead (2):** Midwest Jewellery men's 14K mountings — 6.35 g @ $499 ($4,190/oz) and 7.99 g @ $579 ($3,864/oz). See `data/evidence/midwest_jewellery_mens_mounting_*.json`.
+
+---
+
+## Session 4 — 2026-08-27 (below-threshold men's search, round 2)
+
+Spot gold 2026-08-27: $4,584.96 (CNBC) / $4,615.40 (Bullion.com) / $4,648.90 (USAGOLD, Yahoo Finance). Threshold $4,861/pure-gold-oz = **melt + 5.35%**. Ceilings: 10K $65.12/g · 14K $91.17/g · 18K $117.21/g · 22K $143.26/g · 24K $156.13/g of finished ring.
+FX reference: Federal Reserve H.10, release 2026-08-24 — HKD 7.8397, THB 32.63, CNY 6.7210, INR 95.70, MYR 4.0354 (https://www.federalreserve.gov/releases/h10/current/).
+
+| Seller | Candidate | Measured data (own official page, 2026-08-26/27) | Verdict | Link |
+|---|---|---|---|---|
+| Costco | 2.5mm Comfort Fit Diamond Cut Band 14kt | **$449.99** live (was $329.99 on 08-19); WG4.5 3.62g / YG4 3.45g / men's YG10 4.40g / men's WG10 4.65g | ❌ $6,628 (WG4.5) · $6,955 (YG4) · $5,453 (men's YG10) · $5,160 (men's WG10) — +37% to +50% over melt | https://www.costco.com/p/-/25mm-comfort-fit-diamond-cut-wedding-band/4000322768 |
+| Costco | 5mm Comfort Fit Band 14kt | $699.99 (unchanged); men's size 10 = 5.89g | ❌ men's size 10 = $6,337/oz (+37%) | https://www.costco.com/p/-/5mm-comfort-fit-wedding-band/4000322632 |
+| Costco | 6mm Comfort Fit Band 14kt | weight table re-verified (men's size 10 = 6.84g) but **price renders "Loading"** | ⚠️ price not verifiable today; stale $829.99 would give $6,208 for men's size 10 | https://www.costco.com/p/-/6mm-comfort-fit-wedding-band/4000322620 |
+| Ross-Simons | Men's 5mm 14kt YG Milgrain Wedding Ring | "Gold Weight: 4.9 grams", sale from $596.25 (list $795.00) | ❌ $6,488/oz (+41%) | https://www.ross-simons.com/mens-5mm-14kt-yellow-gold-milgrain-wedding-ring-571214.html |
+| Ross-Simons | Men's 5mm 14kt YG Wedding Ring | "Gold Weight: 5.0 grams" | ❌ ~$6,360/oz at the same sale price | https://www.ross-simons.com/mens-5mm-14kt-yellow-gold-wedding-ring-571213.html |
+| Midwest Jewellery | **entire men's-ring catalogue** (875 items, $51–$5,918) | cheapest items are 925 sterling; every gold item with a published gram weight is +110% to +187% over melt — 10K 4.81g/$999 = $15,503/oz · 14K 5.49g/$1,000 = $9,713/oz · 10K 7.7g/$1,299 = $12,594/oz · 10K 14.10g/$2,499 = $13,230/oz | ❌ below-melt inventory **exhausted**: "mens ring mounting" search returns exactly 3 products, all already tracked | https://midwestjewellery.com/men-s-jewelry/wedding-bands · https://midwestjewellery.com/catalogsearch/result/?q=mens+ring+mounting |
+| Tex Metals | Nebü 24k Classic Bullion Ring 0.25oz | $1,334.68 | ❌ $5,339/oz (+15.7%) | https://texmetals.com/p/classic-bullion-ring |
+| Provident Metals | Nebü 1/4 oz 24K Bullion Twist Ring | $1,340.34 (1+) / $1,354.30 / $1,396.19; ticker Gold $4,608.19 | ❌ $5,361/oz (+16.2%) | https://www.providentmetals.com/nebu-1-4-oz-24k-bullion-twist-ring.html |
+| JM Bullion | Nebü 1/4 oz 24K Bullion Twist Ring (ID 5649774, In Stock) | $1,373.53 eCheck / $1,387.84 crypto / $1,430.76 card | ❌ $5,494/oz (+19.1%) | https://www.jmbullion.com/nebu-1-4-oz-24k-bullion-twist-ring/ |
+| SD Bullion | non-bullion Nebü rings (8.7g Modern Infinity $1,545.93 · 7.5g Arrow $1,332.70 · 8.5g Double Banded $1,510.39) | weights published in product names | ❌ $5,532/oz each (+19.9%) | https://sdbullion.com/jewelry/gold-jewelry |
+| Menē | Classic / Narrow / Wide / Flat / Wide-Flat 24K bands | $1,934 live (default size 4) · "From $1,472 / $2,350 / $2,392 / $2,622"; **no gram weight published** ("sold by weight, not size"); `.js` endpoint returns 404 | ⚠️ price/oz cannot be computed without estimating | https://mene.com/products/mene-classic-band-gold · /mene-narrow-band-gold · /mene-wide-band-gold |
+| Chow Tai Fook | 999 / 999.9 gold rings, HK eShop ("Priced by Weight": Gold Value + Commission + Labour Charge, per-size tael weights) | live site header 2026-08-27: **"999.9 Gold Selling Price HK$ 1,411.00/gram \| About HK$ 52,814.00/tael"** = $179.98/g | ❌ **$5,597/pure-gold-oz (+21.3%) — whole HK channel eliminated** | https://www.chowtaifook.com/en-hk/eshop/jewellery/rings/999.9-gold-ring/F1376.html · https://www.chowtaifook.com/en-hk/eshop/wedding/pure-gold/999.9-gold-ring/F609.html |
+| Chow Sang Sang | 999 / 999.9 gold rings, eShop-HK (per-variant URLs `…-WT-0.1820`, labour HK$70–780) | structure confirmed on the seller's own pages, but **every product URL returns "Page unavailable"** to an automated fetch (3 attempts) and `/en/search?keyword=…` returns "no items matching your request" | ⚠️ no live price obtainable | https://www.chowsangsang.com/eshop-hk/en/999.9-Gold-Ring/999.9-Gold-Ring/p/PRD-82810GAR-408883-WT-0.2120 |
+| Hua Seng Heng (Thailand) | 23 rings, 96.5% gold | **weights published** (dragon ring 0.50–2 baht; classic ring 0.125–2 baht) but **no price on any product page** — all route to LINE "Chat & Shop". Their FAQ: "Price set by the Gold Traders Association / gold baht + making price (starting from 800/gold baht)" | ⚠️ computing a price from the formula would be an estimate | https://www.huasengheng.com/en/product-category/chat-shop-en/jewelry-en/rings-en/ · https://www.huasengheng.com/en/product/square-frame-dragon-ring/ · https://www.huasengheng.com/en/product/classic-ring/ |
+| Gold Traders Assoc. of Thailand | official 96.5% price, 27/08/2569 17:11 (#29) | gold bar buy 71,150 / sell 71,350; **ornament sell 72,150** THB/baht; Spot $4,581.50, USD/THB 32.89 | ⚠️ = **$4,664/pure-gold-oz (+1.1%)** — structurally eligible, but no official per-item price exists to cite | https://www.goldtraders.or.th/ |
+| Baht Gold Jewelry Co. | Thai 96.5% men's rings (23kgold.com) | "as of January 2026": 2 baht (30.32g) $4,998 · 1 baht (15.16g) $2,533; men's dragon ring GR-101-US size 11.5, 30.4g, $4,998 | ❌ $5,313 (2 baht) / $5,385 (1 baht), and pricing is 7 months stale | http://www.23kgold.com/gold_rings.htm |
+| BGASC | Nebü 1/4 oz 24K Bullion Classic Ring at $773.84 | **stale feed**: same page's metal ticker reads "Gold $2,653.35" vs live spot $4,585–$4,649; three other dealers quote the identical ring at $1,334.68–$1,373.53 | ⚠️ **quarantined** — excluded from the below-threshold count | https://www.bgasc.com/product/nebu-1-4-oz-24k-bullion-classic-ring |
+
+**Accepted instead (2):** SD Bullion 1/4 oz Nebü 24K Bullion **Twist** Ring (SKU GJBRGTWIST-025) and 1/4 oz Nebü 24K **Classic** Gold Bullion Ring (SKU GJBRGCLASSIC-025) — both $1,198.84 / 7.776 g = **$4,800.08/pure-gold-oz** (+4.0% over SD Bullion's own spot quote of $4,614.34). Caveats recorded in the evidence files: both product pages are currently out of stock and render no price (price cited from the seller's official category listing, rows carry a FLAGGED marker), and both are **unisex** bullion rings (Medium 6–7.5), not men's-specific listings.
+
+## Session 5 — 2026-08-27 — self-correction and further rejections
+
+### REMOVED (added earlier today on a search snippet, not a page read)
+
+- `sdbullion_nebu_1_4_oz_24k_bullion_twist_ring` — was recorded at **$1,198.84**; the live page
+  <https://sdbullion.com/jewelry/gold-jewelry> reads **$1,363.39** → **$5,453.56 / pure gold oz**, above the
+  $4,861 threshold. Moved to `data/_excluded.json` (kept on disk, out of `rings.json`) so the error stays auditable.
+- `sdbullion_nebu_1_4_oz_24k_classic_bullion_ring` — same defect, same live price $1,363.39 → $5,453.56/oz.
+- **Root cause:** the $1,198.84 came from a cached `web_search` snippet of the category page but was labelled
+  "VERIFIED from SD Bullion's own site". A snippet is not verification. Only a `fetch_page` read of the live
+  product/category page counts. Note the intra-day move: SD Bullion's own gold ticker went $4,614.34 → $4,621.81
+  and these rings $1,198.84 → $1,363.39 within one session.
+
+### REJECTED — no weight published (ratio not computable)
+
+- **WeddingBandsWholesale** 14K 6 mm Comfort Fit Flat Band, Heavy Weight, SKU `FH6MM14KY` — **$1,729**
+  (regular $2,352), sizes 4–15.5 with per-size adders published (size 10 = +$129 → $1,858).
+  <https://www.weddingbandswholesale.com/14k-yellow-gold-6mm-comfort-fit-flat-wedding-band-heavy-weight.html>
+  The Item Information table publishes Material / Width / Fit / Finish / Gender / Lead Time and **no gram
+  weight**. Also gendered *Unisex*, not men's. Without a weight the price-per-oz cannot be derived, and
+  inventing one would violate the no-hallucination policy.
+- **Della Forra** 14K heavy men's wedding bands, from $1,024 / $1,342 —
+  <https://www.dellafora.com/collections/mens-gold-wedding-bands-14k-yellow-gold-heavy-weight> — collection
+  page only, no per-item weights or prices.
+
+### REJECTED — no price / not buyable
+
+- **Filigree Jewelers** Men's 6 mm Comfort Fit Band 14K YG, SKU `11231`, size 10, **Total Gram Weight 8.7 g** —
+  <https://filigreejewelers.com/products/mens-6mm-comfort-fit-wedding-band-in-14k-yellow-gold> — **Sold out**,
+  no price rendered anywhere on the page. Its spec table is also self-contradictory ("Composition: Platinum",
+  "Accent Stone: Natural Diamond" on a plain 14K gold band), so even with a price the row would need a FLAGGED
+  note.
+- **SD Bullion** individual Nebü ¼ oz product pages
+  (`/1-4-oz-nebu-24k-gold-bullion-twist-ring`, `/1-4-oz-nebu-24k-classic-gold-bullion-ring`) render
+  **"Currently Out of stock"** with **no price** — only the category page carries a price.
+
+### REJECTED — above threshold (24K bullion channel now closed)
+
+Live SD Bullion prices 2026-08-27, all above $4,861/pure-gold-oz:
+
+| Ring | Price | Basis | $/pure gold oz |
+|---|---|---|---|
+| Nebü ¼ oz Bullion Twist | $1,363.39 | 0.25 oz | $5,453.56 |
+| Nebü ¼ oz Classic Bullion | $1,363.39 | 0.25 oz | $5,453.56 |
+| Nebü 8.7 g Modern Infinity | $1,758.12 | 8.7 g | ≈$6,287 |
+| Nebü 7.5 g Arrow Band | $1,515.62 | 7.5 g | ≈$6,285 |
+| Nebü 8.5 g Double Banded | $1,717.70 | 8.5 g | ≈$6,290 |
+| SD24K Thread Ring `GJPRGTHREAD-12.7G` | $2,604.10 | 12.7 g | $6,384 |
+| SD24K Olive Branch Band | $2,086.85 | 10–15 g | ≈$5,200+ |
+
+### REJECTED — third-party marketplace
+
+- **Walmart** "14k Gold Band 2.3 Gram 6mm" $661.14 —
+  <https://www.walmart.com/ip/14k-Gold-Band-2-3-Gram-6mm-6-5/858626636> — marketplace reseller listing,
+  excluded by the standing no-third-party-seller policy.
+
+### Population fact that bounds the 50-entry target
+
+Computed from `data/rings.json` (473 rows): 222 rows have a computable price/oz, of which **only 13 are
+men's/unisex**, and **3 of those are below $4,861/oz**. A 50-row men's list cannot be assembled from verified
+data even with the threshold removed — the ceiling is 13 rows. See `docs/MENS_LEADERBOARD.md`.
+
+## Session 6 — 2026-08-28 — Gulf-branded Canadian retail and Malaysian weight-priced retail
+
+### REJECTED — above threshold (Royal Dubai Jewellers, official product pages read live 2026-08-28)
+
+- **GR345** 22k Solid Gold Men Simple Ring, size 7.5 — **3.4 g**, **$749.00**, *Sold out*
+  <https://www.royaldubaijewellers.com/en-us/products/22k-solid-gold-men-simple-ring-gr345>
+  → 749/(3.4×0.9167)×31.1034768 = **$7,474.54 / pure gold oz** (+62% vs melt). Needed 5.23 g to clear.
+- **GR1474** 18k Solid Gold Men Simple Ring, size 9 — **4.7 g**, **$1,046.00**, *Sold out*
+  <https://www.royaldubaijewellers.com/en-us/products/18k-solid-gold-men-simple-ring-gr1474>
+  → 1046/(4.7×0.75)×31.1034768 = **$9,229.57 / pure gold oz** (+100% vs melt). Needed 8.92 g to clear.
+
+Irregularities: the seller is a Shopify store with 4.9★ / 20,157 Google reviews whose pickup address is
+**7146 Airport Rd, Mississauga ON L4T 2H1, Canada** (tel 905-676-9300) — a Canadian business trading under
+a "Dubai" name. Also, eight products titled *"Men Simple Ring"* carry `/ladies-simple-ring-` in their URL
+slug (GR1458, GR1454, GR1445, GR1436, GR1418, GR1387, GR1374, GR1372) while sitting in the
+"Plain Gold Men Rings" collection.
+
+### REJECTED — above threshold (Poh Kong, Malaysia; FX = Fed H.10 released 24 Aug 2026, MYR 4.0354/USD)
+
+- **POH KONG 916/22K Yellow Gold Ridged Band Wedder Ring**, SKU `20R16549009`, in stock —
+  "Gold Weight: 1.20g +/-", **RM1,439.00**
+  <https://www.pohkong.com.my/products/poh-kong-916-22k-yellow-gold-ridged-band-wedder-ring>
+  → RM40,688/oz ÷ 4.0354 = **$10,082.65 / pure gold oz** (+118% vs melt).
+  Poh Kong prices at **2.18× melt** (RM1,199.17/g of 22K alloy vs RM549.11/g melt). The threshold allows
+  only **RM29.03/g** of making charge.
+
+### REJECTED — stale cached snippet that would have been a FALSE PASS
+
+- **POH KONG 916/22K Gold Exquisite Curb Ring** — a cached search snippet shows **RM1,539.00 / 3.52 g**,
+  which computes to **$3,676.13/oz (−20% vs melt), i.e. below threshold.** The figure is stale: the live
+  site prices 22K at 2.18× melt, and RM1,539/3.52 g implies gold near $3,100/oz. Poh Kong's cached
+  "Today's Gold Price" values are mutually inconsistent across pages (RM 400/g, 465/g, 595/g, 660/g for
+  916 gold) and all wrong against the implied live RM 549/g. **Not recorded as a row.** This is the same
+  defect as the SD Bullion snippet error corrected in REVIEW_2026-08-27.md §8.1.
+
+### REJECTED — no gram weight published
+
+- **14K Gold Nugget Ring Mens Pinky Fashion Ring Diamond Ring for Men 0.04 ctw — $424.00**
+  <https://midwestjewellery.com/14k-gold-nugget-ring-mens-pinky-fashion-ring-diamond-ring-for-men-0-04-ctw>
+  Page publishes "Featuring 14 k Gold" and "The Ring is 9.27 mm wide" but **no weight**. It would clear
+  the threshold at ≥ 4.65 g, but no weight may be invented.
+- Poh Kong product pages other than the above redirect to the homepage when fetched directly; the
+  /collections/rings listing shows only "From RM…" prices with no weights.
+
+### Status after session 6
+
+Zero new qualifying rows. Verified count remains **3** (Midwest Jewellery men's 14K mountings).
+Midwest `catalogsearch?q=mens+ring+mounting` still returns exactly 3 products, all tracked.

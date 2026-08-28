@@ -1,0 +1,14 @@
+{
+  "ring": "1/4 oz Nebü 24K Classic Gold Bullion Ring (unisex; Medium 6-7.5)",
+  "seller": "SD Bullion",
+  "karat": "24K",
+  "hallmark": ".9999 fine 24K gold, Nebü Gold (South Africa), Certificate of Authenticity included",
+  "weight_g": 7.776,
+  "ring_size": "Nebü bullion ring sizing (Medium 6-7.5 per the Nebü line; SD Bullion page does not restate size)",
+  "price_usd": 1198.84,
+  "setting_only": false,
+  "note": "VERIFIED 2026-08-27 from SD Bullion's own site. WEIGHT/METAL: product page states 'Contains 1/4 oz of .9999 pure gold' and 'Metal Content: 0.25 Troy Oz' = 7.776 g; SKU GJBRGCLASSIC-025; 'A classic elegant design; Produced by the South African Nebü Gold'. PRICE: 'As low as $1,198.84' is rendered for this item on SD Bullion's official 24K Gold Jewelry listing page (https://sdbullion.com/jewelry/gold-jewelry) fetched 2026-08-27, when SD Bullion's own on-page gold ticker read a: $4,614.34 / $4,615.88. Price per pure gold oz = 1198.84 / (7.776 x 0.999) x 31.1034768 = $4,800 - BELOW the $4,861 threshold (premium only ~4.0% over the dealer's own spot quote). FLAGGED (citation quality + availability, per repo audit rule 7): the canonical product URL renders NO price today because the item is 'Currently Out of stock', so the price is cited from the seller's official category listing; verify in a browser before purchase. GENDER CAVEAT: unisex bullion ring, not a men's-specific listing - SD Bullion's imagery includes a man wearing it ('nebu-classic-bullion-gold-.25oz-ringwornman.jpg'). This is the same ring BGASC lists at $773.84, which this review determined to be a stale-feed error (BGASC's own page ticker shows gold at $2,653.35 vs live spot $4,585-$4,649); other official dealers quote $1,334.68-$1,373.53 for it on 2026-08-26/27.",
+  "source_url": "https://sdbullion.com/1-4-oz-nebu-24k-classic-gold-bullion-ring",
+  "source_label": "SD Bullion - 1/4 oz Nebü 24K Classic Gold Bullion Ring (7.776g, $1,198.84 = $4,800/pure-gold-oz)",
+  "verified_on": "2026-08-27"
+}
