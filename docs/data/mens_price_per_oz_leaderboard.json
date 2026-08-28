@@ -5,10 +5,10 @@
  "spot_usd_per_oz_used_for_premium": 4560.91,
  "spot_basis": "midpoint of $4522.93 (usatoday.com 12:05 ET) and $4598.89 (cnbc.com/select 9:00 ET), 2026-08-28",
  "men_filter": "regex \\b(men|mens|men's|gents|gentleman|unisex|male)\\b applied to ring name + note; women-only rows excluded",
- "total_rows_in_dataset": 479,
- "rows_with_price_per_gold_oz": 228,
- "mens_rows_with_price_per_gold_oz": 20,
- "mens_rows_below_threshold": 9,
+ "total_rows_in_dataset": 482,
+ "rows_with_price_per_gold_oz": 231,
+ "mens_rows_with_price_per_gold_oz": 23,
+ "mens_rows_below_threshold": 12,
  "rows": [
   {
    "rank": 1,
@@ -138,6 +138,48 @@
   },
   {
    "rank": 10,
+   "id": "chowtaifook_999_9_gold_ring_plain_f157081",
+   "ring": "999.9 Gold Ring - plain, unisex (F157081, Mould F186899)",
+   "seller": "Chow Tai Fook",
+   "karat": "24K",
+   "weight_g": 3.44,
+   "price_usd": 627.07,
+   "price_per_gold_oz": 5675.46,
+   "below_threshold": true,
+   "premium_over_melt_pct": 24.4,
+   "source_url": "https://www.chowtaifook.com/en-hk/eshop/jewellery/rings/999.9-gold-ring/F157081.html",
+   "verified_on": "2026-08-28"
+  },
+  {
+   "rank": 11,
+   "id": "chowtaifook_999_9_gold_ring_plain_f1376",
+   "ring": "999.9 Gold Ring - plain, unisex (F1376, Mould F4915)",
+   "seller": "Chow Tai Fook",
+   "karat": "24K",
+   "weight_g": 3.26,
+   "price_usd": 594.28,
+   "price_per_gold_oz": 5675.67,
+   "below_threshold": true,
+   "premium_over_melt_pct": 24.4,
+   "source_url": "https://www.chowtaifook.com/en-hk/eshop/jewellery/rings/999.9-gold-ring/F1376.html",
+   "verified_on": "2026-08-28"
+  },
+  {
+   "rank": 12,
+   "id": "chowtaifook_ripple_999_gold_ring_f206899",
+   "ring": "Ripple 999 Gold Ring - lathed, unisex (F206899, Mould F234246)",
+   "seller": "Chow Tai Fook",
+   "karat": "24K",
+   "weight_g": 2.84,
+   "price_usd": 517.88,
+   "price_per_gold_oz": 5677.46,
+   "below_threshold": true,
+   "premium_over_melt_pct": 24.5,
+   "source_url": "https://www.chowtaifook.com/en-hk/eshop/jewellery/rings/ripple-999-gold-ring/F206899.html",
+   "verified_on": "2026-08-28"
+  },
+  {
+   "rank": 13,
    "id": "providentmetals_nebu_10_5g_24k_mens_curved_ring_size_8",
    "ring": "Neb\u00fc 10.5g 24K Mens Curved Ring Size 8",
    "seller": "Provident Metals",
@@ -151,7 +193,7 @@
    "verified_on": "2026-08-26"
   },
   {
-   "rank": 11,
+   "rank": 14,
    "id": "costco_2_5mm_diamond_cut_band_14k",
    "ring": "2.5mm Comfort Fit Diamond Cut Wedding Band (14kt White Gold, Size 4.5)",
    "seller": "Costco",
@@ -165,7 +207,7 @@
    "verified_on": "2026-08-27"
   },
   {
-   "rank": 12,
+   "rank": 15,
    "id": "moneymetals_bullion_ring_classic_quarter_oz_24k",
    "ring": "Gold Bullion Ring - Classic Design - 1/4 Troy Oz, .9999 Fine 24K Pure - Matte Finish",
    "seller": "Money Metals",
@@ -179,7 +221,7 @@
    "verified_on": "2026-08-28"
   },
   {
-   "rank": 13,
+   "rank": 16,
    "id": "costco_6mm_comfort_fit_band_14k",
    "ring": "6mm Comfort Fit Wedding Band (14kt Yellow Gold, Size 4.5)",
    "seller": "Costco",
@@ -193,7 +235,7 @@
    "verified_on": "2026-08-19"
   },
   {
-   "rank": 14,
+   "rank": 17,
    "id": "costco_5mm_comfort_fit_band_14k",
    "ring": "5mm Comfort Fit Wedding Band (14kt Yellow Gold, Size 4.5)",
    "seller": "Costco",
@@ -207,7 +249,7 @@
    "verified_on": "2026-08-27"
   },
   {
-   "rank": 15,
+   "rank": 18,
    "id": "malo_mens_sandpaper_beveled_6mm_18kr",
    "ring": "Men's 6mm Sandpaper-finish Beveled Edge Wedding Ring 18kt Rose Gold",
    "seller": "Ritani",
@@ -221,7 +263,7 @@
    "verified_on": "2026-08-25"
   },
   {
-   "rank": 16,
+   "rank": 19,
    "id": "malo_mens_satin_milgrain_6mm_18ky",
    "ring": "Men's 6mm Satin-finish Comfort-fit Wedding Ring With Milgrain 18kt Yellow Gold",
    "seller": "Ritani",
@@ -235,7 +277,7 @@
    "verified_on": "2026-08-25"
   },
   {
-   "rank": 17,
+   "rank": 20,
    "id": "malo_mens_classic_square_edged_5mm_18ky",
    "ring": "Men's 2-6mm Classic Square Edged Polished Wedding Ring 18kt Yellow Gold",
    "seller": "Ritani",
@@ -249,7 +291,7 @@
    "verified_on": "2026-08-25"
   },
   {
-   "rank": 18,
+   "rank": 21,
    "id": "malo_mens_classic_square_edged_5mm_18kw",
    "ring": "Men's 2-6mm Classic Square Edged Polished Wedding Ring 18kt White Gold",
    "seller": "Ritani",
@@ -263,7 +305,7 @@
    "verified_on": "2026-08-25"
   },
   {
-   "rank": 19,
+   "rank": 22,
    "id": "malo_mens_high_polish_6mm_18kw",
    "ring": "Men's 6mm High Polish Wedding Ring 18kt White Gold",
    "seller": "Ritani",
@@ -277,7 +319,7 @@
    "verified_on": "2026-08-25"
   },
   {
-   "rank": 20,
+   "rank": 23,
    "id": "malo_mens_classic_square_edged_3mm_14ky",
    "ring": "Men's 2-6mm Classic Square Edged Polished Wedding Ring 14kt Yellow Gold",
    "seller": "Ritani",
