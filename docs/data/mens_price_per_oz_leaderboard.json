@@ -1,7 +1,7 @@
 {
  "generated_from": "data/rings.json (compiled from data/evidence/*.json; no hand-entered values)",
  "regenerate_with": "python3 scripts/build_mens_leaderboard.py",
- "threshold_usd_per_pure_gold_oz": 5500.0,
+ "threshold_usd_per_pure_gold_oz": 6000.0,
  "spot_usd_per_oz_used_for_premium": 4560.91,
  "spot_basis": "midpoint of $4522.93 (usatoday.com 12:05 ET) and $4598.89 (cnbc.com/select 9:00 ET), 2026-08-28",
  "men_filter": "regex \\b(men|mens|men's|gents|gentleman|unisex|male)\\b applied to ring name + note; women-only rows excluded",

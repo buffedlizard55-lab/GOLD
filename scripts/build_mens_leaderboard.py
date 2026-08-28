@@ -16,7 +16,7 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-THRESHOLD = 5500.0  # user-directed threshold 2026-08-28: "lower prices than Price / Gold Oz $5500 /oz Mens"
+THRESHOLD = 6000.0  # user-directed threshold 2026-08-28 (session 9): "lower prices than Price / Gold Oz $6000 /oz Mens" (supersedes session-7's $5,500)
 
 # Spot quotes read on 2026-08-28 (session 7; see docs/REVIEW_2026-08-28.md section 1):
 #   cnbc.com/select    $4,598.89 (9:00 a.m. ET 2026-08-28)
