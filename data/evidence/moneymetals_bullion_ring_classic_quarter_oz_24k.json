@@ -2,12 +2,12 @@
   "ring": "Gold Bullion Ring - Classic Design - 1/4 Troy Oz, .9999 Fine 24K Pure - Matte Finish",
   "seller": "Money Metals",
   "karat": "24K",
-  "hallmark": ".9999 Fine (99.99% pure) 24K gold, Nebü branded",
+  "hallmark": ".9999 Fine (99.99% pure) 24K gold, Neb\u00fc branded",
   "weight_g": 7.776,
-  "price_usd": 1764.63,
+  "price_usd": 1709.18,
   "setting_only": false,
-  "note": "Nebü 24K matte classic design bullion ring. 1/4 Troy Oz = 7.776g (1 troy oz = 31.1035g). CURRENTLY OUT OF STOCK per page (re-stock alert available). 24K .9999 pure investment jewelry. CAVEAT: price_per_gold_oz ~$7,049 exceeds $4,861 threshold but accepted as 24K 'spot-like' workaround per user direction 2026-08-26.",
+  "note": "Neb\u00fc 24K matte classic design bullion ring. 1/4 Troy Oz = 7.776g (1 troy oz = 31.1035g). RE-VERIFIED LIVE 2026-08-28 (session 7) by direct product-page fetch: quantity table '1 - 4: $1,709.18 | 5 - 9: $1,681.14 | 10+: Call for discount'; 'This item is currently out of stock'. Page still states 'Weight: 1/4 troy oz (approx. 7.775 grams), .9999 fine'. PRICE/oz = $6,836.76/pure-gold-oz (1+ tier) \u2014 far ABOVE the user's $5,500/oz threshold (Money Metals prices its 24K jewelry at +51% over the day's spot). Prior read: $1,764.63 on 2026-08-26 (row corrected to today's live figure per repo policy: contradictions are corrected, not averaged). CAVEAT: price_per_gold_oz exceeds the $4,861 legacy threshold too; kept as a 24K 'spot-like' reference row. IMAGERY NOTE: product photos include 'quarteroz-gold-bullion-ring-classic-design-gentlemen.jpg' (worn by a man) \u2014 the ring line is unisex.",
   "source_url": "https://www.moneymetals.com/gold-bullion-ring-classic-design-14-troy-oz-24k-pure/1029",
-  "source_label": "Money Metals - Nebü Gold Bullion Ring Classic 1/4 Troy Oz 24K (~$1,764.63, OOS)",
-  "verified_on": "2026-08-26"
+  "source_label": "Money Metals - Neb\u00fc Gold Bullion Ring Classic 1/4 Troy Oz 24K ($1,709.18, live 2026-08-28, OOS)",
+  "verified_on": "2026-08-28"
 }

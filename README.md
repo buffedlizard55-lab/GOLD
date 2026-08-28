@@ -4,6 +4,8 @@ A buyer-first, evidence-based reference directory for buying **solid gold** enga
 
 🔗 **Live Site:** https://buffedlizard55-lab.github.io/GOLD/
 
+> ⚠️ **Status — 2026-08-28 (review session 7: user reset the threshold to $5,500/pure-gold-oz, men's; +6 rows verified line by line).** Full write-up with every link: [`docs/REVIEW_2026-08-28.md`](docs/REVIEW_2026-08-28.md). At $5,500/oz the bar becomes **melt +≈20%** (vs +5.35%), and one product family clears it: the **1/4 oz .9999 Nebü bullion ring**, priced live on 2026-08-28 at **Tex Metals** $1,248.62/$1,248.01 (ACH) → **$4,999.40 / $4,996.95/oz, in stock** (new seller); **SD Bullion** $1,318.38/$1,319.65 (check-wire) → **$5,278.71 / $5,283.80/oz, out of stock** (re-added with live reads, replacing the snippet-corrupted 08-27 data); **JM Bullion** $1,340.15 (ACH) → **$5,365.88/oz** (first-party CDN list cite — product page captcha-gated, flagged; their card-price tier $1,395.99 = $5,589.80/oz would FAIL — ACH basis stated in-row). **The same ring elsewhere rejects the channel-by-price theory:** Money Metals $1,709.18 = **$6,836.76/oz (+51%, OOS)** — its repo row corrected from a stale 08-26 read; Money Metals, APMEX none. Non-bullion channels measured live: **SD24K thread ring $6,178/oz** (weight from seller SKU `GJPRGTHREAD-12.7G`), **Malabar US 22K men's ring $6,227/oz** (they publish gross+net weights + price break-up — the best future candidate — but their "Smart Buy" prices are explicitly *approximate, may change after manufacture*), **Chow Tai Fook HK $5,558/oz before any labour charge** (live header 1,401 HKD/g ÷ Fed H.10 7.8397), **Totaram $7,773/oz** + years-stale "last listed" prices on OOS items, **Joyalukkas eShop dead** (404 product pages, 2025-cached rate widgets). ½/1 oz members of the bullion-ring family **do not exist as rings** (only bangles) — the family caps at ¼ oz. **Men's/unisex rows now below $5,500/oz: 9** (these 6 + 3 Midwest mountings). Irregularities flagged: session-4's "Costco prices render" claim did **not** reproduce (both 2.5 mm pages render "Loading" — size-10 men's variants stay out); SD's non-bullion ring premiums jumped from +20% to +36% in one day while spot fell (proof jewelry markups are discretionary); the Quince 6 mm unisex band ($5,361/oz) is the **oldest verification (08-19)** among passing rows and could not be re-read today — flagged for manual re-check. The **50-row quota remains unreachable**: measured universe of verified men's/unisex below-threshold stock is 9–11 SKUs directory-wide (§7 of the review doc has the arithmetic); the rest was declined rather than fabricated.
+>
 > ⚠️ **Status — 2026-08-27 (review session 4: line-by-line re-verification + correction of two bad below-threshold rows).** Full write-up with every link: [`docs/REVIEW_2026-08-27.md`](docs/REVIEW_2026-08-27.md). Two headline findings.
 >
 > **(1) The "5 rows below $4,861/oz" claim was overstated — 2 of the 5 did not hold up.** The Costco 2.5 mm band had repriced from **$329.99 to $449.99** (gold flat on both dates), moving it from $4,861/oz to **$6,628/oz** — i.e. *above* threshold; and the BGASC Nebü ring at $773.84 ($3,098/oz, 33% below melt) is a **stale pricing feed**, proven by BGASC's own on-page ticker reading "Gold $2,653.35" while live spot was $4,585–$4,649/oz, and by three other official dealers quoting the identical ring at $1,334.68–$1,373.53. Both were corrected/quarantined. Five evidence files were corrected in total; Costco 5 mm re-verified clean; Menē's Classic Band corrected $1,817 → **$1,934**.
@@ -18,10 +20,10 @@ A buyer-first, evidence-based reference directory for buying **solid gold** enga
 
 ## What This Project Is
 
-- **473 ring rows** (37 non-ring/reference rows and 2 above-threshold SD Bullion rows excluded): a searchable directory of solid gold and platinum rings across 40 seller labels.
-- **Evidence table with source links:** rows with a seller-published weight show the metal karat, gram weight, calculated raw gold content, retail price, and **Price per Pure Gold Troy Ounce / Gram**; rows without a published weight show "—" (223 of 473 currently have no published weight — the site does not invent one).
+- **479 ring rows** (37 non-ring/reference rows excluded — including the 2 SD Bullion rows re-verified live and re-added on 2026-08-28): a searchable directory of solid gold and platinum rings across 42 seller labels.
+- **Evidence table with source links:** rows with a seller-published weight show the metal karat, gram weight, calculated raw gold content, retail price, and **Price per Pure Gold Troy Ounce / Gram**; rows without a published weight show "—" (222 of 479 currently have no published weight — the site does not invent one).
 - **Planned but NOT yet implemented in this build:** the Interactive Melt-Value Calculator, the Size 4.5 investigation page, and the Buyer's Anti-Fraud Checklist / Post-Delivery Guide described in earlier iterations. Do not assume they ship.
-- **Zero-Hallucination Policy (enforced where verification is possible):** every price/weight now either (a) was re-checked against the official page on 2026-08-26, or (b) is shown as "—"/flagged in a note when it could not be confirmed. Values that contradict the official page are corrected, not averaged. See `docs/REVIEW_2026-08-26.md` and `docs/REVIEW_2026-08-26-below-threshold-search.md` for the per-row verification tables with links.
+- **Zero-Hallucination Policy (enforced where verification is possible):** every price/weight now either (a) was re-checked against the official page on 2026-08-26, 08-27 or 08-28, or (b) is shown as "—"/flagged in a note when it could not be confirmed. Values that contradict the official page are corrected, not averaged. See `docs/REVIEW_2026-08-26.md` and `docs/REVIEW_2026-08-26-below-threshold-search.md` for the per-row verification tables with links.
 
 ---
 
@@ -54,14 +56,15 @@ The audit automatically verifies:
 
 | Metric | Value | Details |
 |---|---|---|
-| **Ring rows in the directory** | 473 | Each with an official `source_url`; 26 unverifiable prices withheld and flagged, not published |
-| **Rows with seller-published weight** | 252 | Explicit metal weight; the other 223 show "—" (no weight is invented) |
-| **Rows with price + weight → price per gold oz** | 224 | All derived arithmetic is recomputed by `scripts/build_rings.py` (0 inconsistencies in the 2026-08-27 audit) |
-| **Rows below $4,861 / pure-gold-oz (≈ melt +5.35%)** | **3 credible** | The 3 Midwest Jewellery men's 14K mountings ($3,794 / $3,864 / $4,190). The 2 SD Bullion ¼ oz rows added earlier on 2026-08-27 were **removed** — live page price $1,363.39 = $5,453.56/oz, above threshold (session-5 self-correction). The BGASC Nebü row ($3,098) is **quarantined as a stale pricing feed**, not counted. The Costco row previously counted here was corrected to $6,628/oz and dropped out. |
-| **Men's/unisex rows with a computable price per gold oz** | **13** | See [`docs/MENS_LEADERBOARD.md`](docs/MENS_LEADERBOARD.md) — the complete ranked list, all 13 with official source links. This is the ceiling: only 13 men's rows in the directory publish both a price and a gram weight. |
-| **Investment-Grade (24K) rows** | 63 | Pure 24K bullion-jewelry rings (Nebü, Kuvera, Menē, 7879, Goldzenn) |
-| **Tracked Seller Labels** | 41 | Reference rows and non-ring items excluded from the directory |
-| **Excluded / flagged for review** | 37 excluded + dupes removed | Full lists with links: `data/_excluded.json`, `data/evidence/_rejected.md`, `docs/REVIEW_2026-08-27.md` |
+| **Ring rows in the directory** | 479 | Each with an official `source_url`; 26 unverifiable prices withheld and flagged, not published |
+| **Rows with seller-published weight** | 257 | Explicit metal weight; the other 222 show "—" (no weight is invented) |
+| **Rows with price + weight → price per gold oz** | 228 | All derived arithmetic is recomputed by `scripts/build_rings.py` (0 inconsistencies in the 2026-08-28 audit) |
+| **Men's/unisex rows below $5,500 / pure-gold-oz (user threshold 2026-08-28; ≈ melt +20%)** | **9** | The 3 Midwest men's 14K mountings ($3,794 / $3,864 / $4,190) + the ¼ oz .9999 Nebü bullion-ring family read live 2026-08-28: Tex Metals ×2 ($4,996.95 / $4,999.40, in stock), SD Bullion ×2 ($5,278.71 / $5,283.80, OOS), JM Bullion ×2 ($5,365.88, ACH tier). Near-misses kept OUT: Provident's two ¼ oz rows (size Medium 6–7.5, not men's-labelled) and the Quince 6 mm unisex band (verified 2026-08-19, discount-dependent — flagged for manual re-check). BGASC rows quarantined (stale feed). Links per row: [`docs/REVIEW_2026-08-28.md`](docs/REVIEW_2026-08-28.md) §3. |
+| **Rows below the old $4,861 / pure-gold-oz (≈ melt +5.35%)** | **3 credible** | The 3 Midwest Jewellery men's 14K mountings ($3,794 / $3,864 / $4,190). The 2 SD Bullion ¼ oz rows added earlier on 2026-08-27 were **removed** that day — snippet price — and re-added 2026-08-28 on live reads at $5,278–5,284/oz (above $4,861, below $5,500). The BGASC Nebü row ($3,098) is **quarantined as a stale pricing feed**, not counted. The Costco row previously counted here was corrected to $6,628/oz and dropped out. |
+| **Men's/unisex rows with a computable price per gold oz** | **20** | See [`docs/MENS_LEADERBOARD.md`](docs/MENS_LEADERBOARD.md) — the complete ranked list, all 20 with official source links; 9 below the $5,500 line. This is the ceiling: only 20 men's rows in the directory publish both a price and a gram weight. |
+| **Investment-Grade (24K) rows** | 69 | Pure 24K bullion-jewelry rings (Nebü, Kuvera, Menē, 7879, Goldzenn) |
+| **Tracked Seller Labels** | 42 | Reference rows and non-ring items excluded from the directory |
+| **Excluded / flagged for review** | 37 excluded + dupes removed | Full lists with links: `data/_excluded.json`, `data/evidence/_rejected.md`, `docs/REVIEW_2026-08-27.md`, `docs/REVIEW_2026-08-28.md` |
 
 ---
 
@@ -72,6 +75,7 @@ The audit automatically verifies:
 ├── docs/                     # GitHub Pages static website
 │   ├── index.html            # Main web application layout
 │   ├── REVIEW_2026-08-26.md  # Full review: findings, fixes, manual-verification links
+│   ├── REVIEW_2026-08-28.md  # Session 7: $5,500/oz men's sweep — added/rejected channels, links per row
 │   ├── styles.css            # Modern, responsive design system
 │   ├── scripts.js            # Table rendering, filtering, sorting, exports
 │   └── data/

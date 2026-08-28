@@ -16,15 +16,15 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-THRESHOLD = 4861.0
+THRESHOLD = 5500.0  # user-directed threshold 2026-08-28: "lower prices than Price / Gold Oz $5500 /oz Mens"
 
-# Spot quotes read on 2026-08-27 (see docs/REVIEW_2026-08-27.md section 1):
-#   cnbc.com/select    $4,584.96
-#   usagold.com        $4,648.90
+# Spot quotes read on 2026-08-28 (session 7; see docs/REVIEW_2026-08-28.md section 1):
+#   cnbc.com/select    $4,598.89 (9:00 a.m. ET 2026-08-28)
+#   usatoday.com       $4,522.93 (12:05 p.m. ET 2026-08-28)
 # The premium column uses their midpoint, stated explicitly so it is auditable.
-SPOT_LOW = 4584.96
-SPOT_HIGH = 4648.90
-SPOT = round((SPOT_LOW + SPOT_HIGH) / 2, 2)  # 4616.93
+SPOT_LOW = 4522.93
+SPOT_HIGH = 4598.89
+SPOT = round((SPOT_LOW + SPOT_HIGH) / 2, 2)  # 4560.91
 
 MEN_RE = re.compile(r"\b(men|mens|men's|gents|gentleman|gentlemen's|unisex|male)\b", re.I)
 WOMEN_RE = re.compile(r"\bwomen'?s?\b", re.I)
@@ -61,7 +61,7 @@ def main():
         "regenerate_with": "python3 scripts/build_mens_leaderboard.py",
         "threshold_usd_per_pure_gold_oz": THRESHOLD,
         "spot_usd_per_oz_used_for_premium": SPOT,
-        "spot_basis": f"midpoint of ${SPOT_LOW} (cnbc.com/select) and ${SPOT_HIGH} (usagold.com), 2026-08-27",
+        "spot_basis": f"midpoint of ${SPOT_LOW} (usatoday.com 12:05 ET) and ${SPOT_HIGH} (cnbc.com/select 9:00 ET), 2026-08-28",
         "men_filter": (
             r"regex \b(men|mens|men's|gents|gentleman|unisex|male)\b applied to ring name + note; "
             "women-only rows excluded"
@@ -100,7 +100,7 @@ def main():
     )
     L.append(
         f"**Threshold:** ${THRESHOLD:,.2f} / pure gold troy oz  ·  **Spot used for the premium column:** "
-        f"${SPOT:,.2f}/oz (midpoint of ${SPOT_LOW:,.2f} CNBC – ${SPOT_HIGH:,.2f} USAGOLD, 2026-08-27)\n"
+        f"${SPOT:,.2f}/oz (midpoint of ${SPOT_LOW:,.2f} USA Today 12:05 ET – ${SPOT_HIGH:,.2f} CNBC 9:00 ET, 2026-08-28)\n"
     )
     L.append(
         f"**Population:** {len(rows)} rows in the directory · {payload['rows_with_price_per_gold_oz']} have a "
